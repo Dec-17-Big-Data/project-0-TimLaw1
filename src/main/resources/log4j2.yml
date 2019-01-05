@@ -1,0 +1,23 @@
+Configuration:
+  name: Default
+
+  Properties:
+  
+    Property:
+      - name: log_path
+        value: logs
+      
+  Appenders:
+  
+    File:
+      name: File_Appender
+      fileName: ${log_path}/logfile.log
+      PatternLayout:
+        pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+        
+  Loggers:
+  
+    Root:
+      level: all
+      AppenderRef:
+        - ref: File_Appender

@@ -1,0 +1,1851 @@
+[TRACE] 2019-01-02 13:56:44.245 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 13:56:44.249 [main] SessionManager - Enter
+[TRACE] 2019-01-02 13:56:44.255 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 13:56:44.256 [main] ReadInput - Enter
+[TRACE] 2019-01-02 13:56:46.877 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 13:56:46.878 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 13:56:46.879 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 13:56:46.879 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 13:56:46.880 [main] SessionManager - Enter
+[TRACE] 2019-01-02 13:56:46.890 [main] Login - Enter
+[TRACE] 2019-01-02 13:56:46.890 [main] Login - Enter
+[TRACE] 2019-01-02 13:56:46.890 [main] Login - Enter
+[TRACE] 2019-01-02 13:56:46.890 [main] ReadInput - Enter
+[TRACE] 2019-01-02 13:58:13.618 [main] ReadInput - Enter
+[TRACE] 2019-01-02 13:58:13.619 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 13:58:13.619 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 13:58:13.619 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 13:58:13.619 [main] Login - Enter
+[TRACE] 2019-01-02 13:58:13.619 [main] ReadInput - Enter
+[TRACE] 2019-01-02 13:58:22.639 [main] ReadInput - Enter
+[TRACE] 2019-01-02 13:58:22.639 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 13:58:22.639 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 13:58:22.639 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 13:58:22.639 [main] Login - Enter
+[TRACE] 2019-01-02 13:58:23.384 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 13:58:23.667 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:1350) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.getAllUsers(UserOracle.java:48) [classes/:?]
+	at com.revature.services.UserService.getUsers(UserService.java:27) [classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:39) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:32) [classes/:?]
+[TRACE] 2019-01-02 14:04:32.823 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 14:04:32.826 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:04:32.830 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 14:04:32.830 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:04:34.710 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 14:04:34.711 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:04:34.712 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:04:34.712 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 14:04:34.712 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:04:34.715 [main] Login - Enter
+[TRACE] 2019-01-02 14:04:34.715 [main] Login - Enter
+[TRACE] 2019-01-02 14:04:34.715 [main] Login - Enter
+[TRACE] 2019-01-02 14:04:34.715 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:04:36.942 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:04:36.942 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:04:36.942 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:04:36.942 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 14:04:36.943 [main] Login - Enter
+[TRACE] 2019-01-02 14:04:36.943 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:04:41.843 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:04:41.843 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:04:41.843 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:04:41.844 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:04:41.844 [main] Login - Enter
+[TRACE] 2019-01-02 14:04:42.764 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 14:04:43.733 [main] Login - Enter
+[TRACE] 2019-01-02 14:04:43.733 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:05:31.439 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:05:31.440 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:05:31.440 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:05:31.440 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:05:31.440 [main] Login - Enter
+[TRACE] 2019-01-02 14:05:31.796 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
+[TRACE] 2019-01-02 14:05:31.818 [main] Login - Enter
+[TRACE] 2019-01-02 14:05:31.818 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:06:40.197 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 14:06:40.201 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:06:40.204 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 14:06:40.204 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:06:41.838 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 14:06:41.839 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:06:41.840 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:06:41.840 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 14:06:41.840 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:06:41.843 [main] Login - Enter
+[TRACE] 2019-01-02 14:06:41.843 [main] Login - Enter
+[TRACE] 2019-01-02 14:06:41.843 [main] Login - Enter
+[TRACE] 2019-01-02 14:06:41.843 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:06:43.415 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:06:43.415 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:06:43.415 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:06:43.415 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 14:06:43.416 [main] Login - Enter
+[TRACE] 2019-01-02 14:06:43.416 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:06:47.792 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:06:47.793 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:06:47.793 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:06:47.793 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:06:47.793 [main] Login - Enter
+[TRACE] 2019-01-02 14:06:48.618 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 14:06:48.890 [main] Login - Enter
+[TRACE] 2019-01-02 14:06:48.891 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:07:13.139 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 14:07:13.143 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:07:13.146 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 14:07:13.147 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:07:16.920 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 14:07:16.921 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:07:16.921 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:07:16.921 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 14:07:16.921 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:07:16.925 [main] Login - Enter
+[TRACE] 2019-01-02 14:07:16.925 [main] Login - Enter
+[TRACE] 2019-01-02 14:07:16.926 [main] Login - Enter
+[TRACE] 2019-01-02 14:07:16.926 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:07:18.251 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:07:18.251 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:07:18.251 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:07:18.252 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 14:07:18.252 [main] Login - Enter
+[TRACE] 2019-01-02 14:07:18.252 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:07:22.432 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:07:22.433 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:07:22.433 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:07:22.433 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 14:07:22.433 [main] Login - Enter
+[TRACE] 2019-01-02 14:07:23.421 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 14:07:23.740 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:07:23.741 [main] SessionManager - Exit
+[TRACE] 2019-01-02 14:07:23.741 [main] Login - Enter
+[TRACE] 2019-01-02 14:07:23.741 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:08:14.894 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 14:08:14.898 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:08:14.901 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 14:08:14.902 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:08:16.425 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 14:08:16.426 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 14:08:16.426 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 14:08:16.426 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 14:08:16.426 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:08:16.429 [main] Register - Enter
+[TRACE] 2019-01-02 14:08:16.429 [main] Register - Enter
+[TRACE] 2019-01-02 14:08:16.429 [main] Register - Enter
+[TRACE] 2019-01-02 14:08:16.429 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:08:28.000 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:08:28.001 [main] ReadInput - Exit with(bobbert)
+[TRACE] 2019-01-02 14:08:28.001 [main] ReadInput - Exit with(bobbert)
+[TRACE] 2019-01-02 14:08:28.001 [main] Register - Exit with(bobbert)
+[TRACE] 2019-01-02 14:08:28.001 [main] Register - Enter
+[TRACE] 2019-01-02 14:08:28.001 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:08:35.534 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:08:35.535 [main] ReadInput - Exit with(bobbertrulez)
+[TRACE] 2019-01-02 14:08:35.535 [main] ReadInput - Exit with(bobbertrulez)
+[TRACE] 2019-01-02 14:08:35.535 [main] Register - Exit with(bobbertrulez)
+[TRACE] 2019-01-02 14:08:36.317 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 14:08:36.561 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:1350) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.getAllUsers(UserOracle.java:48) [classes/:?]
+	at com.revature.services.UserService.getUsers(UserService.java:27) [classes/:?]
+	at com.revature.modules.Register.validateRegistrationRequest(Register.java:50) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:29) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:19) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:39) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:32) [classes/:?]
+[TRACE] 2019-01-02 14:58:30.009 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 14:58:30.013 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:58:30.016 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 14:58:30.017 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:58:31.829 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 14:58:31.830 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:58:31.831 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 14:58:31.831 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 14:58:31.831 [main] SessionManager - Enter
+[TRACE] 2019-01-02 14:58:31.835 [main] Login - Enter
+[TRACE] 2019-01-02 14:58:31.835 [main] Login - Enter
+[TRACE] 2019-01-02 14:58:31.835 [main] Login - Enter
+[TRACE] 2019-01-02 14:58:31.835 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:58:33.560 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:58:33.560 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:58:33.561 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 14:58:33.561 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 14:58:33.561 [main] Login - Enter
+[TRACE] 2019-01-02 14:58:33.561 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:58:35.250 [main] ReadInput - Enter
+[TRACE] 2019-01-02 14:58:35.250 [main] ReadInput - Exit with(1lk2n3)
+[TRACE] 2019-01-02 14:58:35.250 [main] ReadInput - Exit with(1lk2n3)
+[TRACE] 2019-01-02 14:58:35.250 [main] Login - Exit with(1lk2n3)
+[TRACE] 2019-01-02 14:58:35.251 [main] Login - Enter
+[TRACE] 2019-01-02 14:58:36.068 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 14:58:36.351 [main] Login - Catching
+com.revature.exceptions.IncorrectPasswordException: You entered the wrong password.
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) ~[classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:32) ~[classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:41) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 14:58:36.356 [main] Login - Exit
+[TRACE] 2019-01-02 14:58:36.356 [main] Login - Exit
+[TRACE] 2019-01-02 14:58:36.356 [main] Login - Exit
+[TRACE] 2019-01-02 14:58:36.356 [main] SessionManager - Exit
+[TRACE] 2019-01-02 14:58:36.356 [main] SessionManager - Exit
+[TRACE] 2019-01-02 14:58:36.356 [main] JDBCBank - Exit
+[TRACE] 2019-01-02 15:00:18.433 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:00:18.438 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:00:18.441 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:00:18.441 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:00:20.210 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:00:20.211 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:00:20.212 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:00:20.212 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:00:20.212 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:00:20.215 [main] Login - Enter
+[TRACE] 2019-01-02 15:00:20.215 [main] Login - Enter
+[TRACE] 2019-01-02 15:00:20.215 [main] Login - Enter
+[TRACE] 2019-01-02 15:00:20.215 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:00:22.976 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:00:22.977 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:00:22.977 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:00:22.977 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 15:00:22.977 [main] Login - Enter
+[TRACE] 2019-01-02 15:00:22.977 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:00:24.085 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:00:24.085 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:00:24.085 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:00:24.085 [main] Login - Exit with(123)
+[TRACE] 2019-01-02 15:00:24.085 [main] Login - Enter
+[TRACE] 2019-01-02 15:00:25.226 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:00:25.491 [main] Login - Catching
+com.revature.exceptions.IncorrectPasswordException: You entered the wrong password.
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) ~[classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:32) ~[classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:41) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:00:25.495 [main] Login - Exit
+[TRACE] 2019-01-02 15:00:25.496 [main] Login - Exit
+[TRACE] 2019-01-02 15:00:25.496 [main] Login - Exit
+[TRACE] 2019-01-02 15:00:25.496 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:00:25.496 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:00:25.496 [main] JDBCBank - Exit
+[TRACE] 2019-01-02 15:02:15.339 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:02:15.342 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:02:15.345 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:02:15.346 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:02:16.722 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:02:16.723 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:02:16.723 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:02:16.723 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:02:16.723 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:02:16.726 [main] Login - Enter
+[TRACE] 2019-01-02 15:02:16.726 [main] Login - Enter
+[TRACE] 2019-01-02 15:02:16.727 [main] Login - Enter
+[TRACE] 2019-01-02 15:02:16.727 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:02:18.604 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:02:18.604 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:02:18.604 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:02:18.605 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 15:02:18.605 [main] Login - Enter
+[TRACE] 2019-01-02 15:02:18.605 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:02:21.405 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:02:21.405 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:02:21.405 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:02:21.405 [main] Login - Exit with(123)
+[TRACE] 2019-01-02 15:02:21.405 [main] Login - Enter
+[TRACE] 2019-01-02 15:02:23.213 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:02:23.483 [main] Login - Catching
+com.revature.exceptions.IncorrectPasswordException: You entered the wrong password.
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) ~[classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:32) ~[classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:41) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:02:23.488 [main] Login - Enter
+[TRACE] 2019-01-02 15:02:23.488 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:02:29.475 [main] ReadInput - Enter Scanner input: 1mmut4bl3
+[TRACE] 2019-01-02 15:02:29.475 [main] ReadInput - Enter Params: 2
+[TRACE] 2019-01-02 15:02:29.476 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:05:42.148 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:05:42.152 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:05:42.155 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:05:42.156 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:05:44.065 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:05:44.066 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:05:44.067 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:05:44.067 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:05:44.067 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:05:44.070 [main] Login - Enter
+[TRACE] 2019-01-02 15:05:44.070 [main] Login - Enter
+[TRACE] 2019-01-02 15:05:44.071 [main] Login - Enter
+[TRACE] 2019-01-02 15:05:44.071 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:05:47.256 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:05:47.257 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:05:47.257 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:05:47.257 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 15:05:47.257 [main] Login - Enter
+[TRACE] 2019-01-02 15:05:47.257 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:05:50.247 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:05:50.247 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:05:50.247 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:05:50.248 [main] Login - Exit with(123)
+[TRACE] 2019-01-02 15:05:50.248 [main] Login - Enter
+[TRACE] 2019-01-02 15:05:51.136 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:05:51.468 [main] Login - Catching
+com.revature.exceptions.IncorrectPasswordException: You entered the wrong password.
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) ~[classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:32) ~[classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:41) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:05:51.473 [main] Login - Enter
+[TRACE] 2019-01-02 15:05:51.473 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:05:51.473 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:01.928 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:06:01.928 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:06:01.928 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:06:01.928 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:06:01.929 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:01.929 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:01.929 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:04.846 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:04.847 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:06:04.847 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:06:04.847 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 15:06:04.847 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:04.847 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:09.298 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:09.298 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 15:06:09.298 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 15:06:09.298 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 15:06:09.298 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:09.513 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@24959ca4)
+[TRACE] 2019-01-02 15:06:09.538 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:06:09.538 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:06:09.538 [main] Login - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] Login - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] Login - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] Login - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] Login - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] Login - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:06:09.539 [main] JDBCBank - Exit
+[TRACE] 2019-01-02 15:06:26.060 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:06:26.064 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:06:26.067 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:06:26.068 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:27.638 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:06:27.639 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:06:27.639 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:06:27.639 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:06:27.639 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:06:27.642 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:27.642 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:27.642 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:27.643 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:29.440 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:29.441 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:06:29.441 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:06:29.441 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 15:06:29.441 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:29.441 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:31.174 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:31.174 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:06:31.175 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:06:31.175 [main] Login - Exit with(123)
+[TRACE] 2019-01-02 15:06:31.175 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:32.439 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:06:32.721 [main] Login - Catching
+com.revature.exceptions.IncorrectPasswordException: You entered the wrong password.
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) ~[classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:32) ~[classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:41) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:06:32.726 [main] Login - Enter
+[TRACE] 2019-01-02 15:06:32.726 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:32.726 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:06:45.885 [main] ReadInput - Enter Scanner input: Register new username
+[TRACE] 2019-01-02 15:06:45.885 [main] ReadInput - Enter Params: 3
+[TRACE] 2019-01-02 15:06:45.885 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:07.298 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:07:07.302 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:07:07.305 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:07:07.306 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:08.827 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:07:08.829 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:07:08.829 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:07:08.829 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:07:08.829 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:07:08.832 [main] Login - Enter
+[TRACE] 2019-01-02 15:07:08.832 [main] Login - Enter
+[TRACE] 2019-01-02 15:07:08.833 [main] Login - Enter
+[TRACE] 2019-01-02 15:07:08.833 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:14.230 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:14.230 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:07:14.231 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:07:14.231 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 15:07:14.231 [main] Login - Enter
+[TRACE] 2019-01-02 15:07:14.231 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:16.446 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:16.446 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:07:16.446 [main] ReadInput - Exit with(123)
+[TRACE] 2019-01-02 15:07:16.446 [main] Login - Exit with(123)
+[TRACE] 2019-01-02 15:07:16.447 [main] Login - Enter
+[TRACE] 2019-01-02 15:07:17.307 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:07:17.578 [main] Login - Catching
+com.revature.exceptions.IncorrectPasswordException: You entered the wrong password.
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) ~[classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:32) ~[classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:41) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:07:17.583 [main] Login - Enter
+[TRACE] 2019-01-02 15:07:17.583 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:17.584 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:22.150 [main] ReadInput - Enter Scanner input: Register
+[TRACE] 2019-01-02 15:07:22.151 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:07:22.151 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:07:22.151 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:07:22.152 [main] Register - Enter
+[TRACE] 2019-01-02 15:07:22.152 [main] Register - Enter
+[TRACE] 2019-01-02 15:07:22.152 [main] Register - Enter
+[TRACE] 2019-01-02 15:07:22.152 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:31.976 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:31.976 [main] ReadInput - Exit with(kenbone)
+[TRACE] 2019-01-02 15:07:31.976 [main] ReadInput - Exit with(kenbone)
+[TRACE] 2019-01-02 15:07:31.976 [main] Register - Exit with(kenbone)
+[TRACE] 2019-01-02 15:07:31.977 [main] Register - Enter
+[TRACE] 2019-01-02 15:07:31.977 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:35.577 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:07:35.577 [main] ReadInput - Exit with(4prez)
+[TRACE] 2019-01-02 15:07:35.577 [main] ReadInput - Exit with(4prez)
+[TRACE] 2019-01-02 15:07:35.577 [main] Register - Exit with(4prez)
+[TRACE] 2019-01-02 15:07:35.835 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@24959ca4)
+[ERROR] 2019-01-02 15:07:35.863 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:1350) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.getAllUsers(UserOracle.java:49) [classes/:?]
+	at com.revature.services.UserService.getUsers(UserService.java:28) [classes/:?]
+	at com.revature.modules.Register.validateRegistrationRequest(Register.java:50) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:29) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:19) [classes/:?]
+	at com.revature.modules.Login.usernameErrorPrompt(Login.java:71) [classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:54) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:30) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:20) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:35) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:12:27.746 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:12:27.750 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:12:27.753 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:12:27.754 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:12:29.174 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:12:29.175 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:12:29.176 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:12:29.176 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:12:29.176 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:12:29.179 [main] Register - Enter
+[TRACE] 2019-01-02 15:12:29.179 [main] Register - Enter
+[TRACE] 2019-01-02 15:12:29.180 [main] Register - Enter
+[TRACE] 2019-01-02 15:12:29.180 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:12:36.559 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:12:36.559 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:12:36.560 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:12:36.560 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:12:36.560 [main] Register - Enter
+[TRACE] 2019-01-02 15:12:36.560 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:12:41.361 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:12:41.361 [main] ReadInput - Exit with(d34)
+[TRACE] 2019-01-02 15:12:41.361 [main] ReadInput - Exit with(d34)
+[TRACE] 2019-01-02 15:12:41.361 [main] Register - Exit with(d34)
+[TRACE] 2019-01-02 15:12:42.198 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:12:42.455 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:1350) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.getAllUsers(UserOracle.java:49) [classes/:?]
+	at com.revature.services.UserService.getUsers(UserService.java:28) [classes/:?]
+	at com.revature.modules.Register.validateRegistrationRequest(Register.java:50) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:29) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:19) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:39) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:13:52.984 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:13:52.992 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:13:52.996 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:13:52.996 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:13:54.576 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:13:54.578 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:13:54.578 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:13:54.578 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:13:54.578 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:13:54.589 [main] Register - Enter
+[TRACE] 2019-01-02 15:13:54.589 [main] Register - Enter
+[TRACE] 2019-01-02 15:13:54.589 [main] Register - Enter
+[TRACE] 2019-01-02 15:13:54.589 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:13:57.498 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:13:57.499 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:13:57.499 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:13:57.499 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:13:57.499 [main] Register - Enter
+[TRACE] 2019-01-02 15:13:57.499 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:13:59.987 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:13:59.987 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:13:59.987 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:13:59.987 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:14:14.777 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3ad394e6)
+[TRACE] 2019-01-02 15:15:36.797 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:15:36.803 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:15:36.808 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:15:36.809 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:15:46.941 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:15:46.944 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:15:46.945 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:15:46.945 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:15:46.945 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:15:46.960 [main] Register - Enter
+[TRACE] 2019-01-02 15:15:46.960 [main] Register - Enter
+[TRACE] 2019-01-02 15:15:46.961 [main] Register - Enter
+[TRACE] 2019-01-02 15:15:46.961 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:15:50.070 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:15:50.070 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:15:50.071 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:15:50.071 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:15:50.071 [main] Register - Enter
+[TRACE] 2019-01-02 15:15:50.071 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:15:51.255 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:15:51.255 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:15:51.255 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:15:51.256 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:18:53.231 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:18:53.241 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:18:53.246 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:18:53.247 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:18:55.516 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:18:55.517 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:18:55.518 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:18:55.518 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:18:55.518 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:18:55.529 [main] Register - Enter
+[TRACE] 2019-01-02 15:18:55.529 [main] Register - Enter
+[TRACE] 2019-01-02 15:18:55.530 [main] Register - Enter
+[TRACE] 2019-01-02 15:18:55.530 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:18:58.752 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:18:58.752 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:18:58.752 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:18:58.752 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:18:58.752 [main] Register - Enter
+[TRACE] 2019-01-02 15:18:58.753 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:19:00.757 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:19:00.758 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:19:00.758 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:19:00.758 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:19:40.198 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:19:40.205 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:19:40.210 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:19:40.211 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:19:41.421 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:19:41.422 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:19:41.423 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:19:41.423 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:19:41.423 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:19:41.435 [main] Register - Enter
+[TRACE] 2019-01-02 15:19:41.435 [main] Register - Enter
+[TRACE] 2019-01-02 15:19:41.435 [main] Register - Enter
+[TRACE] 2019-01-02 15:19:41.435 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:19:43.464 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:19:43.464 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:19:43.464 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:19:43.464 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:19:43.464 [main] Register - Enter
+[TRACE] 2019-01-02 15:19:43.464 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:19:44.832 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:19:44.832 [main] ReadInput - Exit with(alkfn)
+[TRACE] 2019-01-02 15:19:44.832 [main] ReadInput - Exit with(alkfn)
+[TRACE] 2019-01-02 15:19:44.832 [main] Register - Exit with(alkfn)
+[TRACE] 2019-01-02 15:19:59.899 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@cd1d761)
+[ERROR] 2019-01-02 15:20:34.414 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getInt(GeneratedResultSet.java:1350) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.getAllUsers(UserOracle.java:49) [classes/:?]
+	at com.revature.services.UserService.getUsers(UserService.java:28) [classes/:?]
+	at com.revature.modules.Register.validateRegistrationRequest(Register.java:50) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:29) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:19) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:39) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:25:47.073 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:25:47.077 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:25:47.080 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:25:47.081 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:25:48.561 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:25:48.562 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:25:48.563 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:25:48.563 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:25:48.563 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:25:48.567 [main] Register - Enter
+[TRACE] 2019-01-02 15:25:48.567 [main] Register - Enter
+[TRACE] 2019-01-02 15:25:48.567 [main] Register - Enter
+[TRACE] 2019-01-02 15:25:48.567 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:25:51.415 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:25:51.415 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:25:51.415 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:25:51.415 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:25:51.415 [main] Register - Enter
+[TRACE] 2019-01-02 15:25:51.416 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:25:52.989 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:25:52.989 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:25:52.990 [main] ReadInput - Exit with(fr12)
+[TRACE] 2019-01-02 15:25:52.990 [main] Register - Exit with(fr12)
+[TRACE] 2019-01-02 15:25:53.807 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 15:25:54.094 [main] Register - Enter
+[TRACE] 2019-01-02 15:25:54.475 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2fb0623e)
+[TRACE] 2019-01-02 15:25:54.702 [main] Register - Exit
+[TRACE] 2019-01-02 15:25:54.702 [main] Register - Exit
+[TRACE] 2019-01-02 15:25:54.702 [main] Register - Exit
+[TRACE] 2019-01-02 15:25:54.702 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:25:54.702 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:25:54.702 [main] JDBCBank - Exit
+[TRACE] 2019-01-02 15:32:20.194 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:32:20.197 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:32:20.200 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:32:20.201 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:32:27.324 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:32:27.326 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:32:27.326 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:32:27.327 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:32:27.327 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:32:27.331 [main] Register - Enter
+[TRACE] 2019-01-02 15:32:27.331 [main] Register - Enter
+[TRACE] 2019-01-02 15:32:27.331 [main] Register - Enter
+[TRACE] 2019-01-02 15:32:27.331 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:32:29.974 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:32:29.974 [main] ReadInput - Exit with(fr13)
+[TRACE] 2019-01-02 15:32:29.974 [main] ReadInput - Exit with(fr13)
+[TRACE] 2019-01-02 15:32:29.974 [main] Register - Exit with(fr13)
+[TRACE] 2019-01-02 15:32:29.975 [main] Register - Enter
+[TRACE] 2019-01-02 15:32:29.975 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:32:31.376 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:32:31.376 [main] ReadInput - Exit with(fr13)
+[TRACE] 2019-01-02 15:32:31.376 [main] ReadInput - Exit with(fr13)
+[TRACE] 2019-01-02 15:32:31.376 [main] Register - Exit with(fr13)
+[TRACE] 2019-01-02 15:32:32.161 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 15:32:32.413 [main] Register - Enter
+[TRACE] 2019-01-02 15:32:32.671 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2fb0623e)
+[TRACE] 2019-01-02 15:32:32.760 [main] Register - Exit
+[TRACE] 2019-01-02 15:32:32.760 [main] Register - Exit
+[TRACE] 2019-01-02 15:32:32.760 [main] Register - Exit
+[TRACE] 2019-01-02 15:32:32.760 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:32:32.760 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:32:32.760 [main] JDBCBank - Exit
+[TRACE] 2019-01-02 15:33:47.288 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:33:47.292 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:33:47.295 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:33:47.295 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:33:49.235 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:33:49.236 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:33:49.237 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:33:49.237 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:33:49.237 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:33:49.241 [main] Register - Enter
+[TRACE] 2019-01-02 15:33:49.241 [main] Register - Enter
+[TRACE] 2019-01-02 15:33:49.241 [main] Register - Enter
+[TRACE] 2019-01-02 15:33:49.241 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:33:50.994 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:33:50.994 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:33:50.994 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:33:50.995 [main] Register - Exit with(root)
+[TRACE] 2019-01-02 15:33:50.995 [main] Register - Enter
+[TRACE] 2019-01-02 15:33:50.995 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:33:54.267 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:33:54.267 [main] ReadInput - Exit with(1234)
+[TRACE] 2019-01-02 15:33:54.267 [main] ReadInput - Exit with(1234)
+[TRACE] 2019-01-02 15:33:54.267 [main] Register - Exit with(1234)
+[TRACE] 2019-01-02 15:33:55.184 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 15:33:55.441 [main] Register - Enter
+[TRACE] 2019-01-02 15:33:55.712 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2fb0623e)
+[ERROR] 2019-01-02 15:33:55.820 [main] ChampionOracle - Catching
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (ROOT.SYS_C005321) violated
+ORA-06512: at "ROOT.REGISTERUSER", line 7
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.registerUser(UserOracle.java:110) [classes/:?]
+	at com.revature.services.UserService.registerUser(UserService.java:36) [classes/:?]
+	at com.revature.modules.Register.registerNewUser(Register.java:46) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:31) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:19) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:39) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-02 15:42:23.838 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:42:23.846 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:42:23.856 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:42:23.857 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:42:29.577 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:42:29.578 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:42:29.578 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:42:29.579 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:42:29.579 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:42:29.588 [main] Register - Enter
+[TRACE] 2019-01-02 15:42:29.588 [main] Register - Enter
+[TRACE] 2019-01-02 15:42:29.588 [main] Register - Enter
+[TRACE] 2019-01-02 15:42:29.589 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:42:42.252 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:42:42.252 [main] ReadInput - Exit with(fr13)
+[TRACE] 2019-01-02 15:42:42.253 [main] ReadInput - Exit with(fr13)
+[TRACE] 2019-01-02 15:42:42.253 [main] Register - Exit with(fr13)
+[TRACE] 2019-01-02 15:42:42.253 [main] Register - Enter
+[TRACE] 2019-01-02 15:42:42.253 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:42:45.442 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:42:45.442 [main] ReadInput - Exit with(fr123424)
+[TRACE] 2019-01-02 15:42:45.442 [main] ReadInput - Exit with(fr123424)
+[TRACE] 2019-01-02 15:42:45.442 [main] Register - Exit with(fr123424)
+[TRACE] 2019-01-02 15:42:45.442 [main] Register - Enter
+[TRACE] 2019-01-02 15:42:46.226 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 15:42:46.576 [main] Register - Exit
+[TRACE] 2019-01-02 15:42:46.576 [main] Register - Exit
+[TRACE] 2019-01-02 15:42:46.576 [main] Register - Exit
+[TRACE] 2019-01-02 15:42:46.576 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:42:46.576 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:42:46.576 [main] JDBCBank - Exit
+[TRACE] 2019-01-02 15:45:11.225 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:45:11.229 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:45:11.232 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:45:11.233 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:45:12.726 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:45:12.727 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:45:12.728 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:45:12.728 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:45:12.728 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:45:12.732 [main] Register - Enter
+[TRACE] 2019-01-02 15:45:12.732 [main] Register - Enter
+[TRACE] 2019-01-02 15:45:12.732 [main] Register - Enter
+[TRACE] 2019-01-02 15:45:12.732 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:45:15.102 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:45:15.102 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:45:15.102 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:45:15.102 [main] Register - Exit with(fr123)
+[TRACE] 2019-01-02 15:45:15.102 [main] Register - Enter
+[TRACE] 2019-01-02 15:45:15.102 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:45:17.135 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:45:17.135 [main] ReadInput - Exit with(f123)
+[TRACE] 2019-01-02 15:45:17.135 [main] ReadInput - Exit with(f123)
+[TRACE] 2019-01-02 15:45:17.135 [main] Register - Exit with(f123)
+[TRACE] 2019-01-02 15:45:17.135 [main] Register - Enter
+[TRACE] 2019-01-02 15:45:17.968 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 15:45:18.230 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:46:59.368 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:46:59.372 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:46:59.375 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:46:59.375 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:47:01.696 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:47:01.697 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:47:01.697 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:47:01.698 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:47:01.698 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:47:01.701 [main] Register - Enter
+[TRACE] 2019-01-02 15:47:01.701 [main] Register - Enter
+[TRACE] 2019-01-02 15:47:01.702 [main] Register - Enter
+[TRACE] 2019-01-02 15:47:01.702 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:47:03.995 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:47:03.995 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:47:03.995 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:47:03.995 [main] Register - Exit with(fr123)
+[TRACE] 2019-01-02 15:47:03.995 [main] Register - Enter
+[TRACE] 2019-01-02 15:47:03.995 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:47:06.107 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:47:06.107 [main] ReadInput - Exit with(falfkna)
+[TRACE] 2019-01-02 15:47:06.107 [main] ReadInput - Exit with(falfkna)
+[TRACE] 2019-01-02 15:47:06.107 [main] Register - Exit with(falfkna)
+[TRACE] 2019-01-02 15:47:06.107 [main] Register - Enter
+[TRACE] 2019-01-02 15:47:06.947 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:47:07.227 [main] Register - Catching
+com.revature.exceptions.UsernameAlreadyExists: That username is already in the database.
+	at com.revature.dao.UserOracle.registerUser(UserOracle.java:118) ~[classes/:?]
+	at com.revature.services.UserService.registerUser(UserService.java:37) ~[classes/:?]
+	at com.revature.modules.Register.registerNewUser(Register.java:42) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:31) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:21) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:39) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:25) [classes/:?]
+[TRACE] 2019-01-02 15:47:07.232 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:06.779 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:48:06.783 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:48:06.786 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:48:06.787 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:07.908 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:48:07.910 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:48:07.910 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:48:07.911 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-02 15:48:07.911 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:48:07.915 [main] Register - Enter
+[TRACE] 2019-01-02 15:48:07.915 [main] Register - Enter
+[TRACE] 2019-01-02 15:48:07.915 [main] Register - Enter
+[TRACE] 2019-01-02 15:48:07.915 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:09.481 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:09.481 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:48:09.481 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:48:09.482 [main] Register - Exit with(fr123)
+[TRACE] 2019-01-02 15:48:09.482 [main] Register - Enter
+[TRACE] 2019-01-02 15:48:09.482 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:11.730 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:11.731 [main] ReadInput - Exit with(sgkjaba)
+[TRACE] 2019-01-02 15:48:11.731 [main] ReadInput - Exit with(sgkjaba)
+[TRACE] 2019-01-02 15:48:11.731 [main] Register - Exit with(sgkjaba)
+[TRACE] 2019-01-02 15:48:11.731 [main] Register - Enter
+[TRACE] 2019-01-02 15:48:12.546 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-02 15:48:12.837 [main] Register - Catching
+com.revature.exceptions.UsernameAlreadyExists: That username is already in the database.
+	at com.revature.dao.UserOracle.registerUser(UserOracle.java:118) ~[classes/:?]
+	at com.revature.services.UserService.registerUser(UserService.java:37) ~[classes/:?]
+	at com.revature.modules.Register.registerNewUser(Register.java:42) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:31) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:21) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:39) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:27) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:25) [classes/:?]
+[TRACE] 2019-01-02 15:48:12.842 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:12.842 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:19.406 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-02 15:48:19.406 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:48:19.406 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:48:19.406 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-02 15:48:19.411 [main] Login - Enter
+[TRACE] 2019-01-02 15:48:19.411 [main] Login - Enter
+[TRACE] 2019-01-02 15:48:19.411 [main] Login - Enter
+[TRACE] 2019-01-02 15:48:19.411 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:23.072 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:23.072 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:48:23.073 [main] ReadInput - Exit with(fr123)
+[TRACE] 2019-01-02 15:48:23.073 [main] Login - Exit with(fr123)
+[TRACE] 2019-01-02 15:48:23.073 [main] Login - Enter
+[TRACE] 2019-01-02 15:48:23.073 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:36.320 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:48:36.320 [main] ReadInput - Exit with(f123)
+[TRACE] 2019-01-02 15:48:36.320 [main] ReadInput - Exit with(f123)
+[TRACE] 2019-01-02 15:48:36.320 [main] Login - Exit with(f123)
+[TRACE] 2019-01-02 15:48:36.320 [main] Login - Enter
+[TRACE] 2019-01-02 15:48:36.527 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@17503f6b)
+[TRACE] 2019-01-02 15:48:36.549 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:48:36.549 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] Login - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] Login - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] Login - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] Register - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] Register - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] Register - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:48:36.549 [main] JDBCBank - Exit
+[TRACE] 2019-01-02 15:51:58.060 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:51:58.063 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:51:58.066 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:51:58.067 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:51:59.892 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:51:59.894 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:51:59.894 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:52:18.693 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:52:18.697 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:52:18.699 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:52:18.700 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:52:23.538 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:52:23.539 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:52:23.540 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:52:23.540 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:52:23.540 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:52:23.544 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:23.544 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:23.544 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:23.544 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:52:43.675 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:52:43.678 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:52:43.684 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:52:43.685 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:52:46.018 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:52:46.019 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:52:46.020 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:52:46.020 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:52:46.020 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:52:46.023 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:46.024 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:46.024 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:46.024 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:52:55.281 [main] JDBCBank - Enter
+[TRACE] 2019-01-02 15:52:55.285 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:52:55.292 [main] Welcome - Enter Params []
+[TRACE] 2019-01-02 15:52:55.292 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:52:56.624 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-02 15:52:56.625 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:52:56.625 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-02 15:52:56.626 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-02 15:52:56.626 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:52:56.629 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:56.629 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:56.630 [main] Login - Enter
+[TRACE] 2019-01-02 15:52:56.630 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:53:05.765 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:53:05.766 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:53:05.766 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-02 15:53:05.766 [main] Login - Exit with(root)
+[TRACE] 2019-01-02 15:53:05.766 [main] Login - Enter
+[TRACE] 2019-01-02 15:53:05.766 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:53:09.574 [main] ReadInput - Enter
+[TRACE] 2019-01-02 15:53:09.575 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 15:53:09.575 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 15:53:09.575 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-02 15:53:09.575 [main] Login - Enter
+[TRACE] 2019-01-02 15:53:10.379 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-02 15:53:10.636 [main] SessionManager - Enter
+[TRACE] 2019-01-02 15:53:10.636 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:53:10.636 [main] Login - Exit
+[TRACE] 2019-01-02 15:53:10.636 [main] Login - Exit
+[TRACE] 2019-01-02 15:53:10.636 [main] Login - Exit
+[TRACE] 2019-01-02 15:53:10.636 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:53:10.637 [main] SessionManager - Exit
+[TRACE] 2019-01-02 15:53:10.637 [main] JDBCBank - Exit
+[TRACE] 2019-01-03 08:28:41.212 [main] JDBCBank - Enter
+[TRACE] 2019-01-03 08:28:41.218 [main] SessionManager - Enter
+[TRACE] 2019-01-03 08:28:41.221 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 08:28:41.221 [main] ReadInput - Enter
+[TRACE] 2019-01-03 08:28:43.174 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-03 08:28:43.175 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 08:28:43.176 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 08:28:43.176 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-03 08:28:43.176 [main] SessionManager - Enter
+[TRACE] 2019-01-03 08:28:43.181 [main] SessionManager - Exit with(Making Register Request.)
+[TRACE] 2019-01-03 08:28:43.182 [main] Register - Enter
+[TRACE] 2019-01-03 08:28:43.182 [main] Register - Enter
+[TRACE] 2019-01-03 08:28:43.182 [main] Register - Enter
+[TRACE] 2019-01-03 08:28:43.183 [main] ReadInput - Enter
+[TRACE] 2019-01-03 08:28:44.808 [main] ReadInput - Enter
+[TRACE] 2019-01-03 08:28:44.808 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 08:28:44.808 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 08:28:44.809 [main] Register - Exit with(root)
+[TRACE] 2019-01-03 08:28:44.809 [main] Register - Enter
+[TRACE] 2019-01-03 08:28:44.809 [main] ReadInput - Enter
+[TRACE] 2019-01-03 08:28:47.107 [main] ReadInput - Enter
+[TRACE] 2019-01-03 08:28:47.108 [main] ReadInput - Exit with(123222)
+[TRACE] 2019-01-03 08:28:47.108 [main] ReadInput - Exit with(123222)
+[TRACE] 2019-01-03 08:28:47.108 [main] Register - Exit with(123222)
+[TRACE] 2019-01-03 08:28:47.108 [main] Register - Enter
+[TRACE] 2019-01-03 08:28:48.068 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-03 08:28:48.539 [main] Register - Catching
+com.revature.exceptions.UsernameAlreadyExists: That username is already in the database.
+	at com.revature.dao.UserOracle.registerUser(UserOracle.java:118) ~[classes/:?]
+	at com.revature.services.UserService.registerUser(UserService.java:37) ~[classes/:?]
+	at com.revature.modules.Register.registerNewUser(Register.java:42) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:31) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:21) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:42) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:28) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:25) [classes/:?]
+[TRACE] 2019-01-03 08:28:48.545 [main] ReadInput - Enter
+[TRACE] 2019-01-03 08:28:48.546 [main] ReadInput - Enter
+[TRACE] 2019-01-03 12:56:22.561 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 12:56:23.340 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[ERROR] 2019-01-03 12:56:23.576 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OracleCallableStatement.getObject(OracleCallableStatement.java:2415) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatementWrapper.getObject(OracleCallableStatementWrapper.java:812) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.getAllUsers(UserOracle.java:50) [classes/:?]
+	at com.revature.services.UserService.getAllUsers(UserService.java:29) [classes/:?]
+	at com.revature.utils.JDBCBank.testGetAllUsers(JDBCBank.java:33) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-03 12:56:46.563 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 12:57:09.765 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5d5f10b2)
+[TRACE] 2019-01-03 13:00:48.969 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 13:01:12.239 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 13:01:37.069 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@1bdaa23d)
+[ERROR] 2019-01-03 13:01:58.636 [main] ChampionOracle - Catching
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OracleCallableStatement.getObject(OracleCallableStatement.java:2415) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatementWrapper.getObject(OracleCallableStatementWrapper.java:812) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.getAllUsers(UserOracle.java:51) [classes/:?]
+	at com.revature.services.UserService.getAllUsers(UserService.java:29) [classes/:?]
+	at com.revature.utils.JDBCBank.testGetAllUsers(JDBCBank.java:33) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:26) [classes/:?]
+[TRACE] 2019-01-03 13:03:37.208 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 13:03:38.077 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 13:03:38.423 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 13:31:54.652 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 13:31:55.698 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 13:31:56.045 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 13:36:47.257 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 13:36:48.152 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 13:36:48.505 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 13:37:13.946 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 13:37:14.874 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 13:37:15.144 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 13:52:55.289 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 13:52:59.075 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 13:52:59.341 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 14:16:33.204 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 14:16:34.025 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[ERROR] 2019-01-03 14:16:34.328 [main] ChampionOracle - Catching
+java.sql.SQLException: ORA-06576: not a valid function or procedure name
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.updateUser(UserOracle.java:180) [classes/:?]
+	at com.revature.services.UserService.updateUser(UserService.java:46) [classes/:?]
+	at com.revature.utils.JDBCBank.testUserService(JDBCBank.java:37) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:29) [classes/:?]
+[TRACE] 2019-01-03 14:16:34.333 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 14:29:11.868 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 14:29:12.648 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[ERROR] 2019-01-03 14:29:12.963 [main] ChampionOracle - Catching
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (ROOT.SYS_C005321) violated
+ORA-06512: at "ROOT.UPDATEUSER", line 8
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.updateUser(UserOracle.java:180) [classes/:?]
+	at com.revature.services.UserService.updateUser(UserService.java:46) [classes/:?]
+	at com.revature.utils.JDBCBank.testUserService(JDBCBank.java:37) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:29) [classes/:?]
+[TRACE] 2019-01-03 14:29:12.968 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 14:29:30.206 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 14:29:30.978 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 14:29:31.257 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 14:51:42.282 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 14:51:43.169 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 14:51:43.463 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 14:52:10.997 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 14:52:11.832 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-03 14:52:12.105 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-03 16:08:11.428 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:08:11.434 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:08:11.440 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:08:11.442 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:08:11.442 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:08:13.997 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:08:13.998 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:08:13.998 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:08:13.998 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:08:13.999 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:08:14.007 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:08:14.007 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:08:14.007 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:08:14.007 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:08:14.008 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:08:14.008 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:08:14.008 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:08:19.386 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:08:19.386 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:08:19.386 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:08:19.386 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:08:19.386 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:08:19.386 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:08:19.387 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:08:23.333 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:08:23.333 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:08:23.333 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:08:23.333 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:08:23.333 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:08:23.333 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:08:24.174 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[ERROR] 2019-01-03 16:08:24.466 [main] ChampionOracle - Catching
+java.sql.SQLException: ORA-06576: not a valid function or procedure name
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) [classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:34) [classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:43) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:33) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:21) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:37) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:29) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:32) [classes/:?]
+[TRACE] 2019-01-03 16:09:12.010 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:09:12.018 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:09:12.022 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:09:12.026 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:09:12.027 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:13.678 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:09:13.679 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:09:13.679 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:09:13.679 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:09:13.679 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:09:13.697 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:09:13.697 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:09:13.697 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:09:13.697 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:09:13.697 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:09:13.697 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:09:13.697 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:15.072 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:15.072 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:09:15.073 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:09:15.073 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:09:15.073 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:09:15.073 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:09:15.073 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:18.169 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:18.169 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:09:18.169 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:09:18.170 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:09:18.170 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:09:23.240 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:09:33.802 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13f95696)
+[ERROR] 2019-01-03 16:09:35.697 [main] ChampionOracle - Catching
+java.sql.SQLException: ORA-06576: not a valid function or procedure name
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.dao.UserOracle.loginUser(UserOracle.java:80) [classes/:?]
+	at com.revature.services.UserService.loginUser(UserService.java:34) [classes/:?]
+	at com.revature.modules.Login.authenticateUser(Login.java:43) [classes/:?]
+	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:33) [classes/:?]
+	at com.revature.modules.Login.handleLoginRequest(Login.java:21) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:37) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:29) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:32) [classes/:?]
+[TRACE] 2019-01-03 16:09:55.067 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:09:55.073 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:09:55.077 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:09:55.080 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:09:55.080 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:57.449 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:09:57.449 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:09:57.449 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:09:57.449 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:09:57.449 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:09:57.468 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:09:57.468 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:09:57.468 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:09:57.468 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:09:57.468 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:09:57.468 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:09:57.468 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:58.805 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:09:58.806 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:09:58.806 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:09:58.806 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:09:58.806 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:09:58.806 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:09:58.806 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:10:02.701 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:10:02.702 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:10:02.702 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:10:02.702 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:10:02.702 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:10:08.975 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:10:30.540 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@7d64e326)
+[TRACE] 2019-01-03 16:12:01.189 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:12:01.199 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:12:01.201 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:12:01.204 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:12:01.205 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:12:03.025 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:12:03.025 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:12:03.026 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:12:03.026 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:12:03.027 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:12:03.048 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:12:03.048 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:12:03.048 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:12:03.049 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:12:03.049 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:12:03.049 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:12:03.049 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:12:04.287 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:12:04.288 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:12:04.288 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:12:04.288 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:12:04.288 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:12:04.288 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:12:04.288 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:12:07.952 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:12:07.953 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:12:07.953 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:12:07.953 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:12:07.953 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:12:11.321 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:12:21.173 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@68be8808)
+[TRACE] 2019-01-03 16:12:27.328 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-03 16:12:48.439 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-03 16:12:48.524 [main] SessionManager - Exit with(exit processLoginRegister, calling mySuperUser.initiateSuperUserSession())
+[TRACE] 2019-01-03 16:12:48.527 [main] Welcome - Enter entry handleSuperUserSessionHandler
+[TRACE] 2019-01-03 16:12:48.529 [main] Welcome - Exit with(exit handleSuperUserSessionHandler, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:12:48.531 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:12:48.534 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:12:48.536 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:06.649 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:14:06.653 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:14:06.655 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:14:06.659 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:14:06.659 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:07.928 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:14:07.929 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:14:07.929 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:14:07.929 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:14:07.929 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:14:07.933 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:14:07.933 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:14:07.934 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:14:07.934 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:14:07.934 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:14:07.934 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:14:07.934 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:09.293 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:09.294 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:14:09.294 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:14:09.294 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:14:09.294 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:14:09.294 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:14:09.294 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:13.546 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:13.547 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:14:13.547 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:14:13.547 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:14:13.547 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:14:13.547 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:14:14.304 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-03 16:14:14.595 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-03 16:14:14.595 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-03 16:14:14.597 [main] SessionManager - Exit with(exit processLoginRegister, calling mySuperUser.initiateSuperUserSession())
+[TRACE] 2019-01-03 16:14:14.597 [main] Welcome - Enter entry handleSuperUserSessionHandler
+[TRACE] 2019-01-03 16:14:14.597 [main] Welcome - Exit with(exit handleSuperUserSessionHandler, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:14:14.597 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:14:14.597 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:14:14.597 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:14.597 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:25.902 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:14:25.902 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:14:25.902 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:14:25.903 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:14:25.903 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:14:25.903 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:14:25.905 [main] Welcome - Choice 1
+[INFO ] 2019-01-03 16:14:25.905 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:14:25.905 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:14:26.249 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@15d49048)
+[TRACE] 2019-01-03 16:14:26.309 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:14:26.310 [main] Welcome - Enter entry viewAllUsers
+[TRACE] 2019-01-03 16:14:26.310 [main] Welcome - Exit with(exit viewAllUsers, call promptSuperUserChoice again)
+[TRACE] 2019-01-03 16:14:26.311 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:14:26.311 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:14:26.311 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:14:26.311 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:30.779 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:16:30.783 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:16:30.785 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:16:30.788 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:16:30.788 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:39.307 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:16:39.310 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:16:39.312 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:16:39.314 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:16:39.315 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:40.802 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:16:40.803 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:16:40.803 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:16:40.803 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:16:40.804 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:16:40.807 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:16:40.807 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:16:40.808 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:16:40.808 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:16:40.808 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:16:40.808 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:16:40.808 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:44.275 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:44.276 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:16:44.276 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:16:44.276 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:16:44.276 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:16:44.276 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:16:44.277 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:49.186 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:49.186 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:16:49.186 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:16:49.186 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:16:49.186 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:16:49.186 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:16:49.968 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-03 16:16:50.231 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-03 16:16:50.231 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-03 16:16:50.232 [main] SessionManager - Exit with(exit processLoginRegister, calling mySuperUser.initiateSuperUserSession())
+[TRACE] 2019-01-03 16:16:50.232 [main] Welcome - Enter entry handleSuperUserSessionHandler
+[TRACE] 2019-01-03 16:16:50.232 [main] Welcome - Exit with(exit handleSuperUserSessionHandler, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:16:50.232 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:16:50.232 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:16:50.233 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:50.233 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:51.830 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:16:51.830 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:16:51.830 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:16:51.830 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:16:51.831 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:16:51.831 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:16:51.832 [main] Welcome - Choice 1
+[INFO ] 2019-01-03 16:16:51.832 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:16:51.832 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:16:52.090 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@15d49048)
+[TRACE] 2019-01-03 16:16:52.137 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:16:52.138 [main] Welcome - Enter entry viewAllUsers
+[TRACE] 2019-01-03 16:16:52.139 [main] Welcome - Exit with(exit viewAllUsers, call promptSuperUserChoice again)
+[TRACE] 2019-01-03 16:16:52.139 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:16:52.139 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:16:52.139 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:16:52.139 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:26.196 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-03 16:17:26.196 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 16:17:26.197 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 16:17:26.197 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 16:17:26.197 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:17:26.197 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:17:26.197 [main] Welcome - Choice 2
+[INFO ] 2019-01-03 16:17:26.197 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:17:26.197 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:17:26.572 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@17503f6b)
+[TRACE] 2019-01-03 16:17:26.618 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:17:26.618 [main] Welcome - Enter entry registerNewUser
+[INFO ] 2019-01-03 16:17:26.618 [main] Welcome - calling ReadInput.readUsernameOrPassword
+[TRACE] 2019-01-03 16:17:26.618 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:32.737 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:32.738 [main] ReadInput - Exit with(test123test123)
+[TRACE] 2019-01-03 16:17:32.738 [main] ReadInput - Exit with(test123test123)
+[INFO ] 2019-01-03 16:17:32.738 [main] Welcome - calling ReadInput.readUsernameOrPassword
+[TRACE] 2019-01-03 16:17:32.743 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:41.760 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:41.761 [main] ReadInput - Exit with(I hear you loud and clear)
+[TRACE] 2019-01-03 16:17:41.761 [main] ReadInput - Exit with(I hear you loud and clear)
+[INFO ] 2019-01-03 16:17:41.761 [main] Welcome - Calling userService.registerUser with given username/password combination
+[TRACE] 2019-01-03 16:17:42.034 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3bcd05cb)
+[INFO ] 2019-01-03 16:17:42.092 [main] Welcome - Server responded with the new user. User successfully added to database. Adding new user to local array of users for future local viewing.
+[TRACE] 2019-01-03 16:17:42.092 [main] Welcome - Exit with(exit registerNewUser, call promptSuperUserChoice again)
+[TRACE] 2019-01-03 16:17:42.092 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:17:42.093 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:17:42.093 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:42.093 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:51.884 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:17:51.884 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:17:51.885 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:17:51.885 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:17:51.885 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:17:51.885 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:17:51.885 [main] Welcome - Choice 1
+[INFO ] 2019-01-03 16:17:51.885 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:17:51.885 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:17:52.165 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3b6d844d)
+[TRACE] 2019-01-03 16:17:52.225 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:17:52.225 [main] Welcome - Enter entry viewAllUsers
+[TRACE] 2019-01-03 16:17:52.227 [main] Welcome - Exit with(exit viewAllUsers, call promptSuperUserChoice again)
+[TRACE] 2019-01-03 16:17:52.227 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:17:52.227 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:17:52.227 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:17:52.227 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:18:23.826 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-03 16:18:23.827 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:18:23.827 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:18:23.827 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:18:23.827 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:18:23.827 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:18:23.827 [main] Welcome - Choice 3
+[INFO ] 2019-01-03 16:18:23.827 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:18:23.827 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:18:24.124 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@36804139)
+[TRACE] 2019-01-03 16:18:24.162 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:18:24.162 [main] Welcome - Enter entry updateExistingUserPrompt
+[TRACE] 2019-01-03 16:18:24.162 [main] Welcome - Enter entry getUserIDPrompt
+[INFO ] 2019-01-03 16:18:24.163 [main] Welcome - calling local ReadInput class method promptThenReadOptions
+[TRACE] 2019-01-03 16:18:24.163 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:18:24.163 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:18:30.409 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:18:30.409 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:18:30.409 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:18:30.409 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:18:30.409 [main] Welcome - Exit with(exit getUserIDPrompt)
+[INFO ] 2019-01-03 16:18:30.409 [main] Welcome - calling local ReadInput.readOptions
+[TRACE] 2019-01-03 16:18:30.410 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:45.384 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:20:45.388 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:20:45.390 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:20:45.393 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:20:45.393 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:47.659 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:20:47.660 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:20:47.660 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:20:47.660 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:20:47.660 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:20:47.664 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:20:47.664 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:20:47.664 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:20:47.664 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:20:47.664 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:20:47.665 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:20:47.665 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:49.091 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:49.091 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:20:49.092 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:20:49.092 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:20:49.092 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:20:49.092 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:20:49.092 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:54.504 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:54.504 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:20:54.505 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:20:54.505 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:20:54.505 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:20:54.505 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:20:55.338 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-03 16:20:55.616 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-03 16:20:55.616 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-03 16:20:55.617 [main] SessionManager - Exit with(exit processLoginRegister, calling mySuperUser.initiateSuperUserSession())
+[TRACE] 2019-01-03 16:20:55.617 [main] Welcome - Enter entry handleSuperUserSessionHandler
+[TRACE] 2019-01-03 16:20:55.618 [main] Welcome - Exit with(exit handleSuperUserSessionHandler, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:20:55.618 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:20:55.618 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:20:55.618 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:55.618 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:57.549 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-03 16:20:57.549 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:20:57.549 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:20:57.550 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:20:57.550 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:20:57.550 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:20:57.551 [main] Welcome - Choice 3
+[INFO ] 2019-01-03 16:20:57.551 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:20:57.551 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:20:57.863 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@15d49048)
+[TRACE] 2019-01-03 16:20:57.922 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:20:57.923 [main] Welcome - Enter entry updateExistingUserPrompt
+[TRACE] 2019-01-03 16:20:57.923 [main] Welcome - Enter entry getUserIDPrompt
+[INFO ] 2019-01-03 16:20:57.923 [main] Welcome - calling local ReadInput class method promptThenReadOptions
+[TRACE] 2019-01-03 16:20:57.923 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:20:57.923 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:21:07.452 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:21:07.453 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:21:07.453 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:21:07.453 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:21:07.453 [main] Welcome - Exit with(exit getUserIDPrompt)
+[INFO ] 2019-01-03 16:21:07.453 [main] Welcome - calling local ReadInput.readOptions
+[TRACE] 2019-01-03 16:21:07.454 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:21:07.454 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:21:19.985 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:21:19.985 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:21:19.986 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:21:19.986 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:21:19.986 [main] Welcome - Exit with(exit updateExistingUserPrompt, calling handleUpdateUserRequest)
+[TRACE] 2019-01-03 16:21:19.986 [main] Welcome - Enter entry handleUpdateUserRequest
+[INFO ] 2019-01-03 16:21:19.986 [main] Welcome - reading new username
+[TRACE] 2019-01-03 16:21:19.986 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:25.798 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:22:25.802 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:22:25.804 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:22:25.806 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:22:25.806 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:27.320 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:22:27.320 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:27.320 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:27.321 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:22:27.321 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:22:27.325 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:22:27.325 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:22:27.325 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:22:27.325 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:22:27.326 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:22:27.326 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:22:27.326 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:28.707 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:28.708 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:22:28.708 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:22:28.708 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:22:28.708 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:22:28.708 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:22:28.709 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:33.357 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:33.358 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:22:33.358 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:22:33.358 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:22:33.358 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:22:33.358 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:22:34.197 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-03 16:22:34.475 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-03 16:22:34.475 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-03 16:22:34.476 [main] SessionManager - Exit with(exit processLoginRegister, calling mySuperUser.initiateSuperUserSession())
+[TRACE] 2019-01-03 16:22:34.476 [main] Welcome - Enter entry handleSuperUserSessionHandler
+[TRACE] 2019-01-03 16:22:34.477 [main] Welcome - Exit with(exit handleSuperUserSessionHandler, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:22:34.477 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:22:34.477 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:22:34.477 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:34.477 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:36.235 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-03 16:22:36.235 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:22:36.235 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:22:36.235 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:22:36.236 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:22:36.236 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:22:36.237 [main] Welcome - Choice 3
+[INFO ] 2019-01-03 16:22:36.237 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:22:36.237 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:22:36.499 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@15d49048)
+[TRACE] 2019-01-03 16:22:36.546 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:22:36.547 [main] Welcome - Enter entry updateExistingUserPrompt
+[TRACE] 2019-01-03 16:22:36.547 [main] Welcome - Enter entry getUserIDPrompt
+[INFO ] 2019-01-03 16:22:36.547 [main] Welcome - calling local ReadInput class method promptThenReadOptions
+[TRACE] 2019-01-03 16:22:36.547 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:36.547 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:38.384 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:22:38.384 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:38.384 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:38.384 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:38.384 [main] Welcome - Exit with(exit getUserIDPrompt)
+[INFO ] 2019-01-03 16:22:38.385 [main] Welcome - calling local ReadInput.readOptions
+[TRACE] 2019-01-03 16:22:38.385 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:38.385 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:40.752 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:22:40.753 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:40.753 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:40.753 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:40.753 [main] Welcome - Exit with(exit updateExistingUserPrompt, calling handleUpdateUserRequest)
+[TRACE] 2019-01-03 16:22:40.753 [main] Welcome - Enter entry handleUpdateUserRequest
+[INFO ] 2019-01-03 16:22:40.753 [main] Welcome - reading new username
+[TRACE] 2019-01-03 16:22:40.754 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:47.251 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:47.251 [main] ReadInput - Exit with(timplaw)
+[TRACE] 2019-01-03 16:22:47.252 [main] ReadInput - Exit with(timplaw)
+[TRACE] 2019-01-03 16:22:47.622 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@17503f6b)
+[TRACE] 2019-01-03 16:22:47.654 [main] Welcome - Exit with(exit handleUpdateUserRequest, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:22:47.659 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:22:47.659 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:22:47.659 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:47.660 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:50.336 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:22:50.336 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:50.336 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:50.336 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:50.336 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:22:50.336 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:22:50.337 [main] Welcome - Choice 1
+[INFO ] 2019-01-03 16:22:50.337 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:22:50.337 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:22:50.582 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3bcd05cb)
+[TRACE] 2019-01-03 16:22:50.619 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:22:50.619 [main] Welcome - Enter entry viewAllUsers
+[TRACE] 2019-01-03 16:22:50.620 [main] Welcome - Exit with(exit viewAllUsers, call promptSuperUserChoice again)
+[TRACE] 2019-01-03 16:22:50.621 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:22:50.621 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:22:50.621 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:50.621 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:57.642 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-03 16:22:57.642 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:22:57.642 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:22:57.642 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-03 16:22:57.643 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:22:57.643 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:22:57.643 [main] Welcome - Choice 3
+[INFO ] 2019-01-03 16:22:57.643 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:22:57.643 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:22:57.872 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3b6d844d)
+[TRACE] 2019-01-03 16:22:57.944 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:22:57.944 [main] Welcome - Enter entry updateExistingUserPrompt
+[TRACE] 2019-01-03 16:22:57.944 [main] Welcome - Enter entry getUserIDPrompt
+[INFO ] 2019-01-03 16:22:57.944 [main] Welcome - calling local ReadInput class method promptThenReadOptions
+[TRACE] 2019-01-03 16:22:57.944 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:57.945 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:59.851 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:22:59.851 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:59.852 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:59.852 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:22:59.852 [main] Welcome - Exit with(exit getUserIDPrompt)
+[INFO ] 2019-01-03 16:22:59.852 [main] Welcome - calling local ReadInput.readOptions
+[TRACE] 2019-01-03 16:22:59.852 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:22:59.852 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:01.568 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-03 16:23:01.569 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 16:23:01.569 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 16:23:01.569 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-03 16:23:01.569 [main] Welcome - Exit with(exit updateExistingUserPrompt, calling handleUpdateUserRequest)
+[TRACE] 2019-01-03 16:23:01.569 [main] Welcome - Enter entry handleUpdateUserRequest
+[INFO ] 2019-01-03 16:23:01.570 [main] Welcome - reading new password
+[TRACE] 2019-01-03 16:23:01.570 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:09.788 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:09.788 [main] ReadInput - Exit with(hiQuinn)
+[TRACE] 2019-01-03 16:23:09.788 [main] ReadInput - Exit with(hiQuinn)
+[TRACE] 2019-01-03 16:23:10.089 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@36804139)
+[TRACE] 2019-01-03 16:23:10.108 [main] Welcome - Exit with(exit handleUpdateUserRequest, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:23:10.108 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:23:10.108 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:23:10.109 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:10.109 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:13.452 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:23:13.452 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:13.452 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:13.452 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:13.453 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:23:13.453 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:23:13.453 [main] Welcome - Choice 1
+[INFO ] 2019-01-03 16:23:13.453 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:23:13.453 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:23:13.691 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@20bd8be5)
+[TRACE] 2019-01-03 16:23:13.738 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:23:13.738 [main] Welcome - Enter entry viewAllUsers
+[TRACE] 2019-01-03 16:23:13.740 [main] Welcome - Exit with(exit viewAllUsers, call promptSuperUserChoice again)
+[TRACE] 2019-01-03 16:23:13.740 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:23:13.740 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:23:13.740 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:13.740 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:34.432 [main] ReadInput - Enter Scanner input: 4
+[TRACE] 2019-01-03 16:23:34.432 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-03 16:23:34.432 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-03 16:23:34.432 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-03 16:23:34.433 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:23:34.433 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:23:34.433 [main] Welcome - Choice 4
+[INFO ] 2019-01-03 16:23:34.433 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:23:34.433 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:23:34.687 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@730d2164)
+[TRACE] 2019-01-03 16:23:34.727 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:23:34.728 [main] Welcome - Enter entry deleteExistingUserPrompt
+[TRACE] 2019-01-03 16:23:34.728 [main] Welcome - Enter entry getUserIDPrompt
+[INFO ] 2019-01-03 16:23:34.728 [main] Welcome - calling local ReadInput class method promptThenReadOptions
+[TRACE] 2019-01-03 16:23:34.728 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:34.728 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:40.813 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:23:40.813 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:40.814 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:40.814 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:40.814 [main] Welcome - Exit with(exit getUserIDPrompt)
+[TRACE] 2019-01-03 16:23:40.814 [main] Welcome - Exit with(exit deleteExistingUserPrompt, calling handleDeleteUserRequest)
+[TRACE] 2019-01-03 16:23:40.814 [main] Welcome - Enter entry handleDeleteUserRequest
+[TRACE] 2019-01-03 16:23:41.087 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@24959ca4)
+[TRACE] 2019-01-03 16:23:41.140 [main] Welcome - Exit with(exit handleDeleteUserRequest, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:23:41.140 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:23:41.140 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:23:41.141 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:41.141 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:49.123 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:23:49.123 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:49.123 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:49.123 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:23:49.123 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:23:49.124 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:23:49.124 [main] Welcome - Choice 1
+[INFO ] 2019-01-03 16:23:49.124 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:23:49.124 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:23:49.471 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@10289886)
+[TRACE] 2019-01-03 16:23:49.521 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:23:49.521 [main] Welcome - Enter entry viewAllUsers
+[TRACE] 2019-01-03 16:23:49.522 [main] Welcome - Exit with(exit viewAllUsers, call promptSuperUserChoice again)
+[TRACE] 2019-01-03 16:23:49.523 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:23:49.523 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:23:49.523 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:23:49.523 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:23.491 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-03 16:26:23.496 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:26:23.498 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:26:23.501 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:26:23.501 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:24.746 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-03 16:26:24.747 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:26:24.747 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-03 16:26:24.747 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-03 16:26:24.747 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-03 16:26:24.751 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-03 16:26:24.751 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-03 16:26:24.751 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-03 16:26:24.751 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-03 16:26:24.752 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:26:24.752 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:26:24.752 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:26.622 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:26.622 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:26:26.623 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-03 16:26:26.623 [main] Login - Exit with(root)
+[INFO ] 2019-01-03 16:26:26.623 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-03 16:26:26.623 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-03 16:26:26.623 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:29.895 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:29.895 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:26:29.895 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:26:29.895 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-03 16:26:29.896 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-03 16:26:29.896 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-03 16:26:30.829 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-03 16:26:31.085 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-03 16:26:31.085 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-03 16:26:31.086 [main] SessionManager - Exit with(exit processLoginRegister, calling mySuperUser.initiateSuperUserSession())
+[TRACE] 2019-01-03 16:26:31.086 [main] Welcome - Enter entry handleSuperUserSessionHandler
+[TRACE] 2019-01-03 16:26:31.087 [main] Welcome - Exit with(exit handleSuperUserSessionHandler, calling promptSuperUserChoice)
+[TRACE] 2019-01-03 16:26:31.087 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-03 16:26:31.087 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-03 16:26:31.087 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:31.087 [main] ReadInput - Enter
+[TRACE] 2019-01-03 16:26:32.507 [main] ReadInput - Enter Scanner input: 5
+[TRACE] 2019-01-03 16:26:32.507 [main] ReadInput - Exit with(5)
+[TRACE] 2019-01-03 16:26:32.507 [main] ReadInput - Exit with(5)
+[TRACE] 2019-01-03 16:26:32.507 [main] ReadInput - Exit with(5)
+[TRACE] 2019-01-03 16:26:32.508 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-03 16:26:32.508 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-03 16:26:32.509 [main] Welcome - Choice 5
+[INFO ] 2019-01-03 16:26:32.509 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-03 16:26:32.509 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-03 16:26:32.757 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@15d49048)
+[TRACE] 2019-01-03 16:26:32.818 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-03 16:26:32.818 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-03 16:26:32.819 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-03 16:26:32.819 [main] Welcome - Enter Params []
+[TRACE] 2019-01-03 16:26:32.819 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:10.319 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-04 09:09:10.322 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-04 09:09:10.324 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-04 09:09:10.326 [main] Welcome - Enter Params []
+[TRACE] 2019-01-04 09:09:10.327 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:12.362 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-04 09:09:12.362 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-04 09:09:12.362 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-04 09:09:12.363 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-04 09:09:12.363 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-04 09:09:12.384 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-04 09:09:12.384 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-04 09:09:12.384 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-04 09:09:12.384 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-04 09:09:12.385 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-04 09:09:12.385 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-04 09:09:12.385 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:14.084 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:14.084 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-04 09:09:14.085 [main] ReadInput - Exit with(root)
+[TRACE] 2019-01-04 09:09:14.085 [main] Login - Exit with(root)
+[INFO ] 2019-01-04 09:09:14.085 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-04 09:09:14.085 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-04 09:09:14.085 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:18.518 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:18.518 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-04 09:09:18.518 [main] ReadInput - Exit with(1mmut4bl3)
+[TRACE] 2019-01-04 09:09:18.518 [main] Login - Exit with(1mmut4bl3)
+[TRACE] 2019-01-04 09:09:18.518 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-04 09:09:18.519 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-04 09:09:19.740 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-04 09:09:20.052 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-04 09:09:20.052 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-04 09:09:20.053 [main] SessionManager - Exit with(exit processLoginRegister, calling mySuperUser.initiateSuperUserSession())
+[TRACE] 2019-01-04 09:09:20.054 [main] Welcome - Enter entry handleSuperUserSessionHandler
+[TRACE] 2019-01-04 09:09:20.054 [main] Welcome - Exit with(exit handleSuperUserSessionHandler, calling promptSuperUserChoice)
+[TRACE] 2019-01-04 09:09:20.054 [main] Welcome - Enter entry promptSuperUserChoice
+[INFO ] 2019-01-04 09:09:20.054 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-04 09:09:20.054 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:20.055 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:22.660 [main] ReadInput - Enter Scanner input: 4
+[TRACE] 2019-01-04 09:09:22.660 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-04 09:09:22.661 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-04 09:09:22.661 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-04 09:09:22.661 [main] Welcome - Exit with(exit promptSuperUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-04 09:09:22.661 [main] Welcome - Enter entry handleSuperUserRequest
+[INFO ] 2019-01-04 09:09:22.663 [main] Welcome - Choice 4
+[INFO ] 2019-01-04 09:09:22.664 [main] Welcome - calling loadAllUsers
+[TRACE] 2019-01-04 09:09:22.664 [main] Welcome - Enter entry loadAllUsers
+[TRACE] 2019-01-04 09:09:23.250 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@15d49048)
+[TRACE] 2019-01-04 09:09:23.346 [main] Welcome - Exit with(exit loadAllUsers)
+[TRACE] 2019-01-04 09:09:23.346 [main] Welcome - Enter entry deleteExistingUserPrompt
+[TRACE] 2019-01-04 09:09:23.346 [main] Welcome - Enter entry getUserIDPrompt
+[INFO ] 2019-01-04 09:09:23.346 [main] Welcome - calling local ReadInput class method promptThenReadOptions
+[TRACE] 2019-01-04 09:09:23.346 [main] ReadInput - Enter
+[TRACE] 2019-01-04 09:09:23.346 [main] ReadInput - Enter
+[TRACE] 2019-01-04 11:29:35.097 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-04 11:29:36.381 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-04 11:29:36.871 [main] JDBCBank - Exit with(exit main)
