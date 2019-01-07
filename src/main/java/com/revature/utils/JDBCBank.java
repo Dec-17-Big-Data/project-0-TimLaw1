@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
@@ -13,10 +14,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.revature.exceptions.UserIDDoesNotExistException;
-import com.revature.exceptions.UsernameAlreadyExists;
 import com.revature.models.Account;
 import com.revature.models.Champion;
 import com.revature.models.User;
+import com.revature.modules.RegularUser;
 import com.revature.modules.SuperUser;
 import com.revature.services.AccountService;
 import com.revature.services.ChampionService;
@@ -28,11 +29,29 @@ public class JDBCBank {
 	public static final Scanner inStream = new Scanner(System.in);
 	public static void main(String[] args) {
 		logger.traceEntry("entry main");
-		testUserService();
+//		testUserService();
 //		testSuperUserView();
-//		SessionManager sm = SessionManager.getSessionManager();
-//		sm.start();
+//		testRegularUserView();
+//		testGetAllAccounts();
+		SessionManager sm = SessionManager.getSessionManager();
+		sm.start();
 		logger.traceExit("exit main");
+	}
+	public static void testGetAllAccounts () {
+		List<Account> myAccounts = new ArrayList<>();
+		AccountService accountService = AccountService.getService();
+		Optional<List<Account>> optionalAccounts = accountService.getAllAccounts(61);
+		if (optionalAccounts.isPresent()) {
+			myAccounts = optionalAccounts.get();
+			for (Account a: myAccounts) {
+				System.out.println(a.getAccountID());
+				System.out.println(a.getBalance());
+				System.out.println(a.getUserID());
+			}
+		} else {
+			System.out.println("Server failed to find any accounts, try to create an account, and if that doesn't work then it is a server issue.");
+			logger.info("Server failed to return any accounts.");
+		}
 	}
 	public static void testUserService() {
 		AccountService myAS = AccountService.getService();
@@ -48,6 +67,10 @@ public class JDBCBank {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public static void testRegularUserView() {
+		RegularUser myRU = new RegularUser();
+		myRU.initiateRegularUserSession();
 	}
 	public static void testSuperUserView() {
 		SuperUser mySU = new SuperUser();

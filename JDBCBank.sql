@@ -35,7 +35,7 @@ create table transactions (
     date_of_purchase timestamp,
     constraint transactions_pk primary key (transaction_id),
     constraint transactions_user_id_fk foreign key (user_id) references users(user_id) on delete cascade,
-    constraint transactions_account_id_fk foreign key (account_id) references users(user_id) on delete cascade
+    constraint transactions_account_id_fk foreign key (account_id) references accounts(account_id) on delete cascade
 );
 
 CREATE OR REPLACE TRIGGER user_seq_trigger
@@ -159,10 +159,7 @@ BEGIN
         account_id_out := account_seq.CURRVAL;
     ELSE
         success_out := 0;
-    END IF; 
-    EXCEPTION
-        WHEN OTHERS THEN
-            success_out := 0;
+    END IF;
 END;
 /
 create or replace PROCEDURE getAllAccounts(
@@ -171,7 +168,61 @@ create or replace PROCEDURE getAllAccounts(
 IS
 BEGIN
     OPEN S FOR
-    SELECT * FROM users
+    SELECT * FROM accounts
     WHERE user_id = user_id_in;
+END;
+/
+create or replace PROCEDURE withdrawFromAccount(
+    account_id_in IN accounts.account_id%TYPE,
+    amount_in IN number,
+    success_out OUT number)
+IS
+    current_balance number(20);
+BEGIN
+    select balance into current_balance 
+    from accounts
+    where account_id = account_id_in;
+    if amount_in <= current_balance
+    then
+        UPDATE accounts
+        SET balance = current_balance - amount_in
+        WHERE account_id = account_id_in;
+        success_out := 1;
+        commit;
+    else
+        success_out := 0;
+    end if;
+END;
+/
+create or replace PROCEDURE depositToAccount(
+    account_id_in IN accounts.account_id%TYPE,
+    amount_in IN number)
+IS
+BEGIN
+    UPDATE accounts
+    SET balance = balance + amount_in
+    WHERE account_id = account_id_in;
+    commit;
+END;
+/
+
+create or replace PROCEDURE deleteAccount(
+    account_id_in IN accounts.account_id%TYPE,
+    success_out OUT number)
+IS
+    current_balance number(20);
+BEGIN
+    select balance into current_balance 
+    from accounts
+    where account_id = account_id_in;
+    if current_balance = 0
+    then
+        DELETE FROM accounts
+        WHERE account_id = account_id_in;
+        success_out := 1;
+        commit;
+    else
+        success_out := 0;
+    end if;
 END;
 /

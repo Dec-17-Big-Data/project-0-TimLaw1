@@ -26,7 +26,7 @@ public class ConnectionUtil {
 		try {
 			// load information from properties file
 			Properties props = new Properties();
-			in = new FileInputStream("C:\\Users\\IcedT\\Revature\\Java Workspace\\project0\\src\\main\\resources\\connection.properties");
+			in = new FileInputStream("C:\\Users\\IcedT\\Revature\\Java Workspace\\revature-project0\\src\\main\\resources\\connection.properties");
 			props.load(in);
 			// get the connection object
 			Class.forName("oracle.jdbc.driver.OracleDriver");

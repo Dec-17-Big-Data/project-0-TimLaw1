@@ -7,7 +7,7 @@ import com.revature.utils.ReadInput;
 
 public class Welcome {
 	private static final Logger logger = LogManager.getLogger(Welcome.class);
-	private String[] validOptions = {"Login","Register"};
+	private String[] validOptions = {"Login","Register","Exit"};
 	private ReadInput ri = new ReadInput(validOptions);
 	public int prompt(int ... optionalArgs) {
 		logger.traceEntry("Params {}", optionalArgs);
@@ -24,10 +24,7 @@ public class Welcome {
 		}
 		System.out.println("Welcome to the Project 0 Oracle Database Bank App");
 		System.out.println("Do you want to login to an existing account or register a new bank account?");
-		System.out.println("1.Login");
-		System.out.println("2.Register");
-		System.out.println("Please type in the name or number of the choice and hit enter.");
-		int choice = ri.readOptions();
+		int choice = ri.promptThenReadOptions();
 		System.out.printf("You have selected %s.%n", validOptions[choice-1]);
 		return logger.traceExit(choice);
 	}

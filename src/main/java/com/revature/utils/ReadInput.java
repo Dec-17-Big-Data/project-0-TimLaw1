@@ -46,9 +46,9 @@ public class ReadInput {
 	}
 	public int readOptions() {
 		logger.traceEntry();
-		String choice = null;
+		int choice = -1;
 		try{
-			choice = JDBCBank.inStream.nextLine();	
+			choice = parseChoice(JDBCBank.inStream.nextLine());	
 		} catch (NoSuchElementException NSEE) {
 			logger.catching(NSEE);
 		} catch (IllegalStateException ISE) {
@@ -56,11 +56,10 @@ public class ReadInput {
 		} catch(Exception e) {
 			logger.catching(e);
 		} 
-		return logger.traceExit(parseChoice(choice));
+		return logger.traceExit(choice);
 	}
 	private int parseChoice(String choice) {
-		//TODO: test parseChoice
-		//TODO: write custom exceptions and handle them in external class
+		//TODO make these custom exceptions so it can be JUnit tested
 		logger.traceEntry("Scanner input: {}", choice);
 		if (choice.matches("\\s*")) {
 			return logger.traceExit(errorPrompt(1));
@@ -109,7 +108,7 @@ public class ReadInput {
 		}
 	}
 	public String readUsernameOrPassword() {
-		logger.traceEntry();
+		logger.traceEntry("entry readUsernameOrPassword");
 		String password = null;
 		try{
 			password = validateUsernameOrPassword(JDBCBank.inStream.nextLine());
@@ -123,9 +122,8 @@ public class ReadInput {
 		return logger.traceExit(password);
 	}
 	private String validateUsernameOrPassword(String usernameOrPassword) {
-		//TODO: test validateUsernameOrPassword
-		//TODO: write custom exceptions and handle them in external class
-		logger.traceEntry();
+		//TODO make these custom exceptions so it can be JUnit tested
+		logger.traceEntry("entry validateUsernameOrPassword");
 		String invalidCharactersRegex = "[^[[a-z][A-Z]\\d\\!\\(\\)\\-\\.\\?\\[\\]\\_\\`\\~\\;\\:\\@\\#\\$\\%\\^\\&\\*\\+\\=]]";
 		if (usernameOrPassword.matches("\\s*")) {
 			return logger.traceExit(usernameOrPasswordErrorPrompt(0));
@@ -136,8 +134,9 @@ public class ReadInput {
 		}
 	}
 	private String usernameOrPasswordErrorPrompt(Integer error) {
+		logger.traceEntry("entry usernameOrPasswordErrorPrompt");
 		if (error==0) {
-			System.out.println("You can't enter whitespace in your password.");
+			System.out.println("You can't enter an empty password.");
 		} else if (error==1) {
 			System.out.println("You entered an invalid character.");
 			System.out.println("Valid characters include: 'a-z','A-Z','0-9','!','(',')','-','.',''?");
@@ -145,5 +144,45 @@ public class ReadInput {
 		}
 		System.out.println("Try entering a valid password again...");
 		return logger.traceExit(readUsernameOrPassword());
+	}
+	public int readPositiveInteger() {
+		logger.traceEntry("Entry readPositiveInteger");
+		int posInt = -1;
+		try{
+			posInt = validatePositiveInteger(JDBCBank.inStream.nextLine());
+		} catch (NoSuchElementException NSEE) {
+			logger.catching(NSEE);
+		} catch (IllegalStateException ISE) {
+			logger.catching(ISE);
+		} catch(Exception e) {
+			logger.catching(e);
+		} 
+		return logger.traceExit(posInt);
+	}
+	private int validatePositiveInteger(String inputString) {
+		logger.traceEntry("Entry validatePositiveInteger");
+		String invalidCharacters = "[^0-9]";
+		if (inputString.matches("\\s*")) {
+			//TODO make these custom exceptions so it can be JUnit tested
+			return logger.traceExit(positiveIntegerErrorPrompt(0));
+		} else if (inputString.matches(invalidCharacters)) {
+			return logger.traceExit(positiveIntegerErrorPrompt(1));
+		} else if (inputString.length()> 20) {
+			return logger.traceExit(positiveIntegerErrorPrompt(2));
+		} else {
+			int output = Integer.valueOf(inputString); 
+			return logger.traceExit(output);
+		}
+	}
+	private int positiveIntegerErrorPrompt(int error) {
+		logger.traceEntry("Entry positiveIntegerErrorPrompt");
+		if (error==0) {
+			System.out.println("You can't input an empty number.");
+		} else if (error==1) {
+			System.out.println("You need to input only digit values and a positive number.");
+		} else if (error==2) {
+			System.out.println("You need to input a number less than 20 digits long.");
+		}
+		return logger.traceExit(readPositiveInteger());
 	}
 }
