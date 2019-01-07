@@ -11,9 +11,13 @@ import com.revature.exceptions.AccountNotEmptyException;
 import com.revature.exceptions.OverdraftException;
 import com.revature.exceptions.UserIDDoesNotExistException;
 import com.revature.models.Account;
+import com.revature.models.Transaction;
 import com.revature.services.AccountService;
+import com.revature.services.TransactionService;
 import com.revature.utils.ReadInput;
 import com.revature.utils.SessionManager;
+
+import oracle.sql.TIMESTAMP;
 
 public class RegularUser {
 	private static final Logger logger = LogManager.getLogger(Welcome.class);
@@ -139,7 +143,7 @@ public class RegularUser {
 			logger.traceExit("exit handleIndividualAccountOptions, calling viewAccountTransactions");
 			viewIndividualAccountTransactions();
 		} else if (choice==4) {
-			// View transactions
+			// Delete account
 			logger.traceExit("exit handleIndividualAccountOptions, calling deleteAccount");
 			deleteAccount();
 		} else {
@@ -149,7 +153,41 @@ public class RegularUser {
 		}
 	}
 	private void viewIndividualAccountTransactions() {
-		//TODO
+		logger.traceEntry("entry viewIndividualAccountTransactions");
+		logger.info("calling getTransactionsByAccountID");
+		List<Transaction> thisAccountsTransactions = getTransactionsByAccountID();
+		if (thisAccountsTransactions!=null) {
+			logger.traceExit("exit viewIndividualAccountTransactions, calling printListOfTransactions(thisAccountsTransactions)");
+			printListOfTransactions(thisAccountsTransactions);
+		} else {
+			System.out.println("Problem getting transactions list, sending you back to account view.");
+			logger.traceExit("exit viewIndividualAccountTransactions, calling individualAccountOptionsPrompt");
+			individualAccountOptionsPrompt();
+		}
+	}
+	private void printListOfTransactions(List<Transaction> myTransactionList) {
+		System.out.println("Transaction ID,	Amount,	Withdrawal, Date of purchase");
+		for (Transaction t: myTransactionList) {
+			System.out.printf("%d, %d, %s, %s%n",t.getTransaction_id(),t.getAmount(),t.getWithdrawal() == 1 ? "true":"false",t.getDate_of_purchase().toString());
+		}
+		System.out.println("Going back to account view.");
+		logger.traceExit("exit printListOfTransactions, calling individualAccountOptionsPrompt");
+		individualAccountOptionsPrompt();
+	}
+	private List<Transaction> getTransactionsByAccountID() {
+		logger.traceEntry("entry getTransactionsByAccountID");
+		TransactionService transactionService = TransactionService.getService();
+		Optional<List<Transaction>> optionalTransactions = transactionService.getAllTransactionsByAccountID(myAccount.getAccountID());
+		if (optionalTransactions.isPresent()) {
+			logger.traceExit("exit getTransactionsByAccountID, returning transaction list to calling function.");
+			return optionalTransactions.get();
+		} else {
+			System.out.println("Server failed to connect, transactions not received.");
+			System.out.println("Going back to account view.");
+			logger.traceExit("exit getTransactionsByAccountID, calling individualAccountOptionsPrompt");
+			individualAccountOptionsPrompt();
+		}
+		return null;
 	}
 	private void deleteAccount() {
 		logger.traceEntry("entry deleteAccount");

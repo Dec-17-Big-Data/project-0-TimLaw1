@@ -6,6 +6,8 @@ import java.util.NoSuchElementException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.revature.exceptions.InvalidOptionException;
+
 public class ReadInput {
 	private static final Logger logger = LogManager.getLogger(ReadInput.class);
 	private String[] validOptions;
@@ -17,24 +19,10 @@ public class ReadInput {
 			this.validOptions[i] = validIDs.get(i);
 		}
 	}
-	private int errorPrompt(int error) {
-		logger.traceEntry("Params: {}", error);
-		if (error==0) {
-			System.out.println("You didn't enter a valid option, try again...");	
-		} else if (error==1) {
-			System.out.println("You didn't enter anything, try again...");
-		} else if (error==2) {
-			System.out.println("You entered too many numbers, try again...");
-		} else if (error==3) {
-			System.out.println("You entered too many strings, try again...");
-		} else {
-			System.out.println("Unknown Exception, try again...");	
-		}
-		for (int i = 0; i<validOptions.length; i++) {
-			System.out.println(String.valueOf(i+1)+"."+ validOptions[i]);
-		}
-		System.out.println("Please type in the name or number of the choice and hit enter.");	
-		return logger.traceExit(readOptions());
+	private int optionsErrorPrompt() {
+		logger.traceEntry("entry optionsErrorPrompt");
+		System.out.println("Try again...");
+		return logger.traceExit(promptThenReadOptions());
 	}
 	public int promptThenReadOptions() {
 		logger.traceEntry();
@@ -49,6 +37,9 @@ public class ReadInput {
 		int choice = -1;
 		try{
 			choice = parseChoice(JDBCBank.inStream.nextLine());	
+		} catch (InvalidOptionException IOE) {
+			logger.catching(IOE);
+			optionsErrorPrompt();
 		} catch (NoSuchElementException NSEE) {
 			logger.catching(NSEE);
 		} catch (IllegalStateException ISE) {
@@ -58,11 +49,11 @@ public class ReadInput {
 		} 
 		return logger.traceExit(choice);
 	}
-	private int parseChoice(String choice) {
+	public int parseChoice(String choice) throws InvalidOptionException {
 		//TODO make these custom exceptions so it can be JUnit tested
-		logger.traceEntry("Scanner input: {}", choice);
+		logger.traceEntry("entry parseChoice Scanner input: {}", choice);
 		if (choice.matches("\\s*")) {
-			return logger.traceExit(errorPrompt(1));
+			throw new InvalidOptionException("You didn't enter anything.");
 		}
 		String[] digitSS = choice.split("[^\\d+]");
 		int digitCount = 0;
@@ -75,10 +66,7 @@ public class ReadInput {
 		}
 		int result = 0;
 		if (digitCount>1) {
-			for (String i: digitSS) {
-				System.out.println(i);
-			}
-			return logger.traceExit(errorPrompt(2));	
+			throw new InvalidOptionException("You entered too many different numbers.");
 		} else if (digitCount==1) {
 			for (String i: digitSS) {
 				if (i.equals("")) {
@@ -91,12 +79,12 @@ public class ReadInput {
 			if (result > 0 && result <= validOptions.length) {
 				return logger.traceExit(result);
 			} else {
-				return logger.traceExit(errorPrompt(0));	
+				throw new InvalidOptionException("You entered an invalid option.");
 			}
 		} else {
 			String[] wordSS = choice.split("[^\\w+]");
 			if (wordSS.length!=1) {
-				return logger.traceExit(errorPrompt(3));
+				throw new InvalidOptionException("You entered too many strings.");
 			}
 			for (int i = 0; i < validOptions.length; i++) {
 				if (wordSS[0].toLowerCase().equals(validOptions[i].toLowerCase())) {
@@ -104,7 +92,7 @@ public class ReadInput {
 					return logger.traceExit(result);
 				}
 			}
-			return logger.traceExit(errorPrompt(0));
+			throw new InvalidOptionException("You entered an invalid exception.");
 		}
 	}
 	public String readUsernameOrPassword() {
@@ -112,6 +100,9 @@ public class ReadInput {
 		String password = null;
 		try{
 			password = validateUsernameOrPassword(JDBCBank.inStream.nextLine());
+		} catch (InvalidOptionException IOE) {
+			logger.catching(IOE);
+			usernameOrPasswordErrorPrompt();
 		} catch (NoSuchElementException NSEE) {
 			logger.catching(NSEE);
 		} catch (IllegalStateException ISE) {
@@ -121,27 +112,22 @@ public class ReadInput {
 		} 
 		return logger.traceExit(password);
 	}
-	private String validateUsernameOrPassword(String usernameOrPassword) {
+	public String validateUsernameOrPassword(String usernameOrPassword) throws InvalidOptionException {
 		//TODO make these custom exceptions so it can be JUnit tested
 		logger.traceEntry("entry validateUsernameOrPassword");
-		String invalidCharactersRegex = "[^[[a-z][A-Z]\\d\\!\\(\\)\\-\\.\\?\\[\\]\\_\\`\\~\\;\\:\\@\\#\\$\\%\\^\\&\\*\\+\\=]]";
+		String invalidCharactersRegex = "[a-zA-Z\\d\\!\\(\\)\\-\\.\\?\\[\\]\\_\\`\\~\\;\\:\\@\\#\\$\\%\\^\\&\\*\\+\\=]+";
 		if (usernameOrPassword.matches("\\s*")) {
-			return logger.traceExit(usernameOrPasswordErrorPrompt(0));
-		} else if (usernameOrPassword.matches(invalidCharactersRegex)) {
-			return logger.traceExit(usernameOrPasswordErrorPrompt(1));
+			throw new InvalidOptionException("You can't enter an empty password.");
+		} else if (!usernameOrPassword.matches(invalidCharactersRegex)) {
+			throw new InvalidOptionException("System.out.println(\"You entered an invalid character.\r\n" + 
+					"Valid characters include: 'a-z','A-Z','0-9','!','(',')','-','.',''?\r\n" + 
+					"as well as: '[',']','_','`','~',';',':','@','#','$','^','&','*','+','='\r\n");
 		} else {
 			return logger.traceExit(usernameOrPassword);
 		}
 	}
-	private String usernameOrPasswordErrorPrompt(Integer error) {
+	private String usernameOrPasswordErrorPrompt() {
 		logger.traceEntry("entry usernameOrPasswordErrorPrompt");
-		if (error==0) {
-			System.out.println("You can't enter an empty password.");
-		} else if (error==1) {
-			System.out.println("You entered an invalid character.");
-			System.out.println("Valid characters include: 'a-z','A-Z','0-9','!','(',')','-','.',''?");
-			System.out.println("as well as: '[',']','_','`','~',';',':','@','#','$','^','&','*','+','='");
-		}
 		System.out.println("Try entering a valid password again...");
 		return logger.traceExit(readUsernameOrPassword());
 	}
@@ -150,6 +136,9 @@ public class ReadInput {
 		int posInt = -1;
 		try{
 			posInt = validatePositiveInteger(JDBCBank.inStream.nextLine());
+		} catch (InvalidOptionException IOE) {
+			logger.catching(IOE);
+			positiveIntegerErrorPrompt();
 		} catch (NoSuchElementException NSEE) {
 			logger.catching(NSEE);
 		} catch (IllegalStateException ISE) {
@@ -159,30 +148,33 @@ public class ReadInput {
 		} 
 		return logger.traceExit(posInt);
 	}
-	private int validatePositiveInteger(String inputString) {
+	public int validatePositiveInteger(String inputString) throws InvalidOptionException {
 		logger.traceEntry("Entry validatePositiveInteger");
-		String invalidCharacters = "[^0-9]";
+		String validString = "[0-9]+";
 		if (inputString.matches("\\s*")) {
-			//TODO make these custom exceptions so it can be JUnit tested
-			return logger.traceExit(positiveIntegerErrorPrompt(0));
-		} else if (inputString.matches(invalidCharacters)) {
-			return logger.traceExit(positiveIntegerErrorPrompt(1));
+			throw new InvalidOptionException("You can't enter an empty string.");
+		} else if (!inputString.matches(validString)) {
+			throw new InvalidOptionException("Number must be of the format 123456789");
 		} else if (inputString.length()> 20) {
-			return logger.traceExit(positiveIntegerErrorPrompt(2));
+			throw new InvalidOptionException("You need to input a number less than 20 digits long.");
 		} else {
-			int output = Integer.valueOf(inputString); 
-			return logger.traceExit(output);
+			if (inputString.length()==1) {
+				int output = Integer.valueOf(inputString); 
+				return logger.traceExit(output);
+			} else {
+				String invalidOrdering = "0+[0-9]*";
+				if (inputString.matches(invalidOrdering)) {
+					throw new InvalidOptionException("The number cannot begin with any leading zeros.");
+				} else {
+					int output = Integer.valueOf(inputString); 
+					return logger.traceExit(output);
+				}
+			}
 		}
 	}
-	private int positiveIntegerErrorPrompt(int error) {
+	private int positiveIntegerErrorPrompt() {
 		logger.traceEntry("Entry positiveIntegerErrorPrompt");
-		if (error==0) {
-			System.out.println("You can't input an empty number.");
-		} else if (error==1) {
-			System.out.println("You need to input only digit values and a positive number.");
-		} else if (error==2) {
-			System.out.println("You need to input a number less than 20 digits long.");
-		}
+		System.out.println("Try inputting a valid number again...");
 		return logger.traceExit(readPositiveInteger());
 	}
 }

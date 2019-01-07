@@ -19,7 +19,7 @@ import com.revature.utils.ConnectionUtil;
 
 import oracle.jdbc.OracleTypes;
 public class UserOracle implements UserDao {
-	private static final Logger logger = LogManager.getLogger(ChampionOracle.class);
+	private static final Logger logger = LogManager.getLogger(UserOracle.class);
 	private static UserOracle userOracle;
 	final static UserDao userDao = UserOracle.getDao();
 	

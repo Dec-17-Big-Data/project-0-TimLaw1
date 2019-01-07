@@ -13,6 +13,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.revature.exceptions.OverdraftException;
 import com.revature.exceptions.UserIDDoesNotExistException;
 import com.revature.models.Account;
 import com.revature.models.Champion;
@@ -29,28 +30,24 @@ public class JDBCBank {
 	public static final Scanner inStream = new Scanner(System.in);
 	public static void main(String[] args) {
 		logger.traceEntry("entry main");
-//		testUserService();
-//		testSuperUserView();
-//		testRegularUserView();
-//		testGetAllAccounts();
+//		testWithdraw();
 		SessionManager sm = SessionManager.getSessionManager();
 		sm.start();
 		logger.traceExit("exit main");
 	}
-	public static void testGetAllAccounts () {
-		List<Account> myAccounts = new ArrayList<>();
+	public static void testWithdraw () {
 		AccountService accountService = AccountService.getService();
-		Optional<List<Account>> optionalAccounts = accountService.getAllAccounts(61);
-		if (optionalAccounts.isPresent()) {
-			myAccounts = optionalAccounts.get();
-			for (Account a: myAccounts) {
-				System.out.println(a.getAccountID());
-				System.out.println(a.getBalance());
-				System.out.println(a.getUserID());
+		Optional<Boolean> optionalSuccess;
+		try {
+			optionalSuccess = accountService.withdrawFromAccount(1, 505000);
+			if (optionalSuccess.isPresent()) {
+				System.out.println("Worked");
+			} else {
+				System.out.println("failed");
 			}
-		} else {
-			System.out.println("Server failed to find any accounts, try to create an account, and if that doesn't work then it is a server issue.");
-			logger.info("Server failed to return any accounts.");
+		} catch (OverdraftException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	public static void testUserService() {

@@ -21,7 +21,7 @@ create table users (
 create table accounts (
     account_id number(10),
     user_id number(10) not null,
-    balance number(20) default 0 check(balance>0),
+    balance number(20) default 0 check(balance>=0),
     constraint accounts_pk primary key (account_id),
     constraint accounts_user_id_fk foreign key (user_id) references users(user_id) on delete cascade
 );
@@ -178,6 +178,7 @@ create or replace PROCEDURE withdrawFromAccount(
     success_out OUT number)
 IS
     current_balance number(20);
+    l_user_id number(10);
 BEGIN
     select balance into current_balance 
     from accounts
@@ -187,6 +188,11 @@ BEGIN
         UPDATE accounts
         SET balance = current_balance - amount_in
         WHERE account_id = account_id_in;
+        SELECT user_id into l_user_id
+        FROM accounts
+        WHERE account_id = account_id_in;
+        INSERT INTO transactions (user_id, account_id, amount, withdrawal, date_of_purchase)
+        VALUES(l_user_id,account_id_in,amount_in,1,CURRENT_TIMESTAMP);
         success_out := 1;
         commit;
     else
@@ -198,10 +204,16 @@ create or replace PROCEDURE depositToAccount(
     account_id_in IN accounts.account_id%TYPE,
     amount_in IN number)
 IS
+    l_user_id number(10);
 BEGIN
     UPDATE accounts
     SET balance = balance + amount_in
     WHERE account_id = account_id_in;
+    SELECT user_id into l_user_id
+    FROM accounts
+    WHERE account_id = account_id_in;
+    INSERT INTO transactions (user_id, account_id, amount, withdrawal, date_of_purchase)
+    VALUES(l_user_id,account_id_in,amount_in,0,CURRENT_TIMESTAMP);
     commit;
 END;
 /
@@ -224,5 +236,16 @@ BEGIN
     else
         success_out := 0;
     end if;
+END;
+/
+
+create or replace PROCEDURE getAllTransactionsByAccountID(
+    account_id_in IN users.user_id%TYPE,
+    S OUT SYS_REFCURSOR)
+IS
+BEGIN
+    OPEN S FOR
+    SELECT * FROM transactions
+    WHERE account_id = account_id_in;
 END;
 /

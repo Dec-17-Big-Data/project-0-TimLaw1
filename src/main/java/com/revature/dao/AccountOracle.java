@@ -22,7 +22,7 @@ import com.revature.utils.ConnectionUtil;
 import oracle.jdbc.OracleTypes;
 
 public class AccountOracle implements AccountDao{
-	private static final Logger logger = LogManager.getLogger(ChampionOracle.class);
+	private static final Logger logger = LogManager.getLogger(AccountOracle.class);
 	private static AccountOracle accountOracle;
 	final static AccountDao accountDao = AccountOracle.getDao();
 	

@@ -1,176 +1,5 @@
-[TRACE] 2019-01-06 13:47:31.835 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 13:47:32.371 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
-[TRACE] 2019-01-06 13:47:32.619 [main] JDBCBank - Exit with(exit main)
-[TRACE] 2019-01-06 14:45:22.896 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 14:45:22.898 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 14:45:22.899 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 14:45:22.901 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 14:45:22.901 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:25.275 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:45:25.276 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:25.276 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:25.276 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 14:45:25.276 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 14:45:25.278 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 14:45:25.278 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 14:45:25.279 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 14:45:25.279 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 14:45:25.279 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:45:25.279 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:45:25.279 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:45:28.245 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:45:28.245 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:45:28.245 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:45:28.245 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 14:45:28.245 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:45:28.245 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:45:28.245 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:45:29.972 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:45:29.972 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:45:29.972 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:45:29.972 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 14:45:29.972 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 14:45:29.972 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 14:45:30.503 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 14:45:30.703 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 14:45:30.703 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 14:45:30.705 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 14:45:30.705 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 14:45:30.705 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:45:30.705 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:45:30.706 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:45:31.038 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 14:45:31.100 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:45:31.100 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:45:31.100 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:31.101 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:32.605 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:45:32.606 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:32.606 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:32.606 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:32.606 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:45:32.606 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:45:32.606 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:45:32.606 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:45:32.606 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:45:32.606 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:32.606 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:37.073 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:45:37.073 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:45:37.073 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:45:37.073 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:45:37.073 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewAllAccounts)
-[TRACE] 2019-01-06 14:45:37.073 [main] Welcome - Enter entry viewAllAccounts
-[TRACE] 2019-01-06 14:45:37.074 [main] Welcome - Exit with(exit viewAllAccounts, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:45:37.074 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:45:37.074 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:45:37.346 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
-[TRACE] 2019-01-06 14:45:37.402 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:45:37.402 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:45:37.402 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:37.402 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:48.071 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:45:48.072 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:48.072 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:48.072 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:48.072 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:45:48.072 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:45:48.072 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:45:48.072 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:45:48.072 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:45:48.072 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:48.073 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:51.007 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:45:51.007 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:51.008 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:51.008 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:45:51.008 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 14:45:51.008 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 14:45:51.008 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 14:45:51.008 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:45:51.008 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:48:54.616 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 14:48:54.619 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 14:48:54.620 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 14:48:54.621 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 14:48:54.621 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:48:56.467 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:48:56.467 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:48:56.467 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:48:56.467 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 14:48:56.467 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 14:48:56.470 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 14:48:56.470 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 14:48:56.470 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 14:48:56.470 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 14:48:56.470 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:48:56.470 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:48:56.470 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:48:59.224 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:48:59.224 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:48:59.224 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:48:59.224 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 14:48:59.224 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:48:59.224 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:48:59.224 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:49:00.870 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:49:00.870 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:49:00.870 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:49:00.870 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 14:49:00.870 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 14:49:00.870 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 14:49:01.349 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 14:49:01.513 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 14:49:01.513 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 14:49:01.515 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 14:49:01.515 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 14:49:01.515 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:49:01.515 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:49:01.515 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:49:01.785 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 14:49:01.841 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:49:01.841 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:49:01.842 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:01.842 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:06.818 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:49:06.818 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:06.818 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:06.818 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:06.818 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:49:06.819 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:49:06.819 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:49:06.819 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:49:06.819 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:49:06.819 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:06.819 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:10.297 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:49:10.297 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:10.297 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:10.297 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:10.298 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 14:49:10.298 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 14:49:10.298 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 14:49:10.298 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:10.298 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:16.543 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:49:16.543 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:49:16.543 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:49:16.543 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:49:16.543 [main] Welcome - Exit with(61)
-[TRACE] 2019-01-06 14:49:16.544 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:49:16.544 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:16.544 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:28.045 [main] ReadInput - Enter Scanner input: 4
-[TRACE] 2019-01-06 14:49:28.045 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:49:28.045 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:49:28.045 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:49:28.045 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:49:28.045 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:49:28.045 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
-[TRACE] 2019-01-06 14:49:28.046 [main] Welcome - Enter entry deleteAccount
-[TRACE] 2019-01-06 14:49:28.316 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
-[ERROR] 2019-01-06 14:49:28.376 [main] ChampionOracle - Catching
-java.sql.SQLException: ORA-06576: not a valid function or procedure name
+java.sql.SQLIntegrityConstraintViolationException: ORA-02290: check constraint (ROOT.SYS_C005400) violated
+ORA-06512: at "ROOT.WITHDRAWFROMACCOUNT", line 14
 
 	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
 	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
@@ -186,873 +15,1012 @@ java.sql.SQLException: ORA-06576: not a valid function or procedure name
 	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
 	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
 	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at com.revature.dao.AccountOracle.deleteAccount(AccountOracle.java:188) [classes/:?]
-	at com.revature.services.AccountService.deleteAccount(AccountService.java:38) [classes/:?]
-	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:158) [classes/:?]
-	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
-	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:125) [classes/:?]
-	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:103) [classes/:?]
-	at com.revature.modules.RegularUser.handleViewAccountRequest(RegularUser.java:85) [classes/:?]
-	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:46) [classes/:?]
-	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:39) [classes/:?]
-	at com.revature.modules.RegularUser.initiateRegularUserSession(RegularUser.java:28) [classes/:?]
-	at com.revature.utils.SessionManager.processLoginRegister(SessionManager.java:57) [classes/:?]
-	at com.revature.modules.Login.authenticateUser(Login.java:49) [classes/:?]
-	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:33) [classes/:?]
-	at com.revature.modules.Login.handleLoginRequest(Login.java:21) [classes/:?]
-	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:38) [classes/:?]
-	at com.revature.utils.SessionManager.start(SessionManager.java:30) [classes/:?]
-	at com.revature.utils.JDBCBank.main(JDBCBank.java:37) [classes/:?]
-[TRACE] 2019-01-06 14:49:28.645 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@24105dc5)
-[TRACE] 2019-01-06 14:49:28.689 [main] Welcome - Exit with(exit deleteAccount, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:49:28.689 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:49:28.689 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:28.689 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:45.871 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:49:45.872 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:45.872 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:45.872 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:49:45.872 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:49:45.872 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:49:45.872 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
-[TRACE] 2019-01-06 14:49:45.872 [main] Welcome - Enter entry withdrawFromAccount
-[TRACE] 2019-01-06 14:49:45.872 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:49:49.459 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:49:49.459 [main] ReadInput - Exit with(400)
-[TRACE] 2019-01-06 14:49:49.459 [main] ReadInput - Exit with(400)
-[TRACE] 2019-01-06 14:49:49.741 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5167f57d)
-[TRACE] 2019-01-06 14:49:49.868 [main] Welcome - Exit with(exit withdrawFromAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 14:49:49.868 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:49:49.868 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:49.868 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:54.636 [main] ReadInput - Enter Scanner input: 4
-[TRACE] 2019-01-06 14:49:54.636 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:49:54.637 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:49:54.637 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:49:54.637 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:49:54.637 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:49:54.637 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
-[TRACE] 2019-01-06 14:49:54.637 [main] Welcome - Enter entry deleteAccount
-[TRACE] 2019-01-06 14:49:54.951 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@64b0598)
-[ERROR] 2019-01-06 14:49:55.006 [main] ChampionOracle - Catching
-java.sql.SQLException: ORA-06576: not a valid function or procedure name
-
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at com.revature.dao.AccountOracle.deleteAccount(AccountOracle.java:188) [classes/:?]
-	at com.revature.services.AccountService.deleteAccount(AccountService.java:38) [classes/:?]
-	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:158) [classes/:?]
-	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
-	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:125) [classes/:?]
-	at com.revature.modules.RegularUser.withdrawFromAccount(RegularUser.java:226) [classes/:?]
-	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:132) [classes/:?]
-	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:125) [classes/:?]
-	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:171) [classes/:?]
-	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
-	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:125) [classes/:?]
-	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:103) [classes/:?]
-	at com.revature.modules.RegularUser.handleViewAccountRequest(RegularUser.java:85) [classes/:?]
-	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:46) [classes/:?]
-	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:39) [classes/:?]
-	at com.revature.modules.RegularUser.initiateRegularUserSession(RegularUser.java:28) [classes/:?]
-	at com.revature.utils.SessionManager.processLoginRegister(SessionManager.java:57) [classes/:?]
-	at com.revature.modules.Login.authenticateUser(Login.java:49) [classes/:?]
-	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:33) [classes/:?]
-	at com.revature.modules.Login.handleLoginRequest(Login.java:21) [classes/:?]
-	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:38) [classes/:?]
-	at com.revature.utils.SessionManager.start(SessionManager.java:30) [classes/:?]
-	at com.revature.utils.JDBCBank.main(JDBCBank.java:37) [classes/:?]
-[TRACE] 2019-01-06 14:49:55.293 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@18f8cd79)
-[TRACE] 2019-01-06 14:49:55.366 [main] Welcome - Exit with(exit deleteAccount, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:49:55.366 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:49:55.366 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:49:55.367 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:55:49.594 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 14:55:49.597 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 14:55:49.598 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 14:55:49.599 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 14:55:49.599 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:55:51.204 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:55:51.204 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:55:51.204 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:55:51.204 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 14:55:51.204 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 14:55:51.207 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 14:55:51.207 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 14:55:51.207 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 14:55:51.207 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 14:55:51.207 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:55:51.207 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:55:51.207 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:55:53.663 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:55:53.663 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:55:53.663 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:55:53.663 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 14:55:53.664 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:55:53.664 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:55:53.664 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:55:55.263 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:55:55.263 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:55:55.263 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:55:55.263 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 14:55:55.263 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 14:55:55.263 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 14:55:55.748 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 14:55:55.916 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 14:55:55.916 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 14:55:55.918 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 14:55:55.918 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 14:55:55.918 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:55:55.918 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:55:55.918 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:55:56.185 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 14:55:56.237 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:55:56.237 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:55:56.237 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:55:56.237 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:03.416 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:56:03.416 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:03.417 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:03.417 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:03.417 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:56:03.417 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:56:03.417 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:56:03.417 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:56:03.417 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:56:03.417 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:03.417 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:04.717 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:56:04.717 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:04.717 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:04.717 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:04.717 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 14:56:04.717 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 14:56:04.717 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 14:56:04.717 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:04.717 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:05.854 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:56:05.854 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:56:05.854 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:56:05.855 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:56:05.855 [main] Welcome - Exit with(61)
-[TRACE] 2019-01-06 14:56:05.855 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:56:05.855 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:05.856 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:08.284 [main] ReadInput - Enter Scanner input: 4
-[TRACE] 2019-01-06 14:56:08.284 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:56:08.284 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:56:08.284 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:56:08.284 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:56:08.284 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:56:08.284 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
-[TRACE] 2019-01-06 14:56:08.285 [main] Welcome - Enter entry deleteAccount
-[TRACE] 2019-01-06 14:56:08.548 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
-[ERROR] 2019-01-06 14:56:08.598 [main] ChampionOracle - Catching
-java.sql.SQLException: ORA-06576: not a valid function or procedure name
-
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
-	at com.revature.dao.AccountOracle.deleteAccount(AccountOracle.java:188) [classes/:?]
-	at com.revature.services.AccountService.deleteAccount(AccountService.java:38) [classes/:?]
-	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:158) [classes/:?]
-	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
-	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:125) [classes/:?]
-	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:103) [classes/:?]
-	at com.revature.modules.RegularUser.handleViewAccountRequest(RegularUser.java:85) [classes/:?]
-	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:46) [classes/:?]
-	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:39) [classes/:?]
-	at com.revature.modules.RegularUser.initiateRegularUserSession(RegularUser.java:28) [classes/:?]
-	at com.revature.utils.SessionManager.processLoginRegister(SessionManager.java:57) [classes/:?]
-	at com.revature.modules.Login.authenticateUser(Login.java:49) [classes/:?]
-	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:33) [classes/:?]
-	at com.revature.modules.Login.handleLoginRequest(Login.java:21) [classes/:?]
-	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:38) [classes/:?]
-	at com.revature.utils.SessionManager.start(SessionManager.java:30) [classes/:?]
-	at com.revature.utils.JDBCBank.main(JDBCBank.java:37) [classes/:?]
-[TRACE] 2019-01-06 14:56:08.853 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@24105dc5)
-[TRACE] 2019-01-06 14:56:08.904 [main] Welcome - Exit with(exit deleteAccount, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:56:08.904 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:56:08.904 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:08.904 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:40.537 [main] ReadInput - Enter Scanner input: 4
-[TRACE] 2019-01-06 14:56:40.537 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:56:40.537 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:56:40.537 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:56:40.537 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:56:40.537 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:56:40.537 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
-[TRACE] 2019-01-06 14:56:40.537 [main] Welcome - Enter entry deleteAccount
-[TRACE] 2019-01-06 14:56:40.867 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5167f57d)
-[TRACE] 2019-01-06 14:56:40.946 [main] Welcome - Exit with(exit deleteAccount, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:56:40.946 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:56:40.946 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:56:41.204 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@64b0598)
-[TRACE] 2019-01-06 14:56:41.249 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:56:41.249 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:56:41.249 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:41.249 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:50.299 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:56:50.299 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:50.299 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:50.299 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:50.299 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:56:50.299 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:56:50.299 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:56:50.300 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:56:50.300 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:56:50.300 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:50.300 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:52.482 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:56:52.482 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:52.482 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:52.482 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:56:52.482 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 14:56:52.482 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 14:56:52.482 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 14:56:52.482 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:56:52.482 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:25.316 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 14:57:25.318 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 14:57:25.320 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 14:57:25.321 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 14:57:25.321 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:26.986 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:57:26.986 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:26.986 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:26.986 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 14:57:26.986 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 14:57:26.988 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 14:57:26.989 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 14:57:26.989 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 14:57:26.989 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 14:57:26.989 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:57:26.989 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:57:26.989 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:57:29.532 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:57:29.533 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:57:29.533 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:57:29.533 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 14:57:29.533 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:57:29.533 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:57:29.533 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:57:31.049 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:57:31.049 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:57:31.049 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:57:31.049 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 14:57:31.049 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 14:57:31.049 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 14:57:31.538 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 14:57:31.701 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 14:57:31.701 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 14:57:31.703 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 14:57:31.703 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 14:57:31.703 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:57:31.703 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:57:31.703 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:57:31.992 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 14:57:32.048 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:57:32.048 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:57:32.048 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:32.048 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:34.822 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:57:34.822 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:57:34.822 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:57:34.822 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:57:34.823 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:57:34.823 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:57:34.823 [main] Welcome - Exit with(exit handleRegularUserRequest, calling handleCreateAccountRequest)
-[TRACE] 2019-01-06 14:57:34.823 [main] Welcome - Enter entry handleCreateAccountRequest
-[TRACE] 2019-01-06 14:57:34.823 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:57:38.388 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:57:38.388 [main] ReadInput - Exit with(5000)
-[TRACE] 2019-01-06 14:57:38.388 [main] ReadInput - Exit with(5000)
-[TRACE] 2019-01-06 14:57:38.715 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
-[TRACE] 2019-01-06 14:57:38.766 [main] Welcome - Exit with(exit handleCreateAccountRequest, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 14:57:38.766 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:57:38.766 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:38.766 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:47.385 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:57:47.385 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:47.385 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:47.385 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:47.386 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:57:47.386 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:57:47.386 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
-[TRACE] 2019-01-06 14:57:47.386 [main] Welcome - Enter entry withdrawFromAccount
-[TRACE] 2019-01-06 14:57:47.386 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:57:51.256 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:57:51.257 [main] ReadInput - Exit with(4999)
-[TRACE] 2019-01-06 14:57:51.257 [main] ReadInput - Exit with(4999)
-[TRACE] 2019-01-06 14:57:51.549 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2235eaab)
-[TRACE] 2019-01-06 14:57:51.573 [main] Welcome - Exit with(exit withdrawFromAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 14:57:51.574 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:57:51.574 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:51.574 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:52.770 [main] ReadInput - Enter Scanner input: 4
-[TRACE] 2019-01-06 14:57:52.770 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:57:52.770 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:57:52.770 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:57:52.771 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:57:52.771 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:57:52.771 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
-[TRACE] 2019-01-06 14:57:52.771 [main] Welcome - Enter entry deleteAccount
-[TRACE] 2019-01-06 14:57:53.063 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@17503f6b)
-[ERROR] 2019-01-06 14:57:53.088 [main] Welcome - Catching
+	at com.revature.dao.AccountOracle.withdrawFromAccount(AccountOracle.java:128) [classes/:?]
+	at com.revature.services.AccountService.withdrawFromAccount(AccountService.java:42) [classes/:?]
+	at com.revature.utils.JDBCBank.testWithdraw(JDBCBank.java:42) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:33) [classes/:?]
+[TRACE] 2019-01-07 10:47:43.708 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-07 10:51:23.067 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-07 10:51:24.017 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@44c03695)
+[TRACE] 2019-01-07 10:51:24.332 [main] JDBCBank - Exit with(exit main)
+[TRACE] 2019-01-07 10:51:41.574 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-07 10:51:41.581 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-07 10:51:41.590 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-07 10:51:41.592 [main] Welcome - Enter Params []
+[TRACE] 2019-01-07 10:51:41.592 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:51:41.592 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:51:46.003 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:51:46.003 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:51:46.003 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:51:46.003 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:51:46.004 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-07 10:51:46.004 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-07 10:51:46.029 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myRegister.handleRegisterRequest)
+[TRACE] 2019-01-07 10:51:46.029 [main] Register - Enter entry handleRegisterRequest
+[TRACE] 2019-01-07 10:51:46.029 [main] Register - Exit with(exit, calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-07 10:51:46.029 [main] Register - Enter entry usernameAndPasswordPrompt
+[INFO ] 2019-01-07 10:51:46.029 [main] Register - calling getUsernameOrPassword
+[TRACE] 2019-01-07 10:51:46.029 [main] Register - Enter
+[TRACE] 2019-01-07 10:51:46.030 [main] ReadInput - Enter entry readUsernameOrPassword
+[TRACE] 2019-01-07 10:51:48.961 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 10:51:48.961 [main] ReadInput - Exit with(BillyBob)
+[TRACE] 2019-01-07 10:51:48.961 [main] ReadInput - Exit with(BillyBob)
+[TRACE] 2019-01-07 10:51:48.961 [main] Register - Exit with(BillyBob)
+[INFO ] 2019-01-07 10:51:48.961 [main] Register - calling getUsernameOrPassword
+[TRACE] 2019-01-07 10:51:48.961 [main] Register - Enter
+[TRACE] 2019-01-07 10:51:48.962 [main] ReadInput - Enter entry readUsernameOrPassword
+[TRACE] 2019-01-07 10:51:50.591 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 10:51:50.591 [main] ReadInput - Exit with(Thorton)
+[TRACE] 2019-01-07 10:51:50.591 [main] ReadInput - Exit with(Thorton)
+[TRACE] 2019-01-07 10:51:50.591 [main] Register - Exit with(Thorton)
+[TRACE] 2019-01-07 10:51:50.591 [main] Register - Exit with(exit, calling registerNewUser)
+[TRACE] 2019-01-07 10:51:50.591 [main] Register - Enter entry registerNewUser
+[TRACE] 2019-01-07 10:51:51.392 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-07 10:51:51.748 [main] Register - Exit with(New user registered, calling session manager to handle showing the user admin/not-admin views.)
+[TRACE] 2019-01-07 10:51:51.748 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-07 10:51:51.756 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
+[TRACE] 2019-01-07 10:51:51.756 [main] Welcome - Enter entry handleRegularUserSessionHandler
+[TRACE] 2019-01-07 10:51:51.756 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
+[TRACE] 2019-01-07 10:51:51.756 [main] Welcome - Enter entry promptRegularUserChoice
+[TRACE] 2019-01-07 10:51:51.756 [main] Welcome - Enter entry getAllAccounts
+[TRACE] 2019-01-07 10:51:52.061 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@642a7222)
+[TRACE] 2019-01-07 10:51:52.144 [main] Welcome - Exit with(exit getAllAccounts)
+[INFO ] 2019-01-07 10:51:52.144 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:51:52.145 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:51:52.145 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:51:54.226 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:51:54.227 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:51:54.227 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:51:54.227 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:51:54.227 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-07 10:51:54.227 [main] Welcome - Enter entry handleRegularUserRequest
+[TRACE] 2019-01-07 10:51:54.227 [main] Welcome - Exit with(exit handleRegularUserRequest, calling handleCreateAccountRequest)
+[TRACE] 2019-01-07 10:51:54.227 [main] Welcome - Enter entry handleCreateAccountRequest
+[TRACE] 2019-01-07 10:51:54.227 [main] ReadInput - Enter Entry readPositiveInteger
+[TRACE] 2019-01-07 10:51:57.520 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 10:51:57.521 [main] ReadInput - Exit with(505000)
+[TRACE] 2019-01-07 10:51:57.521 [main] ReadInput - Exit with(505000)
+[TRACE] 2019-01-07 10:51:57.823 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@147e2ae7)
+[TRACE] 2019-01-07 10:51:57.884 [main] Welcome - Exit with(exit handleCreateAccountRequest, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:51:57.884 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:51:57.884 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:51:57.884 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:51:57.885 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:51:59.705 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:51:59.705 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:51:59.706 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:51:59.706 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:51:59.706 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-07 10:51:59.707 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:51:59.707 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:51:59.707 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:02.811 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:52:02.811 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:02.811 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:02.811 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:02.811 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:52:02.812 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:52:02.817 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
+[TRACE] 2019-01-07 10:52:02.817 [main] Welcome - Enter entry withdrawFromAccount
+[TRACE] 2019-01-07 10:52:02.817 [main] ReadInput - Enter Entry readPositiveInteger
+[TRACE] 2019-01-07 10:52:05.924 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 10:52:05.924 [main] ReadInput - Exit with(505000)
+[TRACE] 2019-01-07 10:52:05.924 [main] ReadInput - Exit with(505000)
+[TRACE] 2019-01-07 10:52:06.271 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
+[TRACE] 2019-01-07 10:52:06.367 [main] Welcome - Exit with(exit withdrawFromAccount, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:52:06.367 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:52:06.368 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:52:06.368 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:06.368 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:08.425 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:52:08.425 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:08.426 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:08.426 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:08.426 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-07 10:52:08.426 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:52:08.426 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:08.427 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:11.062 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-07 10:52:11.062 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:11.062 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:11.062 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:11.063 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:52:11.063 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:52:11.063 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAccountTransactions)
+[TRACE] 2019-01-07 10:52:11.063 [main] Welcome - Enter entry viewIndividualAccountTransactions
+[INFO ] 2019-01-07 10:52:11.063 [main] Welcome - calling getTransactionsByAccountID
+[TRACE] 2019-01-07 10:52:11.063 [main] Welcome - Enter entry getTransactionsByAccountID
+[TRACE] 2019-01-07 10:52:11.527 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@4470fbd6)
+[TRACE] 2019-01-07 10:52:11.607 [main] Welcome - Exit with(exit getTransactionsByAccountID, returning transaction list to calling function.)
+[TRACE] 2019-01-07 10:52:11.607 [main] Welcome - Exit with(exit viewIndividualAccountTransactions, calling printListOfTransactions(thisAccountsTransactions))
+[TRACE] 2019-01-07 10:52:11.608 [main] Welcome - Exit with(exit printListOfTransactions, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:52:11.608 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:52:11.608 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:11.608 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:18.436 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:52:18.436 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:18.436 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:18.436 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:18.436 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:52:18.437 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:52:18.437 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling depositToAccount)
+[TRACE] 2019-01-07 10:52:18.437 [main] Welcome - Enter entry depositToAccount
+[TRACE] 2019-01-07 10:52:18.437 [main] ReadInput - Enter Entry readPositiveInteger
+[TRACE] 2019-01-07 10:52:21.699 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 10:52:21.699 [main] ReadInput - Exit with(50000)
+[TRACE] 2019-01-07 10:52:21.699 [main] ReadInput - Exit with(50000)
+[TRACE] 2019-01-07 10:52:22.048 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@15d49048)
+[TRACE] 2019-01-07 10:52:22.084 [main] Welcome - Exit with(exit depositToAccount, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:52:22.084 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:52:22.084 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:52:22.084 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:22.085 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:23.476 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:52:23.476 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:23.476 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:23.476 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:52:23.476 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-07 10:52:23.476 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:52:23.476 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:23.476 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:26.387 [main] ReadInput - Enter Scanner input: 5
+[TRACE] 2019-01-07 10:52:26.387 [main] ReadInput - Exit with(5)
+[TRACE] 2019-01-07 10:52:26.387 [main] ReadInput - Exit with(5)
+[TRACE] 2019-01-07 10:52:26.387 [main] ReadInput - Exit with(5)
+[TRACE] 2019-01-07 10:52:26.387 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:52:26.387 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:52:26.387 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAllAccounts)
+[TRACE] 2019-01-07 10:52:26.388 [main] Welcome - Enter entry viewAllAccounts
+[TRACE] 2019-01-07 10:52:26.388 [main] Welcome - Exit with(exit viewAllAccounts, calling promptRegularUserChoice)
+[TRACE] 2019-01-07 10:52:26.388 [main] Welcome - Enter entry promptRegularUserChoice
+[TRACE] 2019-01-07 10:52:26.388 [main] Welcome - Enter entry getAllAccounts
+[TRACE] 2019-01-07 10:52:26.631 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@7098b907)
+[TRACE] 2019-01-07 10:52:26.677 [main] Welcome - Exit with(exit getAllAccounts)
+[INFO ] 2019-01-07 10:52:26.677 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:52:26.677 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:26.678 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:31.942 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:52:31.942 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:31.942 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:31.942 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:31.942 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-07 10:52:31.942 [main] Welcome - Enter entry handleRegularUserRequest
+[TRACE] 2019-01-07 10:52:31.942 [main] Welcome - Exit with(exit handleRegularUserRequest, calling handleCreateAccountRequest)
+[TRACE] 2019-01-07 10:52:31.942 [main] Welcome - Enter entry handleCreateAccountRequest
+[TRACE] 2019-01-07 10:52:31.943 [main] ReadInput - Enter Entry readPositiveInteger
+[TRACE] 2019-01-07 10:52:35.574 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 10:52:35.574 [main] ReadInput - Exit with(30000)
+[TRACE] 2019-01-07 10:52:35.574 [main] ReadInput - Exit with(30000)
+[TRACE] 2019-01-07 10:52:35.944 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@503f91c3)
+[TRACE] 2019-01-07 10:52:36.050 [main] Welcome - Exit with(exit handleCreateAccountRequest, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:52:36.050 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:52:36.050 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:52:36.051 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:36.051 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:38.435 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:52:38.435 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:38.435 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:38.436 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:38.436 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-07 10:52:38.436 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:52:38.436 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:38.437 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:39.986 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-07 10:52:39.987 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:39.987 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:39.987 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:39.987 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:52:39.987 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:52:39.987 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAccountTransactions)
+[TRACE] 2019-01-07 10:52:39.987 [main] Welcome - Enter entry viewIndividualAccountTransactions
+[INFO ] 2019-01-07 10:52:39.987 [main] Welcome - calling getTransactionsByAccountID
+[TRACE] 2019-01-07 10:52:39.987 [main] Welcome - Enter entry getTransactionsByAccountID
+[TRACE] 2019-01-07 10:52:40.342 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
+[TRACE] 2019-01-07 10:52:40.397 [main] Welcome - Exit with(exit getTransactionsByAccountID, returning transaction list to calling function.)
+[TRACE] 2019-01-07 10:52:40.398 [main] Welcome - Exit with(exit viewIndividualAccountTransactions, calling printListOfTransactions(thisAccountsTransactions))
+[TRACE] 2019-01-07 10:52:40.398 [main] Welcome - Exit with(exit printListOfTransactions, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:52:40.398 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:52:40.398 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:40.398 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:44.179 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:52:44.179 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:44.179 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:44.180 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:44.180 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:52:44.180 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:52:44.180 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling depositToAccount)
+[TRACE] 2019-01-07 10:52:44.180 [main] Welcome - Enter entry depositToAccount
+[TRACE] 2019-01-07 10:52:44.180 [main] ReadInput - Enter Entry readPositiveInteger
+[TRACE] 2019-01-07 10:52:47.908 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 10:52:47.908 [main] ReadInput - Exit with(4000000)
+[TRACE] 2019-01-07 10:52:47.908 [main] ReadInput - Exit with(4000000)
+[TRACE] 2019-01-07 10:52:48.213 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2235eaab)
+[TRACE] 2019-01-07 10:52:48.240 [main] Welcome - Exit with(exit depositToAccount, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:52:48.240 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:52:48.240 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:52:48.241 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:48.241 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:49.810 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:52:49.810 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:49.810 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:49.810 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:52:49.810 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-07 10:52:49.811 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:52:49.811 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:49.811 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:54.237 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-07 10:52:54.237 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:54.237 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:54.237 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:52:54.238 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:52:54.238 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:52:54.238 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAccountTransactions)
+[TRACE] 2019-01-07 10:52:54.238 [main] Welcome - Enter entry viewIndividualAccountTransactions
+[INFO ] 2019-01-07 10:52:54.238 [main] Welcome - calling getTransactionsByAccountID
+[TRACE] 2019-01-07 10:52:54.238 [main] Welcome - Enter entry getTransactionsByAccountID
+[TRACE] 2019-01-07 10:52:54.602 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@17503f6b)
+[TRACE] 2019-01-07 10:52:54.652 [main] Welcome - Exit with(exit getTransactionsByAccountID, returning transaction list to calling function.)
+[TRACE] 2019-01-07 10:52:54.652 [main] Welcome - Exit with(exit viewIndividualAccountTransactions, calling printListOfTransactions(thisAccountsTransactions))
+[TRACE] 2019-01-07 10:52:54.653 [main] Welcome - Exit with(exit printListOfTransactions, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:52:54.653 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:52:54.653 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:52:54.654 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:01.257 [main] ReadInput - Enter Scanner input: 4
+[TRACE] 2019-01-07 10:53:01.257 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:53:01.258 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:53:01.258 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:53:01.258 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:53:01.258 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:53:01.258 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
+[TRACE] 2019-01-07 10:53:01.258 [main] Welcome - Enter entry deleteAccount
+[TRACE] 2019-01-07 10:53:01.619 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3bcd05cb)
+[ERROR] 2019-01-07 10:53:01.959 [main] Welcome - Catching
 com.revature.exceptions.AccountNotEmptyException: The account cannot be deleted until it is empty.
 	at com.revature.dao.AccountOracle.deleteAccount(AccountOracle.java:193) ~[classes/:?]
 	at com.revature.services.AccountService.deleteAccount(AccountService.java:38) ~[classes/:?]
-	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:158) [classes/:?]
+	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:196) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:148) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
 	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
-	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:125) [classes/:?]
-	at com.revature.modules.RegularUser.withdrawFromAccount(RegularUser.java:243) [classes/:?]
-	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:132) [classes/:?]
-	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:125) [classes/:?]
-	at com.revature.modules.RegularUser.handleCreateAccountRequest(RegularUser.java:283) [classes/:?]
-	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:50) [classes/:?]
-	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:39) [classes/:?]
-	at com.revature.modules.RegularUser.initiateRegularUserSession(RegularUser.java:28) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.depositToAccount(RegularUser.java:266) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:140) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleCreateAccountRequest(RegularUser.java:321) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:54) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.viewAllAccounts(RegularUser.java:307) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:152) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.depositToAccount(RegularUser.java:266) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:140) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.withdrawFromAccount(RegularUser.java:281) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:136) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleCreateAccountRequest(RegularUser.java:321) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:54) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.initiateRegularUserSession(RegularUser.java:32) [classes/:?]
 	at com.revature.utils.SessionManager.processLoginRegister(SessionManager.java:57) [classes/:?]
-	at com.revature.modules.Login.authenticateUser(Login.java:49) [classes/:?]
-	at com.revature.modules.Login.usernameAndPasswordPrompt(Login.java:33) [classes/:?]
-	at com.revature.modules.Login.handleLoginRequest(Login.java:21) [classes/:?]
-	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:38) [classes/:?]
+	at com.revature.modules.Register.registerNewUser(Register.java:51) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:34) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:22) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:43) [classes/:?]
 	at com.revature.utils.SessionManager.start(SessionManager.java:30) [classes/:?]
-	at com.revature.utils.JDBCBank.main(JDBCBank.java:37) [classes/:?]
-[TRACE] 2019-01-06 14:57:53.091 [main] Welcome - Exit with(exit deleteAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 14:57:53.091 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:57:53.091 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:53.091 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:57:58.990 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:57:58.990 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:58.990 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:58.990 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:57:58.990 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:57:58.990 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:57:58.990 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
-[TRACE] 2019-01-06 14:57:58.990 [main] Welcome - Enter entry withdrawFromAccount
-[TRACE] 2019-01-06 14:57:58.991 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:58:00.661 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:58:00.662 [main] ReadInput - Enter Entry positiveIntegerErrorPrompt
-[TRACE] 2019-01-06 14:58:00.662 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:58:06.696 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:58:06.696 [main] ReadInput - Enter Entry positiveIntegerErrorPrompt
-[TRACE] 2019-01-06 14:58:06.696 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:58:28.621 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 14:58:28.623 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 14:58:28.624 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 14:58:28.625 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 14:58:28.626 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:30.161 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:58:30.161 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:30.161 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:30.161 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 14:58:30.161 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 14:58:30.164 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 14:58:30.164 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 14:58:30.164 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 14:58:30.164 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 14:58:30.164 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:58:30.164 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:58:30.164 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:58:32.407 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:58:32.407 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:58:32.407 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 14:58:32.407 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 14:58:32.407 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 14:58:32.407 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 14:58:32.407 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 14:58:33.777 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 14:58:33.777 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:58:33.777 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 14:58:33.777 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 14:58:33.777 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 14:58:33.777 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 14:58:34.299 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 14:58:34.458 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 14:58:34.458 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 14:58:34.460 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 14:58:34.460 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 14:58:34.460 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:58:34.460 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:58:34.460 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:58:34.711 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 14:58:34.776 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:58:34.776 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:58:34.776 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:34.776 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:36.532 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:58:36.532 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:36.532 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:36.532 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:36.532 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:58:36.532 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:58:36.532 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:58:36.532 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:58:36.532 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:58:36.533 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:36.533 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:37.499 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:58:37.499 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:37.499 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:37.499 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:37.499 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 14:58:37.500 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 14:58:37.500 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 14:58:37.500 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:37.500 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:38.863 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:58:38.863 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:38.863 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:38.863 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:38.863 [main] Welcome - Exit with(63)
-[TRACE] 2019-01-06 14:58:38.863 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:58:38.863 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:38.863 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:41.883 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:58:41.884 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:41.884 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:41.884 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:41.884 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:58:41.884 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:58:41.884 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling depositToAccount)
-[TRACE] 2019-01-06 14:58:41.884 [main] Welcome - Enter entry depositToAccount
-[TRACE] 2019-01-06 14:58:41.884 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:58:44.022 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:58:44.022 [main] ReadInput - Exit with(300)
-[TRACE] 2019-01-06 14:58:44.022 [main] ReadInput - Exit with(300)
-[TRACE] 2019-01-06 14:58:44.279 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
-[TRACE] 2019-01-06 14:58:44.317 [main] Welcome - Exit with(exit depositToAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 14:58:44.317 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:58:44.317 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:44.317 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:46.549 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:58:46.549 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:46.549 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:46.549 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:46.549 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:58:46.549 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:58:46.549 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
-[TRACE] 2019-01-06 14:58:46.550 [main] Welcome - Enter entry withdrawFromAccount
-[TRACE] 2019-01-06 14:58:46.550 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:58:47.746 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:58:47.747 [main] ReadInput - Exit with(301)
-[TRACE] 2019-01-06 14:58:47.747 [main] ReadInput - Exit with(301)
-[TRACE] 2019-01-06 14:58:48.015 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2235eaab)
-[TRACE] 2019-01-06 14:58:48.038 [main] Welcome - Exit with(exit withdrawFromAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 14:58:48.038 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:58:48.038 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:48.038 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:49.521 [main] ReadInput - Enter Scanner input: 4
-[TRACE] 2019-01-06 14:58:49.521 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:58:49.521 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:58:49.521 [main] ReadInput - Exit with(4)
-[TRACE] 2019-01-06 14:58:49.522 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:58:49.522 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:58:49.522 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
-[TRACE] 2019-01-06 14:58:49.522 [main] Welcome - Enter entry deleteAccount
-[TRACE] 2019-01-06 14:58:49.796 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@17503f6b)
-[TRACE] 2019-01-06 14:58:49.842 [main] Welcome - Exit with(exit deleteAccount, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:58:49.842 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:58:49.842 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:58:50.114 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3bcd05cb)
-[TRACE] 2019-01-06 14:58:50.157 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:58:50.158 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:58:50.158 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:50.158 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:55.767 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:58:55.767 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:55.767 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:55.767 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:58:55.767 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:58:55.768 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:58:55.768 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:58:55.768 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:58:55.768 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:58:55.768 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:55.768 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:57.730 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:58:57.730 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:57.730 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:57.730 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:58:57.730 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewAllAccounts)
-[TRACE] 2019-01-06 14:58:57.730 [main] Welcome - Enter entry viewAllAccounts
-[TRACE] 2019-01-06 14:58:57.730 [main] Welcome - Exit with(exit viewAllAccounts, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:58:57.730 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:58:57.730 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:58:58.000 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@3b6d844d)
-[TRACE] 2019-01-06 14:58:58.059 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:58:58.059 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:58:58.059 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:58:58.059 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:02.964 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:59:02.964 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:02.964 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:02.964 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:02.965 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 14:59:02.965 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 14:59:02.965 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 14:59:02.965 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 14:59:02.965 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:59:02.965 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:02.965 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:04.794 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:59:04.794 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:04.794 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:04.794 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:04.794 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 14:59:04.794 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 14:59:04.794 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 14:59:04.794 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:04.794 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:07.276 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 14:59:07.276 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:07.276 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:07.276 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 14:59:07.276 [main] Welcome - Exit with(62)
-[TRACE] 2019-01-06 14:59:07.276 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:59:07.276 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:07.276 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:10.553 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 14:59:10.553 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:59:10.553 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:59:10.553 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 14:59:10.553 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:59:10.553 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:59:10.553 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling depositToAccount)
-[TRACE] 2019-01-06 14:59:10.553 [main] Welcome - Enter entry depositToAccount
-[TRACE] 2019-01-06 14:59:10.553 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 14:59:13.437 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 14:59:13.437 [main] ReadInput - Exit with(11)
-[TRACE] 2019-01-06 14:59:13.437 [main] ReadInput - Exit with(11)
-[TRACE] 2019-01-06 14:59:13.710 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@36804139)
-[TRACE] 2019-01-06 14:59:13.735 [main] Welcome - Exit with(exit depositToAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 14:59:13.735 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 14:59:13.735 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:13.735 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:19.061 [main] ReadInput - Enter Scanner input: 5
-[TRACE] 2019-01-06 14:59:19.062 [main] ReadInput - Exit with(5)
-[TRACE] 2019-01-06 14:59:19.062 [main] ReadInput - Exit with(5)
-[TRACE] 2019-01-06 14:59:19.062 [main] ReadInput - Exit with(5)
-[TRACE] 2019-01-06 14:59:19.062 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 14:59:19.062 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 14:59:19.062 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAllAccounts)
-[TRACE] 2019-01-06 14:59:19.062 [main] Welcome - Enter entry viewAllAccounts
-[TRACE] 2019-01-06 14:59:19.062 [main] Welcome - Exit with(exit viewAllAccounts, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 14:59:19.062 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 14:59:19.062 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 14:59:19.342 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@20bd8be5)
-[TRACE] 2019-01-06 14:59:19.409 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 14:59:19.409 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 14:59:19.409 [main] ReadInput - Enter
-[TRACE] 2019-01-06 14:59:19.409 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:00:53.878 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 15:00:53.881 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 15:00:53.882 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 15:00:53.884 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 15:00:53.884 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:00:55.388 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:00:55.388 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:00:55.388 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:00:55.388 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 15:00:55.388 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 15:00:55.391 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 15:00:55.391 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 15:00:55.391 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 15:00:55.391 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 15:00:55.391 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 15:00:55.391 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 15:00:55.391 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 15:00:58.003 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 15:00:58.003 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 15:00:58.003 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 15:00:58.003 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 15:00:58.003 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 15:00:58.004 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 15:00:58.004 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 15:00:59.552 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 15:00:59.552 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 15:00:59.552 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 15:00:59.552 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 15:00:59.552 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 15:00:59.552 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 15:01:01.293 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 15:01:01.466 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 15:01:01.466 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 15:01:01.468 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 15:01:01.468 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 15:01:01.468 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 15:01:01.468 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 15:01:01.468 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 15:01:02.096 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 15:01:02.273 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 15:01:02.273 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 15:01:02.273 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:02.273 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:05.156 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:01:05.157 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:05.157 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:05.157 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:05.157 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 15:01:05.157 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 15:01:05.157 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 15:01:05.157 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 15:01:05.157 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 15:01:05.157 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:05.157 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:07.829 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 15:01:07.829 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 15:01:07.829 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 15:01:07.829 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 15:01:07.830 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewAllAccounts)
-[TRACE] 2019-01-06 15:01:07.830 [main] Welcome - Enter entry viewAllAccounts
-[TRACE] 2019-01-06 15:01:07.830 [main] Welcome - Exit with(exit viewAllAccounts, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 15:01:07.830 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 15:01:07.830 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 15:01:08.137 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
-[TRACE] 2019-01-06 15:01:08.180 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 15:01:08.180 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 15:01:08.180 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:08.181 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:10.860 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:01:10.860 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:10.860 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:10.861 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:10.861 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 15:01:10.861 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 15:01:10.861 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 15:01:10.861 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 15:01:10.861 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 15:01:10.861 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:10.862 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:12.043 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:01:12.043 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:12.043 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:12.043 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:12.043 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 15:01:12.043 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 15:01:12.043 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 15:01:12.043 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:12.043 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:12.838 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:01:12.838 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:12.838 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:12.838 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:12.838 [main] Welcome - Exit with(62)
-[TRACE] 2019-01-06 15:01:12.838 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 15:01:12.838 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:12.838 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:01:16.422 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:01:16.422 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:16.422 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:16.422 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:01:16.422 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 15:01:16.422 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 15:01:16.423 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
-[TRACE] 2019-01-06 15:01:16.423 [main] Welcome - Enter entry withdrawFromAccount
-[TRACE] 2019-01-06 15:01:16.423 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 15:01:18.623 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 15:01:18.623 [main] ReadInput - Enter Entry positiveIntegerErrorPrompt
-[TRACE] 2019-01-06 15:01:18.623 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 15:04:15.491 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 15:04:15.493 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 15:04:15.494 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 15:04:15.496 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 15:04:15.496 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:17.166 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:04:17.166 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:17.166 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:17.166 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 15:04:17.166 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 15:04:17.169 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 15:04:17.169 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 15:04:17.169 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 15:04:17.169 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 15:04:17.169 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 15:04:17.169 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 15:04:17.169 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 15:04:19.237 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 15:04:19.237 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 15:04:19.237 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 15:04:19.237 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 15:04:19.237 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 15:04:19.237 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 15:04:19.237 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 15:04:20.874 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 15:04:20.874 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 15:04:20.874 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 15:04:20.874 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 15:04:20.874 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 15:04:20.874 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 15:04:21.386 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 15:04:21.540 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 15:04:21.540 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 15:04:21.542 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 15:04:21.542 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 15:04:21.542 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 15:04:21.542 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 15:04:21.542 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 15:04:21.803 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 15:04:21.852 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 15:04:21.852 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 15:04:21.852 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:21.852 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:23.212 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:04:23.212 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:23.212 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:23.212 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:23.212 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
-[TRACE] 2019-01-06 15:04:23.212 [main] Welcome - Enter entry handleRegularUserRequest
-[TRACE] 2019-01-06 15:04:23.212 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
-[TRACE] 2019-01-06 15:04:23.212 [main] Welcome - Enter entry handleViewAccountRequest
-[INFO ] 2019-01-06 15:04:23.212 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 15:04:23.212 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:23.213 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:23.917 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:04:23.917 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:23.917 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:23.917 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:23.917 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
-[TRACE] 2019-01-06 15:04:23.917 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 15:04:23.917 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 15:04:23.918 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:23.918 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:24.764 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:04:24.764 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:24.764 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:24.764 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:24.765 [main] Welcome - Exit with(62)
-[TRACE] 2019-01-06 15:04:24.765 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 15:04:24.765 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:24.765 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:27.014 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:04:27.014 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:27.014 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:27.014 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:27.014 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 15:04:27.014 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 15:04:27.014 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
-[TRACE] 2019-01-06 15:04:27.014 [main] Welcome - Enter entry withdrawFromAccount
-[TRACE] 2019-01-06 15:04:27.015 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 15:04:28.313 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 15:04:28.314 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:28.314 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:28.554 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
-[TRACE] 2019-01-06 15:04:28.577 [main] Welcome - Exit with(exit withdrawFromAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 15:04:28.578 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 15:04:28.578 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 15:04:28.578 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:28.578 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:31.427 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:04:31.428 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:31.428 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:31.428 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:31.428 [main] Welcome - Exit with(62)
-[TRACE] 2019-01-06 15:04:31.428 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 15:04:31.428 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:31.428 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:38.510 [main] ReadInput - Enter Scanner input: 2
-[TRACE] 2019-01-06 15:04:38.510 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 15:04:38.510 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 15:04:38.510 [main] ReadInput - Exit with(2)
-[TRACE] 2019-01-06 15:04:38.510 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 15:04:38.510 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 15:04:38.510 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling depositToAccount)
-[TRACE] 2019-01-06 15:04:38.510 [main] Welcome - Enter entry depositToAccount
-[TRACE] 2019-01-06 15:04:38.510 [main] ReadInput - Enter Entry readPositiveInteger
-[TRACE] 2019-01-06 15:04:40.235 [main] ReadInput - Enter Entry validatePositiveInteger
-[TRACE] 2019-01-06 15:04:40.235 [main] ReadInput - Exit with(9)
-[TRACE] 2019-01-06 15:04:40.235 [main] ReadInput - Exit with(9)
-[TRACE] 2019-01-06 15:04:40.508 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2235eaab)
-[TRACE] 2019-01-06 15:04:40.530 [main] Welcome - Exit with(exit depositToAccount, calling individualAccountOptionsPrompt)
-[TRACE] 2019-01-06 15:04:40.530 [main] Welcome - Enter entry viewIndividualAccount
-[TRACE] 2019-01-06 15:04:40.530 [main] Welcome - Enter entry selectIDPrompt
-[TRACE] 2019-01-06 15:04:40.530 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:40.530 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:42.532 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 15:04:42.532 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:42.532 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:42.532 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 15:04:42.532 [main] Welcome - Exit with(62)
-[TRACE] 2019-01-06 15:04:42.532 [main] Welcome - Enter entry individualAccountOptionsPrompt
-[TRACE] 2019-01-06 15:04:42.533 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:04:42.533 [main] ReadInput - Enter
-[TRACE] 2019-01-06 15:05:40.837 [main] ReadInput - Enter Scanner input: 3
-[TRACE] 2019-01-06 15:05:40.837 [main] ReadInput - Exit with(3)
-[TRACE] 2019-01-06 15:05:40.837 [main] ReadInput - Exit with(3)
-[TRACE] 2019-01-06 15:05:40.837 [main] ReadInput - Exit with(3)
-[TRACE] 2019-01-06 15:05:40.837 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
-[TRACE] 2019-01-06 15:05:40.837 [main] Welcome - Enter entry handleIndividualAccountOptions
-[TRACE] 2019-01-06 15:05:40.837 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAccountTransactions)
-[TRACE] 2019-01-06 15:05:40.837 [main] Welcome - Exit with(exit viewIndividualAccount, calling)
-[TRACE] 2019-01-06 15:05:40.837 [main] Welcome - Exit with(exit viewIndividualAccount, calling)
-[TRACE] 2019-01-06 15:05:40.837 [main] Welcome - Exit with(exit viewIndividualAccount, calling)
-[TRACE] 2019-01-06 15:05:40.837 [main] JDBCBank - Exit with(exit main)
-[TRACE] 2019-01-06 18:19:01.501 [main] JDBCBank - Enter entry main
-[TRACE] 2019-01-06 18:19:01.506 [main] SessionManager - Enter entry start
-[TRACE] 2019-01-06 18:19:01.510 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
-[TRACE] 2019-01-06 18:19:01.511 [main] Welcome - Enter Params []
-[TRACE] 2019-01-06 18:19:01.512 [main] ReadInput - Enter
-[TRACE] 2019-01-06 18:19:01.512 [main] ReadInput - Enter
-[TRACE] 2019-01-06 18:19:14.168 [main] ReadInput - Enter Scanner input: 1
-[TRACE] 2019-01-06 18:19:14.168 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 18:19:14.168 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 18:19:14.168 [main] ReadInput - Exit with(1)
-[TRACE] 2019-01-06 18:19:14.169 [main] Welcome - Exit with(1)
-[TRACE] 2019-01-06 18:19:14.169 [main] SessionManager - Enter entry processWelcomeChoice
-[TRACE] 2019-01-06 18:19:14.187 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
-[TRACE] 2019-01-06 18:19:14.187 [main] Login - Enter entering public void class handleLoginRequest
-[TRACE] 2019-01-06 18:19:14.187 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
-[TRACE] 2019-01-06 18:19:14.188 [main] Login - Enter entering private void usernameAndPasswordPrompt
-[INFO ] 2019-01-06 18:19:14.188 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 18:19:14.188 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 18:19:14.188 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 18:19:16.528 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 18:19:16.528 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 18:19:16.528 [main] ReadInput - Exit with(BillyBob)
-[TRACE] 2019-01-06 18:19:16.528 [main] Login - Exit with(BillyBob)
-[INFO ] 2019-01-06 18:19:16.528 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
-[TRACE] 2019-01-06 18:19:16.528 [main] Login - Enter entry getUsernameOrPassword
-[TRACE] 2019-01-06 18:19:16.528 [main] ReadInput - Enter entry readUsernameOrPassword
-[TRACE] 2019-01-06 18:19:18.317 [main] ReadInput - Enter entry validateUsernameOrPassword
-[TRACE] 2019-01-06 18:19:18.317 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 18:19:18.317 [main] ReadInput - Exit with(Thorton)
-[TRACE] 2019-01-06 18:19:18.317 [main] Login - Exit with(Thorton)
-[TRACE] 2019-01-06 18:19:18.318 [main] Login - Exit with(calling authenticateUser)
-[TRACE] 2019-01-06 18:19:18.318 [main] Login - Enter entry authenticateUser(x,x)
-[TRACE] 2019-01-06 18:19:19.296 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
-[TRACE] 2019-01-06 18:19:19.514 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
-[TRACE] 2019-01-06 18:19:19.514 [main] SessionManager - Enter entry processLoginRegister
-[TRACE] 2019-01-06 18:19:19.534 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
-[TRACE] 2019-01-06 18:19:19.535 [main] Welcome - Enter entry handleRegularUserSessionHandler
-[TRACE] 2019-01-06 18:19:19.535 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
-[TRACE] 2019-01-06 18:19:19.535 [main] Welcome - Enter entry promptRegularUserChoice
-[TRACE] 2019-01-06 18:19:19.535 [main] Welcome - Enter entry getAllAccounts
-[TRACE] 2019-01-06 18:19:20.021 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
-[TRACE] 2019-01-06 18:19:20.097 [main] Welcome - Exit with(exit getAllAccounts)
-[INFO ] 2019-01-06 18:19:20.097 [main] Welcome - calling ReadInput.readOptions
-[TRACE] 2019-01-06 18:19:20.097 [main] ReadInput - Enter
-[TRACE] 2019-01-06 18:19:20.097 [main] ReadInput - Enter
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:35) [classes/:?]
+[TRACE] 2019-01-07 10:53:01.964 [main] Welcome - Exit with(exit deleteAccount, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:53:01.964 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:53:01.965 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:53:01.965 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:01.965 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:06.427 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:53:06.427 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:06.427 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:06.427 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:06.428 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-07 10:53:06.428 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:53:06.428 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:06.428 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:08.177 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:53:08.177 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:08.177 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:08.177 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:08.177 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:53:08.177 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:53:08.177 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling withdrawFromAccount)
+[TRACE] 2019-01-07 10:53:08.178 [main] Welcome - Enter entry withdrawFromAccount
+[TRACE] 2019-01-07 10:53:08.178 [main] ReadInput - Enter Entry readPositiveInteger
+[TRACE] 2019-01-07 10:53:11.574 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 10:53:11.574 [main] ReadInput - Exit with(4030000)
+[TRACE] 2019-01-07 10:53:11.574 [main] ReadInput - Exit with(4030000)
+[TRACE] 2019-01-07 10:53:11.976 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@769a1df5)
+[TRACE] 2019-01-07 10:53:12.005 [main] Welcome - Exit with(exit withdrawFromAccount, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:53:12.005 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:53:12.005 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:53:12.005 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:12.005 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:14.124 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:53:14.124 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:14.124 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:14.124 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:14.124 [main] Welcome - Exit with(2)
+[TRACE] 2019-01-07 10:53:14.125 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:53:14.125 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:14.125 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:15.916 [main] ReadInput - Enter Scanner input: 4
+[TRACE] 2019-01-07 10:53:15.916 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:53:15.916 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:53:15.916 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:53:15.917 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:53:15.917 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:53:15.917 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
+[TRACE] 2019-01-07 10:53:15.917 [main] Welcome - Enter entry deleteAccount
+[TRACE] 2019-01-07 10:53:16.201 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@7975d1d8)
+[TRACE] 2019-01-07 10:53:17.888 [main] Welcome - Exit with(exit deleteAccount, calling promptRegularUserChoice)
+[TRACE] 2019-01-07 10:53:17.888 [main] Welcome - Enter entry promptRegularUserChoice
+[TRACE] 2019-01-07 10:53:17.888 [main] Welcome - Enter entry getAllAccounts
+[TRACE] 2019-01-07 10:53:18.642 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@2438dcd)
+[TRACE] 2019-01-07 10:53:19.104 [main] Welcome - Exit with(exit getAllAccounts)
+[INFO ] 2019-01-07 10:53:19.104 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:53:19.104 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:19.104 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:20.968 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:53:20.969 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:20.969 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:20.969 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:20.969 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-07 10:53:20.969 [main] Welcome - Enter entry handleRegularUserRequest
+[TRACE] 2019-01-07 10:53:20.969 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
+[TRACE] 2019-01-07 10:53:20.969 [main] Welcome - Enter entry handleViewAccountRequest
+[INFO ] 2019-01-07 10:53:20.970 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:53:20.970 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:20.970 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:22.501 [main] ReadInput - Enter Scanner input: 2
+[TRACE] 2019-01-07 10:53:22.501 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:22.501 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:22.501 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 10:53:22.501 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewAllAccounts)
+[TRACE] 2019-01-07 10:53:22.501 [main] Welcome - Enter entry viewAllAccounts
+[TRACE] 2019-01-07 10:53:22.501 [main] Welcome - Exit with(exit viewAllAccounts, calling promptRegularUserChoice)
+[TRACE] 2019-01-07 10:53:22.501 [main] Welcome - Enter entry promptRegularUserChoice
+[TRACE] 2019-01-07 10:53:22.501 [main] Welcome - Enter entry getAllAccounts
+[TRACE] 2019-01-07 10:53:22.988 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@24105dc5)
+[TRACE] 2019-01-07 10:53:23.062 [main] Welcome - Exit with(exit getAllAccounts)
+[INFO ] 2019-01-07 10:53:23.062 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:53:23.062 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:23.063 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:28.172 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:53:28.172 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:28.172 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:28.172 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:28.172 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-07 10:53:28.173 [main] Welcome - Enter entry handleRegularUserRequest
+[TRACE] 2019-01-07 10:53:28.173 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
+[TRACE] 2019-01-07 10:53:28.173 [main] Welcome - Enter entry handleViewAccountRequest
+[INFO ] 2019-01-07 10:53:28.173 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:53:28.173 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:28.173 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:29.546 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:53:29.546 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:29.546 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:29.546 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:29.546 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
+[TRACE] 2019-01-07 10:53:29.546 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:53:29.546 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:53:29.546 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:29.546 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:30.505 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:53:30.506 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:30.506 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:30.506 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:53:30.506 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-07 10:53:30.506 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:53:30.506 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:30.507 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:53:33.186 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-07 10:53:33.186 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:53:33.186 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:53:33.186 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:53:33.186 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:53:33.187 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:53:33.187 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAccountTransactions)
+[TRACE] 2019-01-07 10:53:33.187 [main] Welcome - Enter entry viewIndividualAccountTransactions
+[INFO ] 2019-01-07 10:53:33.187 [main] Welcome - calling getTransactionsByAccountID
+[TRACE] 2019-01-07 10:53:33.187 [main] Welcome - Enter entry getTransactionsByAccountID
+[ERROR] 2019-01-07 10:54:33.294 [main] ConnectionUtil - Catching
+java.sql.SQLRecoverableException: IO Error: Socket read timed out
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_191]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_191]
+	at com.revature.utils.ConnectionUtil.getConnection(ConnectionUtil.java:39) [classes/:?]
+	at com.revature.dao.TransactionOracle.getAllTransactionsByAccountID(TransactionOracle.java:37) [classes/:?]
+	at com.revature.services.TransactionService.getAllTransactionsByAccountID(TransactionService.java:26) [classes/:?]
+	at com.revature.modules.RegularUser.getTransactionsByAccountID(RegularUser.java:180) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:158) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleViewAccountRequest(RegularUser.java:89) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:50) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.viewAllAccounts(RegularUser.java:307) [classes/:?]
+	at com.revature.modules.RegularUser.handleViewAccountRequest(RegularUser.java:93) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:50) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:216) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:148) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.withdrawFromAccount(RegularUser.java:281) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:136) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:245) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:148) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.depositToAccount(RegularUser.java:266) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:140) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleCreateAccountRequest(RegularUser.java:321) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:54) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.viewAllAccounts(RegularUser.java:307) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:152) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.depositToAccount(RegularUser.java:266) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:140) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.withdrawFromAccount(RegularUser.java:281) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:136) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleCreateAccountRequest(RegularUser.java:321) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:54) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.initiateRegularUserSession(RegularUser.java:32) [classes/:?]
+	at com.revature.utils.SessionManager.processLoginRegister(SessionManager.java:57) [classes/:?]
+	at com.revature.modules.Register.registerNewUser(Register.java:51) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:34) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:22) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:43) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:30) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:35) [classes/:?]
+Caused by: oracle.net.ns.NetException: Socket read timed out
+	at oracle.net.ns.Packet.receive(Packet.java:350) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocolStream.negotiateConnection(NSProtocolStream.java:153) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:263) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 75 more
+[TRACE] 2019-01-07 10:54:33.297 [main] Welcome - Exit with(exit getTransactionsByAccountID, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:54:33.297 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:54:33.297 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Enter Scanner input: 
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Enter Params: 1
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Enter Scanner input: 4
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:54:33.298 [main] ReadInput - Exit with(4)
+[TRACE] 2019-01-07 10:54:33.299 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:54:33.299 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:54:33.299 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling deleteAccount)
+[TRACE] 2019-01-07 10:54:33.299 [main] Welcome - Enter entry deleteAccount
+[ERROR] 2019-01-07 10:55:33.382 [main] ConnectionUtil - Catching
+java.sql.SQLRecoverableException: IO Error: Socket read timed out
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_191]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_191]
+	at com.revature.utils.ConnectionUtil.getConnection(ConnectionUtil.java:39) [classes/:?]
+	at com.revature.dao.AccountOracle.deleteAccount(AccountOracle.java:177) [classes/:?]
+	at com.revature.services.AccountService.deleteAccount(AccountService.java:38) [classes/:?]
+	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:196) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:148) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.getTransactionsByAccountID(RegularUser.java:188) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:158) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleViewAccountRequest(RegularUser.java:89) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:50) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.viewAllAccounts(RegularUser.java:307) [classes/:?]
+	at com.revature.modules.RegularUser.handleViewAccountRequest(RegularUser.java:93) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:50) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:216) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:148) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.withdrawFromAccount(RegularUser.java:281) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:136) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.deleteAccount(RegularUser.java:245) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:148) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.depositToAccount(RegularUser.java:266) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:140) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleCreateAccountRequest(RegularUser.java:321) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:54) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.viewAllAccounts(RegularUser.java:307) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:152) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.depositToAccount(RegularUser.java:266) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:140) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.printListOfTransactions(RegularUser.java:175) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccountTransactions(RegularUser.java:161) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:144) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.withdrawFromAccount(RegularUser.java:281) [classes/:?]
+	at com.revature.modules.RegularUser.handleIndividualAccountOptions(RegularUser.java:136) [classes/:?]
+	at com.revature.modules.RegularUser.individualAccountOptionsPrompt(RegularUser.java:129) [classes/:?]
+	at com.revature.modules.RegularUser.viewIndividualAccount(RegularUser.java:107) [classes/:?]
+	at com.revature.modules.RegularUser.handleCreateAccountRequest(RegularUser.java:321) [classes/:?]
+	at com.revature.modules.RegularUser.handleRegularUserRequest(RegularUser.java:54) [classes/:?]
+	at com.revature.modules.RegularUser.promptRegularUserChoice(RegularUser.java:43) [classes/:?]
+	at com.revature.modules.RegularUser.initiateRegularUserSession(RegularUser.java:32) [classes/:?]
+	at com.revature.utils.SessionManager.processLoginRegister(SessionManager.java:57) [classes/:?]
+	at com.revature.modules.Register.registerNewUser(Register.java:51) [classes/:?]
+	at com.revature.modules.Register.usernameAndPasswordPrompt(Register.java:34) [classes/:?]
+	at com.revature.modules.Register.handleRegisterRequest(Register.java:22) [classes/:?]
+	at com.revature.utils.SessionManager.processWelcomeChoice(SessionManager.java:43) [classes/:?]
+	at com.revature.utils.SessionManager.start(SessionManager.java:30) [classes/:?]
+	at com.revature.utils.JDBCBank.main(JDBCBank.java:35) [classes/:?]
+Caused by: oracle.net.ns.NetException: Socket read timed out
+	at oracle.net.ns.Packet.receive(Packet.java:350) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocolStream.negotiateConnection(NSProtocolStream.java:153) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:263) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 78 more
+[TRACE] 2019-01-07 10:55:33.383 [main] Welcome - Exit with(exit deleteAccount, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:55:33.383 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:55:33.383 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:55:33.383 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:55:33.383 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:02.762 [main] JDBCBank - Enter entry main
+[TRACE] 2019-01-07 10:56:02.766 [main] SessionManager - Enter entry start
+[TRACE] 2019-01-07 10:56:02.769 [main] SessionManager - Exit with(exit start, calling processWelcomeChoice(myWelcome.prompt()))
+[TRACE] 2019-01-07 10:56:02.772 [main] Welcome - Enter Params []
+[TRACE] 2019-01-07 10:56:02.772 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:02.773 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:05.161 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:56:05.161 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:05.161 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:05.162 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:05.162 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-07 10:56:05.162 [main] SessionManager - Enter entry processWelcomeChoice
+[TRACE] 2019-01-07 10:56:05.169 [main] SessionManager - Exit with(exit processWelcomeChoice, calling myLogin.handleLoginRequest)
+[TRACE] 2019-01-07 10:56:05.169 [main] Login - Enter entering public void class handleLoginRequest
+[TRACE] 2019-01-07 10:56:05.170 [main] Login - Exit with(Calling usernameAndPasswordPrompt)
+[TRACE] 2019-01-07 10:56:05.170 [main] Login - Enter entering private void usernameAndPasswordPrompt
+[INFO ] 2019-01-07 10:56:05.170 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-07 10:56:05.170 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-07 10:56:05.170 [main] ReadInput - Enter entry readUsernameOrPassword
+[TRACE] 2019-01-07 10:56:07.745 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 10:56:07.746 [main] ReadInput - Exit with(BillyBob)
+[TRACE] 2019-01-07 10:56:07.746 [main] ReadInput - Exit with(BillyBob)
+[TRACE] 2019-01-07 10:56:07.746 [main] Login - Exit with(BillyBob)
+[INFO ] 2019-01-07 10:56:07.746 [main] Login - Calling getUsernameOrPassword() method from usernameAndPasswordPrompt
+[TRACE] 2019-01-07 10:56:07.746 [main] Login - Enter entry getUsernameOrPassword
+[TRACE] 2019-01-07 10:56:07.746 [main] ReadInput - Enter entry readUsernameOrPassword
+[TRACE] 2019-01-07 10:56:09.440 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 10:56:09.440 [main] ReadInput - Exit with(Thorton)
+[TRACE] 2019-01-07 10:56:09.440 [main] ReadInput - Exit with(Thorton)
+[TRACE] 2019-01-07 10:56:09.441 [main] Login - Exit with(Thorton)
+[TRACE] 2019-01-07 10:56:09.441 [main] Login - Exit with(calling authenticateUser)
+[TRACE] 2019-01-07 10:56:09.441 [main] Login - Enter entry authenticateUser(x,x)
+[TRACE] 2019-01-07 10:56:10.243 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@5aa9e4eb)
+[TRACE] 2019-01-07 10:56:10.588 [main] Login - Exit with(Calling SessionManager.processLoginRegister())
+[TRACE] 2019-01-07 10:56:10.588 [main] SessionManager - Enter entry processLoginRegister
+[TRACE] 2019-01-07 10:56:10.592 [main] SessionManager - Exit with(exit processLoginRegister, calling myRegularUser.initiateRegularUserSession())
+[TRACE] 2019-01-07 10:56:10.592 [main] Welcome - Enter entry handleRegularUserSessionHandler
+[TRACE] 2019-01-07 10:56:10.592 [main] Welcome - Exit with(exit handleRegularUserSessionHandler, calling promptRegularUserChoice)
+[TRACE] 2019-01-07 10:56:10.592 [main] Welcome - Enter entry promptRegularUserChoice
+[TRACE] 2019-01-07 10:56:10.592 [main] Welcome - Enter entry getAllAccounts
+[TRACE] 2019-01-07 10:56:10.902 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@448c8166)
+[TRACE] 2019-01-07 10:56:10.963 [main] Welcome - Exit with(exit getAllAccounts)
+[INFO ] 2019-01-07 10:56:10.963 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:56:10.963 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:10.964 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:13.491 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:56:13.492 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:13.492 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:13.492 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:13.492 [main] Welcome - Exit with(exit promptRegularUserChoice, calling handleSuperUserRequest)
+[TRACE] 2019-01-07 10:56:13.492 [main] Welcome - Enter entry handleRegularUserRequest
+[TRACE] 2019-01-07 10:56:13.492 [main] Welcome - Exit with(exit handleRegularUserRequest, calling)
+[TRACE] 2019-01-07 10:56:13.492 [main] Welcome - Enter entry handleViewAccountRequest
+[INFO ] 2019-01-07 10:56:13.492 [main] Welcome - calling ReadInput.readOptions
+[TRACE] 2019-01-07 10:56:13.493 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:13.493 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:14.409 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:56:14.409 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:14.409 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:14.410 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:14.410 [main] Welcome - Exit with(exit handleViewAccountRequest, calling viewIndividualAccount)
+[TRACE] 2019-01-07 10:56:14.410 [main] Welcome - Enter entry viewIndividualAccount
+[TRACE] 2019-01-07 10:56:14.410 [main] Welcome - Enter entry selectIDPrompt
+[TRACE] 2019-01-07 10:56:14.411 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:14.411 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:15.302 [main] ReadInput - Enter Scanner input: 1
+[TRACE] 2019-01-07 10:56:15.302 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:15.302 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:15.303 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 10:56:15.303 [main] Welcome - Exit with(1)
+[TRACE] 2019-01-07 10:56:15.303 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:56:15.304 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:15.304 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:16.753 [main] ReadInput - Enter Scanner input: 3
+[TRACE] 2019-01-07 10:56:16.753 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:56:16.753 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:56:16.753 [main] ReadInput - Exit with(3)
+[TRACE] 2019-01-07 10:56:16.753 [main] Welcome - Exit with(exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions)
+[TRACE] 2019-01-07 10:56:16.753 [main] Welcome - Enter entry handleIndividualAccountOptions
+[TRACE] 2019-01-07 10:56:16.753 [main] Welcome - Exit with(exit handleIndividualAccountOptions, calling viewAccountTransactions)
+[TRACE] 2019-01-07 10:56:16.753 [main] Welcome - Enter entry viewIndividualAccountTransactions
+[INFO ] 2019-01-07 10:56:16.754 [main] Welcome - calling getTransactionsByAccountID
+[TRACE] 2019-01-07 10:56:16.754 [main] Welcome - Enter entry getTransactionsByAccountID
+[TRACE] 2019-01-07 10:56:17.214 [main] ConnectionUtil - Exit with(oracle.jdbc.driver.T4CConnection@13526e59)
+[TRACE] 2019-01-07 10:56:17.264 [main] Welcome - Exit with(exit getTransactionsByAccountID, returning transaction list to calling function.)
+[TRACE] 2019-01-07 10:56:17.265 [main] Welcome - Exit with(exit viewIndividualAccountTransactions, calling printListOfTransactions(thisAccountsTransactions))
+[TRACE] 2019-01-07 10:56:17.266 [main] Welcome - Exit with(exit printListOfTransactions, calling individualAccountOptionsPrompt)
+[TRACE] 2019-01-07 10:56:17.266 [main] Welcome - Enter entry individualAccountOptionsPrompt
+[TRACE] 2019-01-07 10:56:17.266 [main] ReadInput - Enter
+[TRACE] 2019-01-07 10:56:17.267 [main] ReadInput - Enter
+[TRACE] 2019-01-07 14:33:52.546 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 14:33:52.558 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 14:33:52.558 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 14:33:52.562 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 14:33:52.587 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 14:33:52.590 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 14:33:52.591 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 14:33:52.592 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 14:33:52.593 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 14:33:52.594 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 14:33:52.594 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\d\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 14:33:52.595 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 14:33:52.596 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 14:34:48.774 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 14:34:48.781 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 14:34:48.781 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 14:34:48.782 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 14:34:48.783 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 14:34:48.784 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 14:34:48.784 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 14:34:48.784 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 14:34:48.784 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 14:34:48.785 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 14:34:48.785 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 14:34:48.785 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 14:34:48.786 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 14:34:48.786 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\d\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 14:34:48.787 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 14:34:48.788 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 14:59:40.007 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 14:59:40.022 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 14:59:40.026 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 14:59:40.026 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 14:59:40.028 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 14:59:40.028 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 14:59:40.030 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 14:59:40.032 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 14:59:40.033 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 14:59:40.033 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 14:59:40.033 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 14:59:40.033 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 14:59:40.034 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 14:59:40.034 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 14:59:40.034 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 14:59:40.034 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 14:59:40.035 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 14:59:40.035 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 14:59:40.036 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 14:59:40.036 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 14:59:40.037 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 14:59:40.038 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 14:59:40.038 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:02:13.455 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:02:13.460 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:02:13.472 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:02:13.479 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:02:13.482 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:02:13.483 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:02:13.483 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:02:13.484 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:02:13.486 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:02:13.486 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:02:13.486 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:02:13.486 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:02:13.487 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:02:13.487 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:02:13.487 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:02:13.488 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:02:13.488 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:02:13.489 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:02:13.490 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:02:13.490 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:02:13.492 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:02:13.492 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:02:13.493 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:04:43.939 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:04:43.943 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:04:43.955 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:04:43.960 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:04:43.963 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:04:43.964 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:04:43.964 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:04:43.968 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:04:43.969 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:04:43.969 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:04:43.970 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:04:43.970 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:04:43.970 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:04:43.970 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:04:43.971 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:04:43.971 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:04:43.971 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:04:43.971 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:04:43.972 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:04:43.972 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:04:43.973 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:04:43.973 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:04:43.974 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:13:13.850 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:13:13.855 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:13:13.867 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:13:13.871 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:13:13.873 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:13:13.874 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:13:13.875 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:13:13.875 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:13:13.876 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:13:13.877 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:13:13.877 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:13:13.877 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:13:13.878 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:13:13.879 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:13:13.879 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:13:13.879 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:13:13.879 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:13:13.880 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:13:13.880 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:13:13.881 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:13:13.882 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:13:13.882 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:13:13.883 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:14:21.769 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:14:21.784 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:14:21.787 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:14:21.788 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:14:21.789 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:14:21.789 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:14:21.791 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:14:21.793 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:14:21.794 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:14:21.794 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:14:21.794 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:14:21.794 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:14:21.795 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:14:21.795 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:14:21.795 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:14:21.795 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:14:21.796 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:14:21.797 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:14:21.797 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:14:21.798 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:14:21.799 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:14:21.800 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:14:21.802 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:16:09.945 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:16:09.950 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:16:09.951 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:16:09.953 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:16:09.954 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:16:09.955 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:16:09.956 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:16:09.956 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:16:09.956 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:16:09.957 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:16:09.957 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:16:09.957 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:16:09.958 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:16:09.958 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:16:09.959 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:16:09.960 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:16:09.962 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:16:51.071 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:16:51.085 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:16:51.089 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:16:51.089 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:16:51.090 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:16:51.091 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:16:51.092 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:16:51.094 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:16:51.094 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:16:51.094 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:16:51.095 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:16:51.095 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:16:51.095 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:16:51.095 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:16:51.095 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:16:51.096 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:16:51.096 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:16:51.097 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:16:51.097 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:16:51.098 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:16:51.098 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:16:51.099 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:16:51.099 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:18:15.134 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:15.144 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:15.148 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:18:15.149 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:18:15.150 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:18:15.151 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:15.161 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:18:15.174 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:18:15.175 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:18:15.175 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:18:15.176 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:18:15.176 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:18:15.177 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:18:15.178 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:18:15.178 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:18:15.178 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:18:15.179 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:18:15.179 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:18:15.180 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:18:15.180 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:18:15.181 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:15.182 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:18:15.184 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:18:59.826 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:59.835 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:59.839 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:18:59.839 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:18:59.842 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:18:59.842 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:59.845 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:18:59.855 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:18:59.855 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:18:59.855 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:18:59.856 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:18:59.856 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:18:59.856 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:18:59.857 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:18:59.857 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:18:59.857 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:18:59.858 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:18:59.859 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:18:59.859 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:18:59.860 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:18:59.860 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:18:59.861 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:18:59.861 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:19:41.372 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:19:41.379 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:19:41.383 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:19:41.383 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:19:41.384 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:19:41.385 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:19:41.385 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:19:41.386 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:19:41.388 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:19:41.388 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:19:41.389 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:19:41.389 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:19:41.389 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:19:41.390 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:19:41.390 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:19:41.390 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:19:41.391 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:19:41.391 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!\(\)\-\.\?\[\]\_\`\~\;\:\@\#\$\%\^\&\*\+\=)
+[TRACE] 2019-01-07 15:19:41.391 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:19:41.392 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:19:41.392 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:19:41.393 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:21:58.249 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:21:58.256 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:21:58.259 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:21:58.259 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:21:58.260 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:21:58.261 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:21:58.261 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:21:58.262 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:21:58.263 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:21:58.264 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:21:58.264 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:21:58.265 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:21:58.265 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:21:58.265 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:21:58.265 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:21:58.266 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:21:58.266 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:21:58.272 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:21:58.273 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:21:58.274 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:21:58.274 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:23:08.031 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:23:08.038 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:23:08.040 [main] ReadInput - Enter entry parseChoice Scanner input: 1 2
+[TRACE] 2019-01-07 15:23:08.041 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:23:08.041 [main] ReadInput - Enter entry parseChoice Scanner input: 
+[TRACE] 2019-01-07 15:23:08.042 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:23:08.042 [main] ReadInput - Enter entry parseChoice Scanner input: Foo
+[TRACE] 2019-01-07 15:23:08.043 [main] ReadInput - Enter entry parseChoice Scanner input: 1
+[TRACE] 2019-01-07 15:23:08.044 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:23:08.044 [main] ReadInput - Enter entry parseChoice Scanner input: 2
+[TRACE] 2019-01-07 15:23:08.044 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:23:08.045 [main] ReadInput - Enter entry parseChoice Scanner input: Hello
+[TRACE] 2019-01-07 15:23:08.045 [main] ReadInput - Exit with(1)
+[TRACE] 2019-01-07 15:23:08.045 [main] ReadInput - Enter entry parseChoice Scanner input: World
+[TRACE] 2019-01-07 15:23:08.046 [main] ReadInput - Exit with(2)
+[TRACE] 2019-01-07 15:23:08.046 [main] ReadInput - Enter entry parseChoice Scanner input: 3
+[TRACE] 2019-01-07 15:23:08.047 [main] ReadInput - Enter entry validateUsernameOrPassword
+[TRACE] 2019-01-07 15:23:08.047 [main] ReadInput - Exit with(abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!()-.?[]_`~;:@#$%^&*+=)
+[TRACE] 2019-01-07 15:23:08.047 [main] ReadInput - Enter entry parseChoice Scanner input: Hello World
+[TRACE] 2019-01-07 15:23:08.048 [main] ReadInput - Enter Entry validatePositiveInteger
+[TRACE] 2019-01-07 15:23:08.048 [main] ReadInput - Exit with(120398000)
+[TRACE] 2019-01-07 15:23:08.049 [main] ReadInput - Enter entry validateUsernameOrPassword
