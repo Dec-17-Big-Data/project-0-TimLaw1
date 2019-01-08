@@ -41,7 +41,10 @@ public class SessionManager {
 			Register myRegister = new Register();
 			logger.traceExit("exit processWelcomeChoice, calling myRegister.handleRegisterRequest");
 			myRegister.handleRegisterRequest();
+		} else {
+			System.exit(0);
 		}
+		
 	}
 	public void processLoginRegister() {
 		logger.traceEntry("entry processLoginRegister");

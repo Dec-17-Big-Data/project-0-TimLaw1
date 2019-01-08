@@ -37,9 +37,10 @@ public class ReadInput {
 		int choice = -1;
 		try{
 			choice = parseChoice(JDBCBank.inStream.nextLine());	
+			return logger.traceExit(choice);
 		} catch (InvalidOptionException IOE) {
 			logger.catching(IOE);
-			optionsErrorPrompt();
+			System.out.println(IOE);
 		} catch (NoSuchElementException NSEE) {
 			logger.catching(NSEE);
 		} catch (IllegalStateException ISE) {
@@ -47,7 +48,7 @@ public class ReadInput {
 		} catch(Exception e) {
 			logger.catching(e);
 		} 
-		return logger.traceExit(choice);
+		return logger.traceExit(optionsErrorPrompt());
 	}
 	public int parseChoice(String choice) throws InvalidOptionException {
 		//TODO make these custom exceptions so it can be JUnit tested
@@ -92,7 +93,7 @@ public class ReadInput {
 					return logger.traceExit(result);
 				}
 			}
-			throw new InvalidOptionException("You entered an invalid exception.");
+			throw new InvalidOptionException("You entered an invalid option.");
 		}
 	}
 	public String readUsernameOrPassword() {
@@ -100,17 +101,18 @@ public class ReadInput {
 		String password = null;
 		try{
 			password = validateUsernameOrPassword(JDBCBank.inStream.nextLine());
+			return logger.traceExit(password);
 		} catch (InvalidOptionException IOE) {
 			logger.catching(IOE);
-			usernameOrPasswordErrorPrompt();
+			System.out.println(IOE);
 		} catch (NoSuchElementException NSEE) {
 			logger.catching(NSEE);
 		} catch (IllegalStateException ISE) {
 			logger.catching(ISE);
 		} catch(Exception e) {
 			logger.catching(e);
-		} 
-		return logger.traceExit(password);
+		}
+		return logger.traceExit(usernameOrPasswordErrorPrompt());
 	}
 	public String validateUsernameOrPassword(String usernameOrPassword) throws InvalidOptionException {
 		//TODO make these custom exceptions so it can be JUnit tested
@@ -128,7 +130,7 @@ public class ReadInput {
 	}
 	private String usernameOrPasswordErrorPrompt() {
 		logger.traceEntry("entry usernameOrPasswordErrorPrompt");
-		System.out.println("Try entering a valid password again...");
+		System.out.println("Try entering a valid username/password again...");
 		return logger.traceExit(readUsernameOrPassword());
 	}
 	public int readPositiveInteger() {
@@ -136,9 +138,10 @@ public class ReadInput {
 		int posInt = -1;
 		try{
 			posInt = validatePositiveInteger(JDBCBank.inStream.nextLine());
+			return logger.traceExit(posInt);
 		} catch (InvalidOptionException IOE) {
 			logger.catching(IOE);
-			positiveIntegerErrorPrompt();
+			System.out.println(IOE);
 		} catch (NoSuchElementException NSEE) {
 			logger.catching(NSEE);
 		} catch (IllegalStateException ISE) {
@@ -146,7 +149,7 @@ public class ReadInput {
 		} catch(Exception e) {
 			logger.catching(e);
 		} 
-		return logger.traceExit(posInt);
+		return logger.traceExit(positiveIntegerErrorPrompt());
 	}
 	public int validatePositiveInteger(String inputString) throws InvalidOptionException {
 		logger.traceEntry("Entry validatePositiveInteger");
@@ -160,6 +163,9 @@ public class ReadInput {
 		} else {
 			if (inputString.length()==1) {
 				int output = Integer.valueOf(inputString); 
+				if (output==0) {
+					throw new InvalidOptionException("You can't input 0.");
+				}
 				return logger.traceExit(output);
 			} else {
 				String invalidOrdering = "0+[0-9]*";

@@ -169,4 +169,24 @@ public class JDBCBankTest {
 		expectedException.expect(InvalidOptionException.class);
 		ri.validatePositiveInteger(s);
 	}
+	@Test
+	public void testValidatePositiveIntegerZero() throws InvalidOptionException {
+		String s = "0";
+		ReadInput ri = new ReadInput();
+		expectedException.expect(InvalidOptionException.class);
+		ri.validatePositiveInteger(s);
+	}
+	@Test
+	public void testValidatePositiveIntegerValidOver20Long() throws InvalidOptionException {
+		String s = "912835015931257329870392470391248710239847890";
+		ReadInput ri = new ReadInput();
+		expectedException.expect(InvalidOptionException.class);
+		ri.validatePositiveInteger(s);
+	}
+	@Test
+	public void testValidatePositiveIntegerOne() throws InvalidOptionException {
+		String s = "1";
+		ReadInput ri = new ReadInput();
+		assertEquals(1,ri.validatePositiveInteger(s));
+	}
 }

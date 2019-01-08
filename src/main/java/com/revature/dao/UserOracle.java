@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,6 +55,7 @@ public class UserOracle implements UserDao {
 			while (rs.next()) {
 				listOfUsers.add(new User(rs.getInt("user_id"),rs.getString("user_name"),rs.getString("user_password"),rs.getInt("super_user")));
 			}
+			Collections.sort(listOfUsers);
 			getAllSuccess = true;
 		} catch (SQLException e) {
 			logger.catching(e);

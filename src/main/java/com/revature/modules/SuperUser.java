@@ -179,12 +179,16 @@ public class SuperUser {
 		try {
 			Optional<Boolean> updateSuccess = userService.updateUser(lUserID, username, password);
 			if (updateSuccess.isPresent()) {
+				System.out.println("Database connection works.");
 				Boolean upSucc = updateSuccess.get();
 				if (upSucc) {
+					System.out.println("Database updated properly.");
 					User updatedUser = new User(lUserID, username, password, isSuperUser);
 					for (User u: allUsers) {
 						if (u.getUser_id()==lUserID) {
 							u = updatedUser; 
+							System.out.println("The user has been updated successfully.");
+							logger.info("Successfully updated user information after update request.");
 						}
 					}
 				} else {

@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,7 +22,7 @@ import com.revature.utils.ConnectionUtil;
 
 import oracle.jdbc.OracleTypes;
 
-public class AccountOracle implements AccountDao{
+public class AccountOracle implements AccountDao {
 	private static final Logger logger = LogManager.getLogger(AccountOracle.class);
 	private static AccountOracle accountOracle;
 	final static AccountDao accountDao = AccountOracle.getDao();
@@ -58,6 +59,7 @@ public class AccountOracle implements AccountDao{
 			while (rs.next()) {
 				listOfAccounts.add(new Account(rs.getInt("account_id"),userID,rs.getInt("balance")));
 			}
+			Collections.sort(listOfAccounts);
 			getAllSuccess = true;
 		} catch (SQLException e) {
 			logger.catching(e);

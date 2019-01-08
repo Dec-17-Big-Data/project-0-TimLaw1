@@ -1,6 +1,6 @@
 package com.revature.models;
 
-public class Account {
+public class Account implements Comparable<Account> {
 	private Integer accountID;
 	private Integer userID;
 	private Integer balance;
@@ -68,5 +68,22 @@ public class Account {
 	public String toString() {
 		return "Account [accountID=" + accountID + ", userID=" + userID + ", balance=" + balance + "]";
 	}
-	
+	public int compare(Account a1, Account a2) {
+		if (a1.getAccountID()>a2.getAccountID()) {
+			return 1;
+		} else if (a1.getAccountID()<a2.getAccountID()) {
+			return -1;
+		} else {
+			return 0;
+		}
+	}
+	@Override
+	public int compareTo(Account arg0) {
+		if (this.accountID>arg0.getAccountID()) {
+			return 1;
+		} else if (this.accountID<arg0.getAccountID()) {
+			return -1;
+		}
+		return 0;
+	}
 }
