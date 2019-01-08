@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Register.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.modules</a> &gt; <span class="el_source">Register.java</span></div><h1>Register.java</h1><pre class="source lang-java linenums">package com.revature.modules;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.exceptions.UsernameAlreadyExists;
+import com.revature.models.User;
+import com.revature.services.UserService;
+import com.revature.utils.ReadInput;
+import com.revature.utils.SessionManager;
+
+<span class="nc" id="L15">public class Register {</span>
+<span class="nc" id="L16">	private static final Logger logger = LogManager.getLogger(Register.class);</span>
+<span class="nc" id="L17">	private ReadInput ri = new ReadInput();</span>
+<span class="nc" id="L18">	private UserService userService = UserService.getService();</span>
+	public void handleRegisterRequest() {
+<span class="nc" id="L20">		logger.traceEntry(&quot;entry handleRegisterRequest&quot;);</span>
+<span class="nc" id="L21">		logger.traceExit(&quot;exit, calling usernameAndPasswordPrompt&quot;);</span>
+<span class="nc" id="L22">		usernameAndPasswordPrompt();</span>
+<span class="nc" id="L23">	}</span>
+	private void usernameAndPasswordPrompt() {
+<span class="nc" id="L25">		logger.traceEntry(&quot;entry usernameAndPasswordPrompt&quot;);</span>
+<span class="nc" id="L26">		System.out.println(&quot;Beginning of Registration prompt...&quot;);</span>
+<span class="nc" id="L27">		System.out.println(&quot;Type a new username (case-sensitive) and hit enter.&quot;);</span>
+<span class="nc" id="L28">		logger.info(&quot;calling getUsernameOrPassword&quot;);</span>
+<span class="nc" id="L29">		String myUsername = getUsernameOrPassword();</span>
+<span class="nc" id="L30">		System.out.println(&quot;Type a new password (case-sensitive) and hit enter.&quot;);</span>
+<span class="nc" id="L31">		logger.info(&quot;calling getUsernameOrPassword&quot;);</span>
+<span class="nc" id="L32">		String myPassword = getUsernameOrPassword();</span>
+<span class="nc" id="L33">		logger.traceExit(&quot;exit, calling registerNewUser&quot;);</span>
+<span class="nc" id="L34">		registerNewUser(myUsername,myPassword);	</span>
+<span class="nc" id="L35">	}</span>
+	private String getUsernameOrPassword() {
+<span class="nc" id="L37">		logger.traceEntry();</span>
+<span class="nc" id="L38">		return logger.traceExit(ri.readUsernameOrPassword());</span>
+	}
+	private void registerNewUser(String username, String password) {
+<span class="nc" id="L41">		logger.traceEntry(&quot;entry registerNewUser&quot;);</span>
+<span class="nc" id="L42">		System.out.println(&quot;Registering new user...&quot;);</span>
+		Optional&lt;User&gt; potentialUser;
+		try {
+<span class="nc" id="L45">			potentialUser = userService.registerUser(username,password);</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">			if (potentialUser.isPresent()) {</span>
+<span class="nc" id="L47">				User u = potentialUser.get();</span>
+<span class="nc" id="L48">				SessionManager.sessionUser = u;</span>
+<span class="nc" id="L49">				SessionManager mySm = SessionManager.getSessionManager();</span>
+<span class="nc" id="L50">				logger.traceExit(&quot;New user registered, calling session manager to handle showing the user admin/not-admin views.&quot;);</span>
+<span class="nc" id="L51">				mySm.processLoginRegister();</span>
+<span class="nc" id="L52">			} else {</span>
+<span class="nc" id="L53">				System.out.println(&quot;Server failed to respond, try again...&quot;);</span>
+<span class="nc" id="L54">				logger.traceExit(&quot;Server failed to respond, calling registration error prompt&quot;);</span>
+<span class="nc" id="L55">				registrationErrorPrompt();</span>
+			}
+<span class="nc" id="L57">		} catch (UsernameAlreadyExists e) {</span>
+<span class="nc" id="L58">			logger.catching(e);</span>
+<span class="nc" id="L59">			System.out.println(&quot;That username is already taken, what would you like to do?&quot;);</span>
+<span class="nc" id="L60">			logger.traceExit(&quot;Username already exists, calling registration error prompt&quot;);</span>
+<span class="nc" id="L61">			registrationErrorPrompt();</span>
+		}
+<span class="nc" id="L63">	}</span>
+	private void registrationErrorPrompt() {
+<span class="nc" id="L65">		logger.traceEntry(&quot;entry registrationErrorPrompt&quot;);</span>
+<span class="nc" id="L66">		String[] validOptions = {&quot;Register&quot;,&quot;Login&quot;};</span>
+<span class="nc" id="L67">		ReadInput myRI = new ReadInput(validOptions);</span>
+<span class="nc" id="L68">		Integer choice = myRI.promptThenReadOptions();</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">		if (choice == 1) {</span>
+<span class="nc" id="L70">			System.out.println(&quot;You are attempting to register again.&quot;);</span>
+<span class="nc" id="L71">			logger.traceExit(&quot;exit usernameAndPasswordPrompt&quot;);</span>
+<span class="nc" id="L72">			usernameAndPasswordPrompt();</span>
+<span class="nc" id="L73">		} else {</span>
+<span class="nc" id="L74">			System.out.println(&quot;You are attempting to Login.&quot;);</span>
+<span class="nc" id="L75">			Login myLogin = new Login();</span>
+<span class="nc" id="L76">			logger.traceExit(&quot;exit myLogin.handleLoginRequest&quot;);</span>
+<span class="nc" id="L77">			myLogin.handleLoginRequest();</span>
+		}
+	
+<span class="nc" id="L80">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

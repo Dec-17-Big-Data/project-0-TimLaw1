@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="USERS" directorySegmentName="seg_0" id="983E0169-984E-D5A5-1783-1CCE8942D61E">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:42 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>AE171B31-5981-DBCE-B653-271AC88F2DE5</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USER_PASSWORD" id="226AA019-0F92-0BA8-D3F4-6103B8A2E4A8">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_NAME" id="BAC65AAC-D380-5BE8-E458-9E4F98FAF588">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUPER_USER" id="D21F1294-E09F-D091-168F-19BF8D52AFFC">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="F2310CDC-DB19-ADF7-F5EF-7896BD7158D3">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="USERS_PK" id="AB8BA2E0-D9BF-9069-519E-AF0ADDD9E176">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:45 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+<segment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="USERS_PK" id="09720590-F26B-EE95-F983-EB7365073D5A">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:45 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<segment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+<existingIndex>AB8BA2E0-D9BF-9069-519E-AF0ADDD9E176</existingIndex>
+<indexSegment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="USERS_USER_NAME_UN" id="3490A97C-65C4-3F06-ADAD-71065DBC7DBB">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:45 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+<segment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+<indexSegment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

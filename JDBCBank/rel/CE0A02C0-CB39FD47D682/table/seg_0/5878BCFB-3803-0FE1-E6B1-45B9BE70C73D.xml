@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5878BCFB-3803-0FE1-E6B1-45B9BE70C73D" schemaObject="FFC1AA7C-F2C2-A9DA-60DE-996410A0455E" name="TRANSACTIONS">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ROOT</sourceObjSchema>
+<sourceObjName>TRANSACTIONS</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:42 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TRANSACTION_ID" id="17E03805-FDA9-F76A-1192-AE976DC578C3">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>TRANSACTIONS</sourceObjSchema>
+<sourceObjName>TRANSACTION_ID</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>transaction_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRANSACTION_SEQ_TRIGGER</autoIncrementTriggerName>
+</Column>
+<Column name="USER_ID" id="C4597654-E441-3B16-1310-80E091BA8598">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>TRANSACTIONS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="21711D98-A1C2-DE7E-A3A9-F508E66424FA" referredColumn="F2310CDC-DB19-ADF7-F5EF-7896BD7158D3"/>
+</associations>
+</Column>
+<Column name="ACCOUNT_ID" id="D1AC64C1-4606-58FE-F9FF-9D1A3A0CFF8A">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>TRANSACTIONS</sourceObjSchema>
+<sourceObjName>ACCOUNT_ID</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B7BFC94-70FA-6B64-7200-BF8FB469DDD0" referredColumn="9A8A5F79-4BF2-D712-8745-31B673AA1D2E"/>
+</associations>
+</Column>
+<Column name="AMOUNT" id="A0487B0D-6617-DEFB-3A70-D0A4A90D7118">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>TRANSACTIONS</sourceObjSchema>
+<sourceObjName>AMOUNT</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WITHDRAWAL" id="22E9A0E7-5195-A697-6F72-09091159ACC9">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>TRANSACTIONS</sourceObjSchema>
+<sourceObjName>WITHDRAWAL</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<constraintName>SYS_C005425</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="withdrawal&lt;2"/>
+<implementationDef dbType="Oracle Database 12c" definition="withdrawal&lt;2"/>
+</checkConstraint>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE_OF_PURCHASE" id="D65B3AA6-A1A4-262E-B0E0-324EB57701CD">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>TRANSACTIONS</sourceObjSchema>
+<sourceObjName>DATE_OF_PURCHASE</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EB37C8EC-8F8A-F10C-56BA-18ED74D61B43" name="TRANSACTIONS_PK">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ROOT</sourceObjSchema>
+<sourceObjName>TRANSACTIONS_PK</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:45 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17E03805-FDA9-F76A-1192-AE976DC578C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49927E5C-A455-1EB7-0AC2-C4E178A237F2" schemaObject="FFC1AA7C-F2C2-A9DA-60DE-996410A0455E" name="TRANSACTIONS_PK">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ROOT</sourceObjSchema>
+<sourceObjName>TRANSACTIONS_PK</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:44 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17E03805-FDA9-F76A-1192-AE976DC578C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A3041E7C-C8B5-B59C-9CB1-1F6987FEB168" name="TRANSACTIONS_ACCOUNT_ID_FK">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:46 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1AC64C1-4606-58FE-F9FF-9D1A3A0CFF8A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5F0E9EFA-FCF4-C9A2-D4A8-FD0248115D37" name="TRANSACTIONS_USER_ID_FK">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:46 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4597654-E441-3B16-1310-80E091BA8598"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

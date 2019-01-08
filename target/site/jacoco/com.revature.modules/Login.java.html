@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Login.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.modules</a> &gt; <span class="el_source">Login.java</span></div><h1>Login.java</h1><pre class="source lang-java linenums">package com.revature.modules;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Optional;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.exceptions.IncorrectPasswordException;
+import com.revature.models.User;
+import com.revature.services.UserService;
+import com.revature.utils.ReadInput;
+import com.revature.utils.SessionManager;
+
+<span class="nc" id="L19">public class Login {</span>
+<span class="nc" id="L20">	private static final Logger logger = LogManager.getLogger(Login.class);</span>
+<span class="nc" id="L21">	private ReadInput ri = new ReadInput();</span>
+<span class="nc" id="L22">	private UserService userService = UserService.getService();</span>
+	public void handleLoginRequest() {
+<span class="nc" id="L24">		logger.traceEntry(&quot;entering public void class handleLoginRequest&quot;);</span>
+<span class="nc" id="L25">		logger.traceExit(&quot;Calling usernameAndPasswordPrompt&quot;);</span>
+<span class="nc" id="L26">		usernameAndPasswordPrompt();</span>
+<span class="nc" id="L27">	}</span>
+	private void usernameAndPasswordPrompt() {
+<span class="nc" id="L29">		logger.traceEntry(&quot;entering private void usernameAndPasswordPrompt&quot;);</span>
+<span class="nc" id="L30">		System.out.println(&quot;Beginning of Login prompt...&quot;);</span>
+<span class="nc" id="L31">		System.out.println(&quot;Type your username (case-sensitive) and hit enter.&quot;);</span>
+<span class="nc" id="L32">		logger.info(&quot;Calling getUsernameOrPassword() method from usernameAndPasswordPrompt&quot;);</span>
+<span class="nc" id="L33">		String myUsername = getUsernameOrPassword();</span>
+<span class="nc" id="L34">		System.out.println(&quot;Type your password (case-sensitive) and hit enter.&quot;);</span>
+<span class="nc" id="L35">		logger.info(&quot;Calling getUsernameOrPassword() method from usernameAndPasswordPrompt&quot;);</span>
+<span class="nc" id="L36">		String myPassword = getUsernameOrPassword();</span>
+<span class="nc" id="L37">		logger.traceExit(&quot;calling authenticateUser&quot;);</span>
+<span class="nc" id="L38">		authenticateUser(myUsername,myPassword);</span>
+<span class="nc" id="L39">	}</span>
+	private String getUsernameOrPassword() {
+<span class="nc" id="L41">		logger.traceEntry(&quot;entry getUsernameOrPassword&quot;);</span>
+<span class="nc" id="L42">		return logger.traceExit(ri.readUsernameOrPassword());</span>
+	}
+	private void authenticateUser(String username, String password) {
+<span class="nc" id="L45">		logger.traceEntry(&quot;entry authenticateUser(x,x)&quot;);</span>
+		Optional&lt;User&gt; potentialUser;
+<span class="nc" id="L47">		InputStream in = null;</span>
+<span class="nc" id="L48">		Properties props = new Properties();</span>
+		String superUsername;
+		String superPassword;
+		try {
+<span class="nc" id="L52">			in = new FileInputStream(&quot;C:\\Users\\IcedT\\Revature\\Java Workspace\\revature-project0\\src\\main\\resources\\superuser.properties&quot;);</span>
+<span class="nc" id="L53">			props.load(in);</span>
+			// Read root superuser name and password
+<span class="nc" id="L55">			superUsername = props.getProperty(&quot;username&quot;);</span>
+<span class="nc" id="L56">			superPassword = props.getProperty(&quot;password&quot;);</span>
+<span class="nc bnc" id="L57" title="All 4 branches missed.">			if (username.equals(superUsername) &amp;&amp; password.equals(superPassword)) {</span>
+<span class="nc" id="L58">				SessionManager.sessionUser = new User(0,&quot;&quot;,&quot;&quot;,1);</span>
+<span class="nc" id="L59">				SessionManager mySm = SessionManager.getSessionManager();</span>
+<span class="nc" id="L60">				logger.traceExit(&quot;Calling SessionManager.processLoginRegister() as root superuser&quot;);</span>
+<span class="nc" id="L61">				mySm.processLoginRegister();</span>
+			}
+<span class="nc" id="L63">		} catch (FileNotFoundException e1) {</span>
+<span class="nc" id="L64">			logger.catching(e1);</span>
+<span class="nc" id="L65">			System.out.println(&quot;Couldn't open superuser.&quot;);</span>
+<span class="nc" id="L66">		} catch (IOException e) {</span>
+<span class="nc" id="L67">			logger.catching(e);</span>
+<span class="nc" id="L68">			System.out.println(&quot;Couldn't load superuser.&quot;);</span>
+		}
+		try {
+<span class="nc" id="L71">			potentialUser = userService.loginUser(username,password);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">			if (potentialUser.isPresent()) {</span>
+<span class="nc" id="L73">				User u = potentialUser.get();</span>
+<span class="nc" id="L74">				SessionManager.sessionUser = u;</span>
+<span class="nc" id="L75">				SessionManager mySm = SessionManager.getSessionManager();</span>
+<span class="nc" id="L76">				logger.traceExit(&quot;Calling SessionManager.processLoginRegister()&quot;);</span>
+<span class="nc" id="L77">				mySm.processLoginRegister();</span>
+<span class="nc" id="L78">			} else {</span>
+<span class="nc" id="L79">				System.out.println(&quot;Server failed to respond, try again...&quot;);</span>
+<span class="nc" id="L80">				logger.traceExit(&quot;Calling usernameErrorPrompt&quot;);</span>
+<span class="nc" id="L81">				usernameErrorPrompt();</span>
+			}
+<span class="nc" id="L83">		} catch (IncorrectPasswordException e) {</span>
+<span class="nc" id="L84">			logger.catching(e);</span>
+<span class="nc" id="L85">			System.out.println(&quot;Incorrect password, try again... &quot;);</span>
+<span class="nc" id="L86">			logger.traceExit(&quot;Incorrect password, calling usernameErrorPrompt&quot;);</span>
+<span class="nc" id="L87">			usernameErrorPrompt();</span>
+		}
+<span class="nc" id="L89">	}</span>
+	private void usernameErrorPrompt() {
+<span class="nc" id="L91">		logger.traceEntry(&quot;entry usernameErrorPrompt()&quot;);</span>
+<span class="nc" id="L92">		String[] validOptions = {&quot;Login&quot;,&quot;Register&quot;};</span>
+<span class="nc" id="L93">		ReadInput uEPRI = new ReadInput(validOptions);</span>
+<span class="nc" id="L94">		Integer choice = uEPRI.promptThenReadOptions();</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">		if (choice==1) {</span>
+			// Prompt username password for login
+<span class="nc" id="L97">			System.out.println(&quot;You are attempting to login again with an existing username&quot;);</span>
+<span class="nc" id="L98">			usernameAndPasswordPrompt();</span>
+<span class="nc" id="L99">		} else {</span>
+			// Prompt username password for register
+<span class="nc" id="L101">			System.out.println(&quot;You are registering a new username/password on the database.&quot;);</span>
+<span class="nc" id="L102">			Register myRegister = new Register();</span>
+<span class="nc" id="L103">			myRegister.handleRegisterRequest();</span>
+		}	
+<span class="nc" id="L105">		logger.traceExit();</span>
+<span class="nc" id="L106">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

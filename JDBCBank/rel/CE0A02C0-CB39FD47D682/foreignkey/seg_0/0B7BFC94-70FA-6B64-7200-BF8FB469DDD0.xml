@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0B7BFC94-70FA-6B64-7200-BF8FB469DDD0" containerWithKeyObject="5878BCFB-3803-0FE1-E6B1-45B9BE70C73D" localFKIndex="A3041E7C-C8B5-B59C-9CB1-1F6987FEB168" name="TRANSACTIONS_ACCOUNT_ID_FK">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ROOT</sourceObjSchema>
+<sourceObjName>TRANSACTIONS_ACCOUNT_ID_FK</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:46 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<referredTableLongName>ROOT.ACCOUNTS</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>2AC80AF7-6C95-8C80-54F6-2695121335E0</referredTableID>
+<keyObject>A82A21F4-F715-4242-A5A0-E7EEA2BFF894</keyObject>
+<referredKeyID>A82A21F4-F715-4242-A5A0-E7EEA2BFF894</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ACCOUNT_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

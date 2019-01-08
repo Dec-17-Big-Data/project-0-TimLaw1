@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="ROOT" directorySegmentName="seg_0" id="A4B7E404-2EDD-2E67-A9E5-A1F1131E7097">
+<sourceConnName>revature</sourceConnName>
+<sourceObjName>ROOT</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:41 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+</UserOraclev10g>

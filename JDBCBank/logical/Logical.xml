@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="08FE030A-59FB-FC09-7F9C-82C344E27B90" mainViewID="B1EEA247-612E-FFB8-AC46-7E408E022B0A">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:11:11 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

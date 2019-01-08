@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2AC80AF7-6C95-8C80-54F6-2695121335E0" schemaObject="FFC1AA7C-F2C2-A9DA-60DE-996410A0455E" name="ACCOUNTS">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ROOT</sourceObjSchema>
+<sourceObjName>ACCOUNTS</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:42 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACCOUNT_ID" id="9A8A5F79-4BF2-D712-8745-31B673AA1D2E">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>ACCOUNT_ID</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>account_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>ACCOUNTS_SEQ_TRIGGER</autoIncrementTriggerName>
+</Column>
+<Column name="USER_ID" id="D3B51AB1-E6A7-0EA1-21A4-C23C072F56E9">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76961B08-334C-514D-3B70-43A8144BD4A2" referredColumn="F2310CDC-DB19-ADF7-F5EF-7896BD7158D3"/>
+</associations>
+</Column>
+<Column name="BALANCE" id="ABA70F7F-0C77-DF71-DB65-C3C9EC613C51">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ACCOUNTS</sourceObjSchema>
+<sourceObjName>BALANCE</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<constraintName>SYS_C005418</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="balance&gt;=0"/>
+<implementationDef dbType="Oracle Database 12c" definition="balance&gt;=0"/>
+</checkConstraint>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,20,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A82A21F4-F715-4242-A5A0-E7EEA2BFF894" name="ACCOUNTS_PK">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ROOT</sourceObjSchema>
+<sourceObjName>ACCOUNTS_PK</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:45 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A8A5F79-4BF2-D712-8745-31B673AA1D2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5FCFCC3-B653-B437-BC3C-2918154DEEFD" schemaObject="FFC1AA7C-F2C2-A9DA-60DE-996410A0455E" name="ACCOUNTS_PK">
+<sourceConnName>revature</sourceConnName>
+<sourceObjSchema>ROOT</sourceObjSchema>
+<sourceObjName>ACCOUNTS_PK</sourceObjName>
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:44 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A8A5F79-4BF2-D712-8745-31B673AA1D2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7835E46-630D-A08B-F61D-F114EE8BCB1F" name="ACCOUNTS_USER_ID_FK">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:46 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D3B51AB1-E6A7-0EA1-21A4-C23C072F56E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

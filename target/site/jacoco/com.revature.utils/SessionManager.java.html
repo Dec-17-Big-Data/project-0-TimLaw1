@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SessionManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.utils</a> &gt; <span class="el_source">SessionManager.java</span></div><h1>SessionManager.java</h1><pre class="source lang-java linenums">package com.revature.utils;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.models.User;
+import com.revature.modules.Login;
+import com.revature.modules.Register;
+import com.revature.modules.RegularUser;
+import com.revature.modules.SuperUser;
+import com.revature.modules.Welcome;
+
+public class SessionManager {
+<span class="nc" id="L14">	private static final Logger logger = LogManager.getLogger(SessionManager.class);</span>
+	public static User sessionUser;
+<span class="nc" id="L16">	private static SessionManager sessionManager;</span>
+<span class="nc" id="L17">	private SessionManager() {</span>
+		
+<span class="nc" id="L19">	}</span>
+	public static SessionManager getSessionManager() {
+<span class="nc bnc" id="L21" title="All 2 branches missed.">		if (sessionManager == null) {</span>
+<span class="nc" id="L22">			sessionManager = new SessionManager();</span>
+		}
+<span class="nc" id="L24">		return sessionManager;</span>
+	}
+	public void start() {
+<span class="nc" id="L27">		logger.traceEntry(&quot;entry start&quot;);</span>
+<span class="nc" id="L28">		Welcome myWelcome = new Welcome();</span>
+<span class="nc" id="L29">		logger.traceExit(&quot;exit start, calling processWelcomeChoice(myWelcome.prompt())&quot;);</span>
+<span class="nc" id="L30">		processWelcomeChoice(myWelcome.prompt());	</span>
+<span class="nc" id="L31">	}</span>
+	private void processWelcomeChoice(int choice) {
+<span class="nc" id="L33">		logger.traceEntry(&quot;entry processWelcomeChoice&quot;);</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">		if (choice == 1) {</span>
+			// Login prompt
+<span class="nc" id="L36">			Login myLogin = new Login();</span>
+<span class="nc" id="L37">			logger.traceExit(&quot;exit processWelcomeChoice, calling myLogin.handleLoginRequest&quot;);</span>
+<span class="nc" id="L38">			myLogin.handleLoginRequest();</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">		} else if (choice==2){</span>
+			// Register prompt
+<span class="nc" id="L41">			Register myRegister = new Register();</span>
+<span class="nc" id="L42">			logger.traceExit(&quot;exit processWelcomeChoice, calling myRegister.handleRegisterRequest&quot;);</span>
+<span class="nc" id="L43">			myRegister.handleRegisterRequest();</span>
+<span class="nc" id="L44">		} else {</span>
+<span class="nc" id="L45">			System.exit(0);</span>
+		}
+		
+<span class="nc" id="L48">	}</span>
+	public void processLoginRegister() {
+<span class="nc" id="L50">		logger.traceEntry(&quot;entry processLoginRegister&quot;);</span>
+<span class="nc" id="L51">		System.out.println(&quot;Login/Register Succeeded&quot;);</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">		if (sessionUser.getAdmin()==1) {</span>
+<span class="nc" id="L53">			SuperUser mySuperUser = new SuperUser();</span>
+<span class="nc" id="L54">			logger.traceExit(&quot;exit processLoginRegister, calling mySuperUser.initiateSuperUserSession()&quot;);</span>
+<span class="nc" id="L55">			mySuperUser.initiateSuperUserSession();</span>
+<span class="nc" id="L56">		} else {</span>
+			//TODO: implement this path
+<span class="nc" id="L58">			RegularUser myRegularUser = new RegularUser();</span>
+<span class="nc" id="L59">			logger.traceExit(&quot;exit processLoginRegister, calling myRegularUser.initiateRegularUserSession()&quot;);</span>
+<span class="nc" id="L60">			myRegularUser.initiateRegularUserSession();</span>
+		}
+<span class="nc" id="L62">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
