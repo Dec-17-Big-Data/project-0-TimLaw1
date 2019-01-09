@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import com.revature.dao.AccountDao;
 import com.revature.dao.AccountOracle;
+import com.revature.exceptions.AccountNotEmptyException;
+import com.revature.exceptions.OverdraftException;
 import com.revature.exceptions.UserIDDoesNotExistException;
 import com.revature.models.Account;
 import com.revature.models.User;
@@ -30,5 +32,17 @@ public class AccountService {
 
 	public Optional<Account> registerAccount(Integer userID, Integer balance) throws UserIDDoesNotExistException {
 		return accountDao.registerAccount(userID,balance);
+	}
+	
+	public Optional<Boolean> deleteAccount(Integer accountID) throws AccountNotEmptyException{
+		return accountDao.deleteAccount(accountID);
+	}
+	
+	public Optional<Boolean> withdrawFromAccount(Integer accountID, Integer amount) throws OverdraftException {
+		return accountDao.withdrawFromAccount(accountID,amount);
+	}
+	
+	public Optional<Boolean> depositToAccount(Integer accountID, Integer amount) {
+		return accountDao.depositToAccount(accountID,amount);
 	}
 }

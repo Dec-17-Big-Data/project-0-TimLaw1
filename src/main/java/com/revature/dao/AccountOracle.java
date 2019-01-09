@@ -5,12 +5,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.revature.exceptions.AccountNotEmptyException;
+import com.revature.exceptions.OverdraftException;
 import com.revature.exceptions.UserIDDoesNotExistException;
 import com.revature.exceptions.UsernameAlreadyExists;
 import com.revature.models.Account;
@@ -19,8 +22,8 @@ import com.revature.utils.ConnectionUtil;
 
 import oracle.jdbc.OracleTypes;
 
-public class AccountOracle implements AccountDao{
-	private static final Logger logger = LogManager.getLogger(ChampionOracle.class);
+public class AccountOracle implements AccountDao {
+	private static final Logger logger = LogManager.getLogger(AccountOracle.class);
 	private static AccountOracle accountOracle;
 	final static AccountDao accountDao = AccountOracle.getDao();
 	
@@ -46,16 +49,17 @@ public class AccountOracle implements AccountDao{
 	    List<Account> listOfAccounts = new ArrayList<>();
 	    Boolean getAllSuccess = false;
 		try {
-			String SQL = "call getAllUsers(?, ?)";
+			String SQL = "call getAllAccounts(?, ?)";
 			cstmt = con.prepareCall(SQL);
 			cstmt.setInt(1, userID);
 			cstmt.registerOutParameter(2, OracleTypes.CURSOR);
 			cstmt.execute();
-			ResultSet rs = (ResultSet) cstmt.getObject(1);
+			ResultSet rs = (ResultSet) cstmt.getObject(2);
 
 			while (rs.next()) {
 				listOfAccounts.add(new Account(rs.getInt("account_id"),userID,rs.getInt("balance")));
 			}
+			Collections.sort(listOfAccounts);
 			getAllSuccess = true;
 		} catch (SQLException e) {
 			logger.catching(e);
@@ -110,21 +114,95 @@ public class AccountOracle implements AccountDao{
 	}
 
 	@Override
-	public Optional<Boolean> deleteAccount(Integer accountID) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<Boolean> withdrawFromAccount(Integer accountID, Integer amount) throws OverdraftException {
+		Connection con = ConnectionUtil.getConnection();
+		if (con == null) {
+			return Optional.empty();
+		}
+		CallableStatement cstmt = null;
+		Boolean success = false;
+	    try {
+	       String SQL = "call withdrawFromAccount(?, ?, ?)";
+	       cstmt = con.prepareCall(SQL);
+	       cstmt.setInt(1, accountID);
+	       cstmt.setInt(2, amount);
+	       cstmt.registerOutParameter(3, java.sql.Types.INTEGER);
+	       cstmt.execute();
+	       Integer registerSuccess = cstmt.getInt(3);
+	       if (registerSuccess==1) {
+	    	   success = true;
+	       } else {
+	    	   throw new OverdraftException("You cannot withdraw more than the amount in the account.");
+	       }
+	       
+	    } catch (SQLException e) {
+	       logger.catching(e);
+	    } finally {
+	    	try {
+				cstmt.close();
+			} catch (SQLException e) {
+				logger.catching(e);
+			}
+	    }
+	    return Optional.of(success);
 	}
 
 	@Override
-	public Optional<Boolean> depositAccount(Integer accountID) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<Boolean> depositToAccount(Integer accountID, Integer amount) {
+		Connection con = ConnectionUtil.getConnection();
+		if (con == null) {
+			return Optional.empty();
+		}
+		CallableStatement cstmt = null;
+		Boolean success = false;
+	    try {
+	       String SQL = "call depositToAccount(?, ?)";
+	       cstmt = con.prepareCall(SQL);
+	       cstmt.setInt(1, accountID);
+	       cstmt.setInt(2, amount);
+	       cstmt.execute();
+	       success = true;
+	    } catch (SQLException e) {
+	       logger.catching(e);
+	    } finally {
+	    	try {
+				cstmt.close();
+			} catch (SQLException e) {
+				logger.catching(e);
+			}
+	    }
+	    return Optional.of(success);
 	}
 
 	@Override
-	public Optional<Boolean> withdrawAccount(Integer accountID) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<Boolean> deleteAccount(Integer accountID) throws AccountNotEmptyException {
+		Connection con = ConnectionUtil.getConnection();
+		if (con == null) {
+			return Optional.empty();
+		}
+		CallableStatement cstmt = null;
+		Boolean success = false;
+	    try {
+	       String SQL = "call deleteAccount(?, ?)";
+	       cstmt = con.prepareCall(SQL);
+	       cstmt.setInt(1, accountID);
+	       cstmt.registerOutParameter(2, java.sql.Types.INTEGER);
+	       cstmt.execute();
+	       Integer registerSuccess = cstmt.getInt(2);
+	       if (registerSuccess==1) {
+	    	   success = true;
+	       } else {
+	    	   throw new AccountNotEmptyException("The account cannot be deleted until it is empty.");
+	       }
+	    } catch (SQLException e) {
+	       logger.catching(e);
+	    } finally {
+	    	try {
+				cstmt.close();
+			} catch (SQLException e) {
+				logger.catching(e);
+			}
+	    }
+	    return Optional.of(success);
 	}
-
 }

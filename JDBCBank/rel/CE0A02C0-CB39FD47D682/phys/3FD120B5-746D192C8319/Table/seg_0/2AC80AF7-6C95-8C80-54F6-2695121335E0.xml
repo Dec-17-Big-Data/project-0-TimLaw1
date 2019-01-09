@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ACCOUNTS" directorySegmentName="seg_0" id="2AC80AF7-6C95-8C80-54F6-2695121335E0">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:42 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>AE171B31-5981-DBCE-B653-271AC88F2DE5</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ACCOUNT_ID" id="9A8A5F79-4BF2-D712-8745-31B673AA1D2E">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="BALANCE" id="ABA70F7F-0C77-DF71-DB65-C3C9EC613C51">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="D3B51AB1-E6A7-0EA1-21A4-C23C072F56E9">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ACCOUNTS_PK" id="C5FCFCC3-B653-B437-BC3C-2918154DEEFD">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:44 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+<segment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ACCOUNTS_USER_ID_FK" id="D7835E46-630D-A08B-F61D-F114EE8BCB1F">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:46 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ACCOUNTS_PK" id="A82A21F4-F715-4242-A5A0-E7EEA2BFF894">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:45 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<segment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+<existingIndex>C5FCFCC3-B653-B437-BC3C-2918154DEEFD</existingIndex>
+<indexSegment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

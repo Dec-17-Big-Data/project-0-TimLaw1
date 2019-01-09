@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TransactionOracle.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.dao</a> &gt; <span class="el_source">TransactionOracle.java</span></div><h1>TransactionOracle.java</h1><pre class="source lang-java linenums">package com.revature.dao;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.models.Transaction;
+import com.revature.utils.ConnectionUtil;
+
+import oracle.jdbc.OracleTypes;
+
+public class TransactionOracle implements TransactionDao {
+<span class="nc" id="L21">	private static final Logger logger = LogManager.getLogger(TransactionOracle.class);</span>
+	private static TransactionOracle transactionOracle;
+<span class="nc" id="L23">	final static TransactionDao transactionDao = TransactionOracle.getDao();</span>
+	
+<span class="nc" id="L25">	private TransactionOracle() {</span>
+		
+<span class="nc" id="L27">	}</span>
+	
+	public static TransactionOracle getDao() {
+<span class="nc bnc" id="L30" title="All 2 branches missed.">		if (transactionOracle == null) {</span>
+<span class="nc" id="L31">			transactionOracle = new TransactionOracle();</span>
+		}
+<span class="nc" id="L33">		return transactionOracle;</span>
+	}
+	
+	@Override
+	public Optional&lt;List&lt;Transaction&gt;&gt; getAllTransactionsByAccountID(Integer accountID) {
+<span class="nc" id="L38">Connection con = ConnectionUtil.getConnection();</span>
+		
+<span class="nc" id="L40">		CallableStatement cstmt = null;</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">	    if (con == null) {</span>
+<span class="nc" id="L42">			return Optional.empty();</span>
+		}
+<span class="nc" id="L44">	    List&lt;Transaction&gt; listOfTransactions = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L45">	    Boolean getAllSuccess = false;</span>
+		try {
+<span class="nc" id="L47">			String SQL = &quot;call getAllTransactionsByAccountID(?, ?)&quot;;</span>
+<span class="nc" id="L48">			cstmt = con.prepareCall(SQL);</span>
+<span class="nc" id="L49">			cstmt.setInt(1, accountID);</span>
+<span class="nc" id="L50">			cstmt.registerOutParameter(2, OracleTypes.CURSOR);</span>
+<span class="nc" id="L51">			cstmt.execute();</span>
+<span class="nc" id="L52">			ResultSet rs = (ResultSet) cstmt.getObject(2);</span>
+
+<span class="nc bnc" id="L54" title="All 2 branches missed.">			while (rs.next()) {</span>
+<span class="nc" id="L55">				listOfTransactions.add(new Transaction(rs.getInt(&quot;transaction_id&quot;),rs.getInt(&quot;user_id&quot;),rs.getInt(&quot;account_id&quot;),rs.getInt(&quot;amount&quot;),rs.getInt(&quot;withdrawal&quot;),rs.getTimestamp(&quot;date_of_purchase&quot;)));</span>
+			}
+<span class="nc" id="L57">			Collections.sort(listOfTransactions);</span>
+<span class="nc" id="L58">			getAllSuccess = true;</span>
+<span class="nc" id="L59">		} catch (SQLException e) {</span>
+<span class="nc" id="L60">			logger.catching(e);</span>
+<span class="nc" id="L61">		} finally {</span>
+			try {
+<span class="nc" id="L63">				cstmt.close();</span>
+<span class="nc" id="L64">			} catch (SQLException e) {</span>
+<span class="nc" id="L65">				logger.catching(e);</span>
+			}
+<span class="nc" id="L67">		}</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">		if (getAllSuccess) {</span>
+<span class="nc" id="L69">			return Optional.of(listOfTransactions);		</span>
+		} else {
+<span class="nc" id="L71">			return Optional.empty();</span>
+		}
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

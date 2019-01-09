@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Champion.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.models</a> &gt; <span class="el_source">Champion.java</span></div><h1>Champion.java</h1><pre class="source lang-java linenums">package com.revature.models;
+
+import java.io.Serializable;
+
+public class Champion implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6590458798816016608L;
+	private Integer champion_id;
+	private String champion_name;
+	private String ability1;
+	private String ability2;
+	private String ability3;
+	private String ability4;
+	private String passive;
+	private Float health;
+	public Champion() {
+<span class="nc" id="L19">		super();</span>
+<span class="nc" id="L20">	}</span>
+	public Champion(Integer champion_id, String champion_name, String ability1, String ability2, String ability3,
+			String ability4, String passive, Float health) {
+<span class="nc" id="L23">		super();</span>
+<span class="nc" id="L24">		this.champion_id = champion_id;</span>
+<span class="nc" id="L25">		this.champion_name = champion_name;</span>
+<span class="nc" id="L26">		this.ability1 = ability1;</span>
+<span class="nc" id="L27">		this.ability2 = ability2;</span>
+<span class="nc" id="L28">		this.ability3 = ability3;</span>
+<span class="nc" id="L29">		this.ability4 = ability4;</span>
+<span class="nc" id="L30">		this.passive = passive;</span>
+<span class="nc" id="L31">		this.health = health;</span>
+<span class="nc" id="L32">	}</span>
+	public Integer getChampion_id() {
+<span class="nc" id="L34">		return champion_id;</span>
+	}
+	public void setChampion_id(Integer champion_id) {
+<span class="nc" id="L37">		this.champion_id = champion_id;</span>
+<span class="nc" id="L38">	}</span>
+	public String getChampion_name() {
+<span class="nc" id="L40">		return champion_name;</span>
+	}
+	public void setChampion_name(String champion_name) {
+<span class="nc" id="L43">		this.champion_name = champion_name;</span>
+<span class="nc" id="L44">	}</span>
+	public String getAbility1() {
+<span class="nc" id="L46">		return ability1;</span>
+	}
+	public void setAbility1(String ability1) {
+<span class="nc" id="L49">		this.ability1 = ability1;</span>
+<span class="nc" id="L50">	}</span>
+	public String getAbility2() {
+<span class="nc" id="L52">		return ability2;</span>
+	}
+	public void setAbility2(String ability2) {
+<span class="nc" id="L55">		this.ability2 = ability2;</span>
+<span class="nc" id="L56">	}</span>
+	public String getAbility3() {
+<span class="nc" id="L58">		return ability3;</span>
+	}
+	public void setAbility3(String ability3) {
+<span class="nc" id="L61">		this.ability3 = ability3;</span>
+<span class="nc" id="L62">	}</span>
+	public String getAbility4() {
+<span class="nc" id="L64">		return ability4;</span>
+	}
+	public void setAbility4(String ability4) {
+<span class="nc" id="L67">		this.ability4 = ability4;</span>
+<span class="nc" id="L68">	}</span>
+	public String getPassive() {
+<span class="nc" id="L70">		return passive;</span>
+	}
+	public void setPassive(String passive) {
+<span class="nc" id="L73">		this.passive = passive;</span>
+<span class="nc" id="L74">	}</span>
+	public Float getHealth() {
+<span class="nc" id="L76">		return health;</span>
+	}
+	public void setHealth(Float health) {
+<span class="nc" id="L79">		this.health = health;</span>
+<span class="nc" id="L80">	}</span>
+	@Override
+	public int hashCode() {
+<span class="nc" id="L83">		final int prime = 31;</span>
+<span class="nc" id="L84">		int result = 1;</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">		result = prime * result + ((ability1 == null) ? 0 : ability1.hashCode());</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">		result = prime * result + ((ability2 == null) ? 0 : ability2.hashCode());</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">		result = prime * result + ((ability3 == null) ? 0 : ability3.hashCode());</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">		result = prime * result + ((ability4 == null) ? 0 : ability4.hashCode());</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">		result = prime * result + ((champion_id == null) ? 0 : champion_id.hashCode());</span>
+<span class="nc bnc" id="L90" title="All 2 branches missed.">		result = prime * result + ((champion_name == null) ? 0 : champion_name.hashCode());</span>
+<span class="nc bnc" id="L91" title="All 2 branches missed.">		result = prime * result + ((health == null) ? 0 : health.hashCode());</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">		result = prime * result + ((passive == null) ? 0 : passive.hashCode());</span>
+<span class="nc" id="L93">		return result;</span>
+	}
+	@Override
+	public boolean equals(Object obj) {
+<span class="nc bnc" id="L97" title="All 2 branches missed.">		if (this == obj)</span>
+<span class="nc" id="L98">			return true;</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">		if (obj == null)</span>
+<span class="nc" id="L100">			return false;</span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">		if (getClass() != obj.getClass())</span>
+<span class="nc" id="L102">			return false;</span>
+<span class="nc" id="L103">		Champion other = (Champion) obj;</span>
+<span class="nc bnc" id="L104" title="All 2 branches missed.">		if (ability1 == null) {</span>
+<span class="nc bnc" id="L105" title="All 2 branches missed.">			if (other.ability1 != null)</span>
+<span class="nc" id="L106">				return false;</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">		} else if (!ability1.equals(other.ability1))</span>
+<span class="nc" id="L108">			return false;</span>
+<span class="nc bnc" id="L109" title="All 2 branches missed.">		if (ability2 == null) {</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">			if (other.ability2 != null)</span>
+<span class="nc" id="L111">				return false;</span>
+<span class="nc bnc" id="L112" title="All 2 branches missed.">		} else if (!ability2.equals(other.ability2))</span>
+<span class="nc" id="L113">			return false;</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">		if (ability3 == null) {</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">			if (other.ability3 != null)</span>
+<span class="nc" id="L116">				return false;</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">		} else if (!ability3.equals(other.ability3))</span>
+<span class="nc" id="L118">			return false;</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">		if (ability4 == null) {</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">			if (other.ability4 != null)</span>
+<span class="nc" id="L121">				return false;</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">		} else if (!ability4.equals(other.ability4))</span>
+<span class="nc" id="L123">			return false;</span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">		if (champion_id == null) {</span>
+<span class="nc bnc" id="L125" title="All 2 branches missed.">			if (other.champion_id != null)</span>
+<span class="nc" id="L126">				return false;</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">		} else if (!champion_id.equals(other.champion_id))</span>
+<span class="nc" id="L128">			return false;</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">		if (champion_name == null) {</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">			if (other.champion_name != null)</span>
+<span class="nc" id="L131">				return false;</span>
+<span class="nc bnc" id="L132" title="All 2 branches missed.">		} else if (!champion_name.equals(other.champion_name))</span>
+<span class="nc" id="L133">			return false;</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">		if (health == null) {</span>
+<span class="nc bnc" id="L135" title="All 2 branches missed.">			if (other.health != null)</span>
+<span class="nc" id="L136">				return false;</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">		} else if (!health.equals(other.health))</span>
+<span class="nc" id="L138">			return false;</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">		if (passive == null) {</span>
+<span class="nc bnc" id="L140" title="All 2 branches missed.">			if (other.passive != null)</span>
+<span class="nc" id="L141">				return false;</span>
+<span class="nc bnc" id="L142" title="All 2 branches missed.">		} else if (!passive.equals(other.passive))</span>
+<span class="nc" id="L143">			return false;</span>
+<span class="nc" id="L144">		return true;</span>
+	}
+	@Override
+	public String toString() {
+<span class="nc" id="L148">		return &quot;Champion [champion_id=&quot; + champion_id + &quot;, champion_name=&quot; + champion_name + &quot;, ability1=&quot; + ability1</span>
+				+ &quot;, ability2=&quot; + ability2 + &quot;, ability3=&quot; + ability3 + &quot;, ability4=&quot; + ability4 + &quot;, passive=&quot;
+				+ passive + &quot;, health=&quot; + health + &quot;]&quot;;
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.apache.logging.log4j.*;
 
-public class User implements Serializable {
+public class User implements Serializable, Comparable<User> {
 	/**
 	 * 
 	 */
@@ -98,5 +98,14 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [user_id=" + user_id + ", user_name=" + user_name + ", user_password=" + user_password
 				+ ", admin=" + admin + "]";
+	}
+	@Override
+	public int compareTo(User o) {
+		if (this.user_id>o.getUser_id()) {
+			return 1;
+		} else if (this.user_id<o.getUser_id()) {
+			return -1;
+		}
+		return 0;
 	}
 }

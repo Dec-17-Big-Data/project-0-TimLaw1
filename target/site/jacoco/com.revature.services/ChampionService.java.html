@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChampionService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.services</a> &gt; <span class="el_source">ChampionService.java</span></div><h1>ChampionService.java</h1><pre class="source lang-java linenums">package com.revature.services;
+
+import java.util.List;
+import java.util.Optional;
+
+
+import com.revature.dao.ChampionDao;
+import com.revature.models.Champion;
+import com.revature.dao.ChampionOracle;
+
+public class ChampionService {
+	private static ChampionService championService;
+<span class="nc" id="L13">	final static ChampionDao championDao = ChampionOracle.getDao();</span>
+	
+<span class="nc" id="L15">	private ChampionService() {</span>
+		
+<span class="nc" id="L17">	}</span>
+	
+	public static ChampionService getService() {
+<span class="nc bnc" id="L20" title="All 2 branches missed.">		if (championService == null) {</span>
+<span class="nc" id="L21">			championService = new ChampionService();</span>
+		}
+<span class="nc" id="L23">		return championService;</span>
+	}
+	
+	public Optional&lt;List&lt;Champion&gt;&gt; getChampions() {
+<span class="nc" id="L27">		return championDao.getAllChampions();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

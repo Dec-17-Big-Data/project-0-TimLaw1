@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AccountService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.services</a> &gt; <span class="el_source">AccountService.java</span></div><h1>AccountService.java</h1><pre class="source lang-java linenums">package com.revature.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.revature.dao.AccountDao;
+import com.revature.dao.AccountOracle;
+import com.revature.exceptions.AccountNotEmptyException;
+import com.revature.exceptions.OverdraftException;
+import com.revature.exceptions.UserIDDoesNotExistException;
+import com.revature.models.Account;
+import com.revature.models.User;
+
+public class AccountService {
+	private static AccountService accountService;
+<span class="nc" id="L16">	final static AccountDao accountDao = AccountOracle.getDao();</span>
+	
+<span class="nc" id="L18">	private AccountService() {</span>
+		
+<span class="nc" id="L20">	}</span>
+	
+	public static AccountService getService() {
+<span class="nc bnc" id="L23" title="All 2 branches missed.">		if (accountService == null) {</span>
+<span class="nc" id="L24">			accountService = new AccountService();</span>
+		}
+<span class="nc" id="L26">		return accountService;</span>
+	}
+
+	public Optional&lt;List&lt;Account&gt;&gt; getAllAccounts(int userID) {
+<span class="nc" id="L30">		return accountDao.getAllAccounts(userID);</span>
+	}
+
+	public Optional&lt;Account&gt; registerAccount(Integer userID, Integer balance) throws UserIDDoesNotExistException {
+<span class="nc" id="L34">		return accountDao.registerAccount(userID,balance);</span>
+	}
+	
+	public Optional&lt;Boolean&gt; deleteAccount(Integer accountID) throws AccountNotEmptyException{
+<span class="nc" id="L38">		return accountDao.deleteAccount(accountID);</span>
+	}
+	
+	public Optional&lt;Boolean&gt; withdrawFromAccount(Integer accountID, Integer amount) throws OverdraftException {
+<span class="nc" id="L42">		return accountDao.withdrawFromAccount(accountID,amount);</span>
+	}
+	
+	public Optional&lt;Boolean&gt; depositToAccount(Integer accountID, Integer amount) {
+<span class="nc" id="L46">		return accountDao.depositToAccount(accountID,amount);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

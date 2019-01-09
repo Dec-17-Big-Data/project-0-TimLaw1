@@ -36,12 +36,15 @@ public class SessionManager {
 			Login myLogin = new Login();
 			logger.traceExit("exit processWelcomeChoice, calling myLogin.handleLoginRequest");
 			myLogin.handleLoginRequest();
-		} else {
+		} else if (choice==2){
 			// Register prompt
 			Register myRegister = new Register();
 			logger.traceExit("exit processWelcomeChoice, calling myRegister.handleRegisterRequest");
 			myRegister.handleRegisterRequest();
+		} else {
+			System.exit(0);
 		}
+		
 	}
 	public void processLoginRegister() {
 		logger.traceEntry("entry processLoginRegister");

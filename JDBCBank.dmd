@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="JDBCBank" id="D2DC3042-609E-82CD-90DA-B415806A36CE" version="3.5">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:11:11 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D2DC3042-609E-82CD-90DA-B415806A36CE</designId>
+</OSDM_Design>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SuperUser.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.modules</a> &gt; <span class="el_source">SuperUser.java</span></div><h1>SuperUser.java</h1><pre class="source lang-java linenums">package com.revature.modules;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.exceptions.UsernameAlreadyExists;
+import com.revature.models.User;
+import com.revature.services.UserService;
+import com.revature.utils.ReadInput;
+import com.revature.utils.SessionManager;
+
+<span class="nc" id="L16">public class SuperUser {</span>
+<span class="nc" id="L17">	private static final Logger logger = LogManager.getLogger(Welcome.class);</span>
+<span class="nc" id="L18">	private String[] validOptions = {&quot;View&quot;,&quot;Create&quot;,&quot;Update&quot;,&quot;Delete&quot;,&quot;Logout&quot;};</span>
+<span class="nc" id="L19">	private ReadInput ri = new ReadInput(validOptions);</span>
+	private List&lt;User&gt; allUsers;
+<span class="nc" id="L21">	private UserService userService = UserService.getService();</span>
+	public void initiateSuperUserSession() {
+<span class="nc" id="L23">		logger.traceEntry(&quot;entry handleSuperUserSessionHandler&quot;);</span>
+<span class="nc" id="L24">		logger.traceExit(&quot;exit handleSuperUserSessionHandler, calling promptSuperUserChoice&quot;);</span>
+<span class="nc" id="L25">		promptSuperUserChoice();</span>
+<span class="nc" id="L26">	}</span>
+	private void promptSuperUserChoice() {
+<span class="nc" id="L28">		logger.traceEntry(&quot;entry promptSuperUserChoice&quot;);</span>
+<span class="nc" id="L29">		System.out.println(&quot;You are logged in as a superuser.&quot;);</span>
+<span class="nc" id="L30">		System.out.println(&quot;What would you like to do?&quot;);</span>
+<span class="nc" id="L31">		logger.info(&quot;calling ReadInput.readOptions&quot;);</span>
+<span class="nc" id="L32">		int choice = ri.promptThenReadOptions();</span>
+<span class="nc" id="L33">		System.out.printf(&quot;You have selected %s.%n&quot;, validOptions[choice-1]);</span>
+<span class="nc" id="L34">		logger.traceExit(&quot;exit promptSuperUserChoice, calling handleSuperUserRequest&quot;);</span>
+<span class="nc" id="L35">		handleSuperUserRequest(choice);</span>
+<span class="nc" id="L36">	}</span>
+	private void handleSuperUserRequest(int choice) {
+<span class="nc" id="L38">		logger.traceEntry(&quot;entry handleSuperUserRequest&quot;);</span>
+<span class="nc" id="L39">		logger.info(&quot;Choice {}&quot;,choice);</span>
+<span class="nc" id="L40">		logger.info(&quot;calling loadAllUsers&quot;);</span>
+<span class="nc" id="L41">		loadAllUsers();</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">		if (choice==1) {</span>
+			// View all users
+<span class="nc" id="L44">			System.out.println(&quot;You chose to view all users.&quot;);</span>
+<span class="nc" id="L45">			viewAllUsers();</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">		} else if (choice==2) {</span>
+			// Create a new user
+<span class="nc" id="L48">			System.out.println(&quot;You chose to create a new user.&quot;);</span>
+<span class="nc" id="L49">			registerNewUser();</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">		} else if (choice==3) {</span>
+			// Update an existing user
+<span class="nc" id="L52">			System.out.println(&quot;You chose to update an existing user.&quot;);</span>
+<span class="nc" id="L53">			updateExistingUserPrompt();</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">		} else if (choice==4) {</span>
+			// Delete an existing user
+<span class="nc" id="L56">			System.out.println(&quot;You chose to delete an existing user.&quot;);</span>
+<span class="nc" id="L57">			deleteExistingUserPrompt();</span>
+<span class="nc" id="L58">		} else {</span>
+			// Logout
+<span class="nc" id="L60">			System.out.println(&quot;You chose to logout of the super user account.&quot;);</span>
+<span class="nc" id="L61">			SessionManager mySM = SessionManager.getSessionManager();</span>
+<span class="nc" id="L62">			mySM.start();</span>
+		}
+<span class="nc" id="L64">	}</span>
+	private void loadAllUsers() {
+<span class="nc" id="L66">		logger.traceEntry(&quot;entry loadAllUsers&quot;);</span>
+<span class="nc" id="L67">		Optional&lt;List&lt;User&gt;&gt; potentialUsers = userService.getAllUsers();</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">		if (potentialUsers.isPresent()) {</span>
+<span class="nc" id="L69">			allUsers = potentialUsers.get();</span>
+<span class="nc" id="L70">		} else {</span>
+<span class="nc" id="L71">			System.out.println(&quot;Server failed to load users.&quot;);</span>
+		}
+<span class="nc" id="L73">		logger.traceExit(&quot;exit loadAllUsers&quot;);</span>
+<span class="nc" id="L74">	}</span>
+	private void viewAllUsers() {
+<span class="nc" id="L76">		logger.traceEntry(&quot;entry viewAllUsers&quot;);</span>
+<span class="nc" id="L77">		System.out.printf(&quot;User ID,\tUser name,\tUser password,\tIsSuperUser%n&quot;);</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">		for (User u: allUsers) {</span>
+<span class="nc" id="L79">			System.out.printf(&quot;%d,\t%s,\t%s,\t%d%n&quot;,u.getUser_id(),u.getUser_name(),u.getUser_password(),u.getAdmin());</span>
+		}
+<span class="nc" id="L81">		logger.traceExit(&quot;exit viewAllUsers, call promptSuperUserChoice again&quot;);</span>
+<span class="nc" id="L82">		promptSuperUserChoice();</span>
+<span class="nc" id="L83">	}</span>
+	private void registerNewUser() {
+<span class="nc" id="L85">		logger.traceEntry(&quot;entry registerNewUser&quot;);</span>
+<span class="nc" id="L86">		System.out.println(&quot;Type in your username, then hit enter.&quot;);</span>
+<span class="nc" id="L87">		logger.info(&quot;calling ReadInput.readUsernameOrPassword&quot;);</span>
+<span class="nc" id="L88">		String username = ri.readUsernameOrPassword();</span>
+<span class="nc" id="L89">		System.out.println(&quot;Type in your password, then hit enter.&quot;);</span>
+<span class="nc" id="L90">		logger.info(&quot;calling ReadInput.readUsernameOrPassword&quot;);</span>
+<span class="nc" id="L91">		String password = ri.readUsernameOrPassword();</span>
+		try {
+<span class="nc" id="L93">			logger.info(&quot;Calling userService.registerUser with given username/password combination&quot;);</span>
+<span class="nc" id="L94">			Optional&lt;User&gt; optionalUser = userService.registerUser(username, password);</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">			if (optionalUser.isPresent()) {</span>
+<span class="nc" id="L96">				logger.info(&quot;Server responded with the new user. User successfully added to database. Adding new user to local array of users for future local viewing.&quot;);</span>
+<span class="nc" id="L97">				User newUser = optionalUser.get();</span>
+<span class="nc" id="L98">				allUsers.add(newUser);</span>
+<span class="nc" id="L99">			} else {</span>
+<span class="nc" id="L100">				logger.info(&quot;The server failed to respond with a user object.&quot;);</span>
+<span class="nc" id="L101">				System.out.println(&quot;Server failure, user may or may not have been registered, try again.&quot;);</span>
+			}
+<span class="nc" id="L103">		} catch (UsernameAlreadyExists e) {</span>
+			// TODO Auto-generated catch block
+<span class="nc" id="L105">			logger.catching(e);</span>
+<span class="nc" id="L106">			System.out.println(&quot;You entered a username that already exists, new user not registered.&quot;);</span>
+		}
+<span class="nc" id="L108">		logger.traceExit(&quot;exit registerNewUser, call promptSuperUserChoice again&quot;);</span>
+<span class="nc" id="L109">		promptSuperUserChoice();</span>
+<span class="nc" id="L110">	}</span>
+	private void updateExistingUserPrompt() {
+<span class="nc" id="L112">		logger.traceEntry(&quot;entry updateExistingUserPrompt&quot;);</span>
+<span class="nc" id="L113">		System.out.println(&quot;First, select a valid userID&quot;);</span>
+<span class="nc" id="L114">		int lUserID = getUserIDPrompt();	</span>
+<span class="nc" id="L115">		System.out.printf(&quot;You have selected UserID #%d.%n&quot;, lUserID);</span>
+<span class="nc" id="L116">		System.out.println(&quot;What would you like to change?&quot;);</span>
+<span class="nc" id="L117">		String[] validOptions = {&quot;Username&quot;,&quot;Password&quot;,&quot;Both&quot;};</span>
+<span class="nc" id="L118">		logger.info(&quot;calling local ReadInput.readOptions&quot;);</span>
+<span class="nc" id="L119">		ReadInput lri = new ReadInput(validOptions);</span>
+<span class="nc" id="L120">		int choice = lri.promptThenReadOptions();</span>
+<span class="nc" id="L121">		System.out.printf(&quot;You have selected to change %s.%n&quot;, validOptions[choice-1]);</span>
+<span class="nc" id="L122">		logger.traceExit(&quot;exit updateExistingUserPrompt, calling handleUpdateUserRequest&quot;);</span>
+<span class="nc" id="L123">		handleUpdateUserRequest(choice,lUserID);</span>
+<span class="nc" id="L124">	}</span>
+	private int getUserIDPrompt() {
+<span class="nc" id="L126">		logger.traceEntry(&quot;entry getUserIDPrompt&quot;);</span>
+<span class="nc" id="L127">		List&lt;String&gt; validIDs = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L128" title="All 2 branches missed.">		for (User u: allUsers) {</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">			if (u.getUser_id()==SessionManager.sessionUser.getUser_id()) {</span>
+<span class="nc" id="L130">				continue;</span>
+			}
+<span class="nc" id="L132">			validIDs.add(String.valueOf(u.getUser_id()));</span>
+		}
+<span class="nc" id="L134">		ReadInput lri = new ReadInput(validIDs);</span>
+<span class="nc" id="L135">		logger.info(&quot;calling local ReadInput class method promptThenReadOptions&quot;);</span>
+<span class="nc" id="L136">		int userIDChoice = lri.promptThenReadOptions();</span>
+<span class="nc" id="L137">		logger.traceExit(&quot;exit getUserIDPrompt&quot;);</span>
+<span class="nc" id="L138">		return Integer.valueOf(validIDs.get(userIDChoice-1));</span>
+	}
+	private void handleUpdateUserRequest(int choice,int lUserID) {
+<span class="nc" id="L141">		logger.traceEntry(&quot;entry handleUpdateUserRequest&quot;);</span>
+<span class="nc" id="L142">		String username, password,database_password = null,database_username = null;</span>
+<span class="nc" id="L143">		Integer isSuperUser = null;</span>
+<span class="nc bnc" id="L144" title="All 2 branches missed.">		for (User u: allUsers) {</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">			if (u.getUser_id()==lUserID) {</span>
+<span class="nc" id="L146">				database_username = u.getUser_name();</span>
+<span class="nc" id="L147">				database_password = u.getUser_password();</span>
+<span class="nc" id="L148">				isSuperUser = u.getAdmin();</span>
+			}
+		}
+<span class="nc bnc" id="L151" title="All 6 branches missed.">		if (database_username==null||database_password==null||isSuperUser==null) {</span>
+<span class="nc" id="L152">			System.out.println(&quot;The user wasn't found locally, weird bug, should never happen.&quot;);</span>
+<span class="nc" id="L153">			logger.info(&quot;The user wasn't found locally, weird bug, should never happen.&quot;);</span>
+<span class="nc" id="L154">			System.out.println(&quot;Try from scratch.&quot;);</span>
+<span class="nc" id="L155">			logger.traceExit(&quot;retrying promptSuperUserChoice&quot;);</span>
+<span class="nc" id="L156">			promptSuperUserChoice();</span>
+		}
+<span class="nc bnc" id="L158" title="All 2 branches missed.">		if (choice == 1) {</span>
+			// only change username
+<span class="nc" id="L160">			logger.info(&quot;reading new username&quot;);</span>
+<span class="nc" id="L161">			System.out.println(&quot;Type the username and hit enter.&quot;);</span>
+<span class="nc" id="L162">			username = ri.readUsernameOrPassword();</span>
+<span class="nc" id="L163">			password = database_password;</span>
+<span class="nc bnc" id="L164" title="All 2 branches missed.">		} else if (choice == 2) {</span>
+			// only change password
+<span class="nc" id="L166">			username = database_username;</span>
+<span class="nc" id="L167">			logger.info(&quot;reading new password&quot;);</span>
+<span class="nc" id="L168">			System.out.println(&quot;Type the password and hit enter.&quot;);</span>
+<span class="nc" id="L169">			password = ri.readUsernameOrPassword();</span>
+<span class="nc" id="L170">		} else {</span>
+			// change both
+<span class="nc" id="L172">			logger.info(&quot;reading new username&quot;);</span>
+<span class="nc" id="L173">			System.out.println(&quot;Type the username and hit enter.&quot;);</span>
+<span class="nc" id="L174">			username = ri.readUsernameOrPassword();</span>
+<span class="nc" id="L175">			logger.info(&quot;reading new password&quot;);</span>
+<span class="nc" id="L176">			System.out.println(&quot;Type the password and hit enter.&quot;);</span>
+<span class="nc" id="L177">			password = ri.readUsernameOrPassword();</span>
+		}
+		try {
+<span class="nc" id="L180">			Optional&lt;Boolean&gt; updateSuccess = userService.updateUser(lUserID, username, password);</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">			if (updateSuccess.isPresent()) {</span>
+<span class="nc" id="L182">				System.out.println(&quot;Database connection works.&quot;);</span>
+<span class="nc" id="L183">				Boolean upSucc = updateSuccess.get();</span>
+<span class="nc bnc" id="L184" title="All 2 branches missed.">				if (upSucc) {</span>
+<span class="nc" id="L185">					System.out.println(&quot;Database updated properly.&quot;);</span>
+<span class="nc" id="L186">					User updatedUser = new User(lUserID, username, password, isSuperUser);</span>
+<span class="nc bnc" id="L187" title="All 2 branches missed.">					for (User u: allUsers) {</span>
+<span class="nc bnc" id="L188" title="All 2 branches missed.">						if (u.getUser_id()==lUserID) {</span>
+<span class="nc" id="L189">							u = updatedUser; </span>
+<span class="nc" id="L190">							System.out.println(&quot;The user has been updated successfully.&quot;);</span>
+<span class="nc" id="L191">							logger.info(&quot;Successfully updated user information after update request.&quot;);</span>
+						}
+					}
+<span class="nc" id="L194">				} else {</span>
+<span class="nc" id="L195">					System.out.println(&quot;The update didn't work for some reason, the user may or may not have been updated.&quot;);</span>
+<span class="nc" id="L196">					logger.info(&quot;The update didn't work for some reason, the user may or may not have been updated.&quot;);</span>
+				}
+<span class="nc" id="L198">			} else {</span>
+				// Connection didn't work
+<span class="nc" id="L200">				System.out.println(&quot;Database error occurred, update request failed.&quot;);</span>
+<span class="nc" id="L201">				logger.info(&quot;Database error occurred, update request failed.&quot;);</span>
+			}
+<span class="nc" id="L203">		} catch (UsernameAlreadyExists e) {</span>
+<span class="nc" id="L204">			logger.catching(e);</span>
+<span class="nc" id="L205">			System.out.println(&quot;Username already exists, couldn't update database.&quot;);</span>
+		}
+<span class="nc" id="L207">		logger.traceExit(&quot;exit handleUpdateUserRequest, calling promptSuperUserChoice&quot;);</span>
+<span class="nc" id="L208">		promptSuperUserChoice();</span>
+<span class="nc" id="L209">	}</span>
+	public void deleteExistingUserPrompt() {
+<span class="nc" id="L211">		logger.traceEntry(&quot;entry deleteExistingUserPrompt&quot;);</span>
+<span class="nc" id="L212">		System.out.println(&quot;First, select a valid userID&quot;);</span>
+<span class="nc" id="L213">		int lUserID = getUserIDPrompt();	</span>
+<span class="nc" id="L214">		System.out.printf(&quot;You have selected UserID #%d.%n&quot;, lUserID);</span>
+<span class="nc" id="L215">		logger.traceExit(&quot;exit deleteExistingUserPrompt, calling handleDeleteUserRequest&quot;);</span>
+<span class="nc" id="L216">		handleDeleteUserRequest(lUserID);</span>
+<span class="nc" id="L217">	}</span>
+	public void handleDeleteUserRequest(int lUserID) {
+<span class="nc" id="L219">		logger.traceEntry(&quot;entry handleDeleteUserRequest&quot;);</span>
+<span class="nc" id="L220">		System.out.printf(&quot;Deleting user with UserID %d.%n&quot;,lUserID);</span>
+<span class="nc" id="L221">		Optional&lt;Boolean&gt; deleteSuccess =userService.deleteUser(lUserID);</span>
+<span class="nc bnc" id="L222" title="All 2 branches missed.">		if (deleteSuccess.isPresent()) {</span>
+<span class="nc" id="L223">			Boolean delSuc = deleteSuccess.get();</span>
+<span class="nc bnc" id="L224" title="All 2 branches missed.">			if (delSuc) {</span>
+<span class="nc" id="L225">				int indexToRemove = -1;</span>
+<span class="nc bnc" id="L226" title="All 2 branches missed.">				for(int i = 0;i&lt;allUsers.size();i++) {</span>
+<span class="nc bnc" id="L227" title="All 2 branches missed.">					if (allUsers.get(i).getUser_id()==lUserID) {</span>
+<span class="nc" id="L228">						indexToRemove = i;</span>
+					}
+				}
+<span class="nc bnc" id="L231" title="All 2 branches missed.">				if (indexToRemove!=-1) {</span>
+<span class="nc" id="L232">					allUsers.remove(indexToRemove);</span>
+<span class="nc" id="L233">				} else {</span>
+<span class="nc" id="L234">					logger.info(&quot;Failed to find local user with userID that was deleted on the database, weird bug if this ever prints.&quot;);</span>
+<span class="nc" id="L235">					System.out.println(&quot;Failed to find local user with userID that was deleted on the database, weird bug if this ever prints.&quot;);</span>
+				}
+<span class="nc" id="L237">			} else {</span>
+<span class="nc" id="L238">				System.out.println(&quot;Server failed to delete user, user may still be on database. Restart program to be sure.&quot;);</span>
+<span class="nc" id="L239">				logger.info(&quot;User delete request failed.&quot;);		</span>
+			}
+<span class="nc" id="L241">		} else {</span>
+<span class="nc" id="L242">			System.out.println(&quot;Server failed to respond after request to delete user, user may still be on database. Restart program to be sure.&quot;);</span>
+<span class="nc" id="L243">			logger.info(&quot;Major error, should restart program now.&quot;);</span>
+		}
+<span class="nc" id="L245">		logger.traceExit(&quot;exit handleDeleteUserRequest, calling promptSuperUserChoice&quot;);</span>
+<span class="nc" id="L246">		promptSuperUserChoice();</span>
+<span class="nc" id="L247">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

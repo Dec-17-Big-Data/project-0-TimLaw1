@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="TRANSACTIONS" directorySegmentName="seg_0" id="5878BCFB-3803-0FE1-E6B1-45B9BE70C73D">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:42 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>AE171B31-5981-DBCE-B653-271AC88F2DE5</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TRANSACTION_ID" id="17E03805-FDA9-F76A-1192-AE976DC578C3">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="WITHDRAWAL" id="22E9A0E7-5195-A697-6F72-09091159ACC9">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AMOUNT" id="A0487B0D-6617-DEFB-3A70-D0A4A90D7118">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="C4597654-E441-3B16-1310-80E091BA8598">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCOUNT_ID" id="D1AC64C1-4606-58FE-F9FF-9D1A3A0CFF8A">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATE_OF_PURCHASE" id="D65B3AA6-A1A4-262E-B0E0-324EB57701CD">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:43 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TRANSACTIONS_PK" id="49927E5C-A455-1EB7-0AC2-C4E178A237F2">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:44 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<schemaObject>FFC1AA7C-F2C2-A9DA-60DE-996410A0455E</schemaObject>
+<segment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRANSACTIONS_USER_ID_FK" id="5F0E9EFA-FCF4-C9A2-D4A8-FD0248115D37">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:46 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRANSACTIONS_ACCOUNT_ID_FK" id="A3041E7C-C8B5-B59C-9CB1-1F6987FEB168">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:46 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TRANSACTIONS_PK" id="EB37C8EC-8F8A-F10C-56BA-18ED74D61B43">
+<createdBy>IcedT</createdBy>
+<createdTime>2019-01-08 18:12:45 UTC</createdTime>
+<ownerDesignName>JDBCBank</ownerDesignName>
+<segment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</segment>
+<tableSpace>980FAE97-6BB9-420A-6394-7C3632E243E2</tableSpace>
+<existingIndex>49927E5C-A455-1EB7-0AC2-C4E178A237F2</existingIndex>
+<indexSegment>8EFF4E1A-348F-F40C-30CC-1BD15F1EC5E1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

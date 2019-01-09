@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegularUser.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.modules</a> &gt; <span class="el_source">RegularUser.java</span></div><h1>RegularUser.java</h1><pre class="source lang-java linenums">package com.revature.modules;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.exceptions.AccountNotEmptyException;
+import com.revature.exceptions.OverdraftException;
+import com.revature.exceptions.UserIDDoesNotExistException;
+import com.revature.models.Account;
+import com.revature.models.Transaction;
+import com.revature.services.AccountService;
+import com.revature.services.TransactionService;
+import com.revature.utils.ReadInput;
+import com.revature.utils.SessionManager;
+
+import oracle.sql.TIMESTAMP;
+
+<span class="nc" id="L22">public class RegularUser {</span>
+<span class="nc" id="L23">	private static final Logger logger = LogManager.getLogger(Welcome.class);</span>
+<span class="nc" id="L24">	private String[] validOptions = {&quot;View&quot;,&quot;Create&quot;,&quot;Logout&quot;};</span>
+<span class="nc" id="L25">	private ReadInput ri = new ReadInput(validOptions);</span>
+	private Account myAccount;
+<span class="nc" id="L27">	private List&lt;Account&gt; myAccounts = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L28">	private AccountService accountService = AccountService.getService();</span>
+	public void initiateRegularUserSession() {
+<span class="nc" id="L30">		logger.traceEntry(&quot;entry handleRegularUserSessionHandler&quot;);</span>
+<span class="nc" id="L31">		logger.traceExit(&quot;exit handleRegularUserSessionHandler, calling promptRegularUserChoice&quot;);</span>
+<span class="nc" id="L32">		promptRegularUserChoice();</span>
+<span class="nc" id="L33">	}</span>
+	private void promptRegularUserChoice() {
+<span class="nc" id="L35">		logger.traceEntry(&quot;entry promptRegularUserChoice&quot;);</span>
+<span class="nc" id="L36">		getAllAccounts();</span>
+<span class="nc" id="L37">		System.out.println(&quot;You are logged in as a regular user.&quot;);</span>
+<span class="nc" id="L38">		System.out.println(&quot;What would you like to do with your account(s)?&quot;);</span>
+<span class="nc" id="L39">		logger.info(&quot;calling ReadInput.readOptions&quot;);</span>
+<span class="nc" id="L40">		int choice = ri.promptThenReadOptions();</span>
+<span class="nc" id="L41">		System.out.printf(&quot;You have selected %s.%n&quot;, validOptions[choice-1]);</span>
+<span class="nc" id="L42">		logger.traceExit(&quot;exit promptRegularUserChoice, calling handleSuperUserRequest&quot;);</span>
+<span class="nc" id="L43">		handleRegularUserRequest(choice);</span>
+<span class="nc" id="L44">	}</span>
+	private void handleRegularUserRequest(Integer choice) {
+<span class="nc" id="L46">		logger.traceEntry(&quot;entry handleRegularUserRequest&quot;);</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">		if (choice==1) {</span>
+			// View all accounts
+<span class="nc" id="L49">			logger.traceExit(&quot;exit handleRegularUserRequest, calling&quot;);</span>
+<span class="nc" id="L50">			handleViewAccountRequest();</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		} else if (choice==2) {</span>
+			// Create an account
+<span class="nc" id="L53">			logger.traceExit(&quot;exit handleRegularUserRequest, calling handleCreateAccountRequest&quot;);</span>
+<span class="nc" id="L54">			handleCreateAccountRequest();</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">		} else if (choice==3) {</span>
+			// Logout
+<span class="nc" id="L57">			logger.traceExit(&quot;exit handleRegularUserRequest, calling SessionManager.start&quot;);</span>
+<span class="nc" id="L58">			SessionManager mySM = SessionManager.getSessionManager();</span>
+<span class="nc" id="L59">			mySM.start();</span>
+		}
+<span class="nc" id="L61">	}</span>
+	private void handleViewAccountRequest() {
+<span class="nc" id="L63">		logger.traceEntry(&quot;entry handleViewAccountRequest&quot;);</span>
+<span class="nc" id="L64">		System.out.println(&quot;Account viewer menu.&quot;);</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">		if (myAccounts==null) {</span>
+<span class="nc" id="L66">			System.out.println(&quot;You have no accounts yet, would you like to create an account now?&quot;);</span>
+<span class="nc" id="L67">			String[] ValidOptions2 = {&quot;Yes&quot;,&quot;No&quot;};</span>
+<span class="nc" id="L68">			ReadInput lRI2 = new ReadInput(ValidOptions2);</span>
+<span class="nc" id="L69">			int choice2 = lRI2.promptThenReadOptions();</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">			if (choice2==1) {</span>
+<span class="nc" id="L71">				System.out.println(&quot;You are going to the create an account menu.&quot;);</span>
+<span class="nc" id="L72">				logger.traceExit(&quot;exit handleViewAccountRequest, calling handleCreateAccountRequest&quot;);</span>
+<span class="nc" id="L73">				handleCreateAccountRequest();</span>
+<span class="nc" id="L74">			} else {</span>
+<span class="nc" id="L75">				System.out.println(&quot;You will be returned to the main account choice prompt.&quot;);</span>
+<span class="nc" id="L76">				logger.traceExit(&quot;exit handleViewAccountRequest, calling promptRegularUserChoice&quot;);</span>
+<span class="nc" id="L77">				promptRegularUserChoice();</span>
+			}
+		}
+<span class="nc" id="L80">		System.out.println(&quot;What would you like to view?&quot;);</span>
+<span class="nc" id="L81">		String[] lValidOptions = {&quot;Individual&quot;,&quot;All&quot;};</span>
+<span class="nc" id="L82">		ReadInput lRI = new ReadInput(lValidOptions);</span>
+<span class="nc" id="L83">		logger.info(&quot;calling ReadInput.readOptions&quot;);</span>
+<span class="nc" id="L84">		int lChoice = lRI.promptThenReadOptions();</span>
+<span class="nc" id="L85">		System.out.printf(&quot;You have selected %s.%n&quot;, lValidOptions[lChoice-1]);</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">		if (lChoice==1) {</span>
+			// View Individual Account
+<span class="nc" id="L88">			logger.traceExit(&quot;exit handleViewAccountRequest, calling viewIndividualAccount&quot;);</span>
+<span class="nc" id="L89">			viewIndividualAccount();</span>
+<span class="nc" id="L90">		} else {</span>
+			// View all accounts
+<span class="nc" id="L92">			logger.traceExit(&quot;exit handleViewAccountRequest, calling viewAllAccounts&quot;);</span>
+<span class="nc" id="L93">			viewAllAccounts();</span>
+		}
+<span class="nc" id="L95">	}</span>
+	private void viewIndividualAccount() {
+<span class="nc" id="L97">		logger.traceEntry(&quot;entry viewIndividualAccount&quot;);</span>
+<span class="nc" id="L98">		System.out.println(&quot;Please select a valid account id.&quot;);</span>
+<span class="nc" id="L99">		int lAccountID = selectIDPrompt();</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">		for (Account a: myAccounts) {</span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">			if (a.getAccountID()==lAccountID) {</span>
+<span class="nc" id="L102">				myAccount = a;</span>
+			}
+		}
+<span class="nc" id="L105">		System.out.printf(&quot;AccountID,	Balance%n&quot;);</span>
+<span class="nc" id="L106">		System.out.printf(&quot;%d,\t%d%n&quot;,lAccountID,myAccount.getBalance());</span>
+<span class="nc" id="L107">		individualAccountOptionsPrompt();</span>
+<span class="nc" id="L108">		logger.traceExit(&quot;exit viewIndividualAccount, calling&quot;);</span>
+<span class="nc" id="L109">	}</span>
+	private int selectIDPrompt() {
+<span class="nc" id="L111">		logger.traceEntry(&quot;entry selectIDPrompt&quot;);</span>
+<span class="nc" id="L112">		String[] validAccountIDs = new String[myAccounts.size()];</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		for (int i=0;i&lt;myAccounts.size();i++) {</span>
+<span class="nc" id="L114">			validAccountIDs[i] = String.valueOf(myAccounts.get(i).getAccountID());</span>
+		}
+<span class="nc" id="L116">		ReadInput myRI = new ReadInput(validAccountIDs);</span>
+<span class="nc" id="L117">		int accountChoice = myRI.promptThenReadOptions();</span>
+<span class="nc" id="L118">		System.out.printf(&quot;You selected account number %s.%n&quot;,validAccountIDs[accountChoice-1]);</span>
+<span class="nc" id="L119">		return logger.traceExit(Integer.valueOf(validAccountIDs[accountChoice-1]));</span>
+	}
+	private void individualAccountOptionsPrompt() {
+<span class="nc" id="L122">		logger.traceEntry(&quot;entry individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L123">		System.out.println(&quot;Would you like to make a withdrawal or deposit, view transaction history, delete the account, or go back to view all accounts?&quot;);</span>
+<span class="nc" id="L124">		String[] lValidOptions = {&quot;Withdraw&quot;,&quot;Deposit&quot;,&quot;Transactions&quot;,&quot;Delete&quot;,&quot;Back&quot;};</span>
+<span class="nc" id="L125">		ReadInput myRI = new ReadInput(lValidOptions);</span>
+<span class="nc" id="L126">		int lChoice = myRI.promptThenReadOptions();</span>
+<span class="nc" id="L127">		System.out.printf(&quot;You chose %s.%n&quot;,lValidOptions[lChoice-1]);</span>
+<span class="nc" id="L128">		logger.traceExit(&quot;exit individualAccountOptionsPrompt, calling handleIndividualAccountOptions&quot;);</span>
+<span class="nc" id="L129">		handleIndividualAccountOptions(lChoice);</span>
+<span class="nc" id="L130">	}</span>
+	private void handleIndividualAccountOptions(int choice) {
+<span class="nc" id="L132">		logger.traceEntry(&quot;entry handleIndividualAccountOptions&quot;);</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">		if (choice==1) {</span>
+			// Withdraw
+<span class="nc" id="L135">			logger.traceExit(&quot;exit handleIndividualAccountOptions, calling withdrawFromAccount&quot;);</span>
+<span class="nc" id="L136">			withdrawFromAccount();</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">		} else if (choice==2) {</span>
+			// Deposit
+<span class="nc" id="L139">			logger.traceExit(&quot;exit handleIndividualAccountOptions, calling depositToAccount&quot;);</span>
+<span class="nc" id="L140">			depositToAccount();</span>
+<span class="nc bnc" id="L141" title="All 2 branches missed.">		} else if (choice==3) {</span>
+			// View transactions
+<span class="nc" id="L143">			logger.traceExit(&quot;exit handleIndividualAccountOptions, calling viewAccountTransactions&quot;);</span>
+<span class="nc" id="L144">			viewIndividualAccountTransactions();</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">		} else if (choice==4) {</span>
+			// Delete account
+<span class="nc" id="L147">			logger.traceExit(&quot;exit handleIndividualAccountOptions, calling deleteAccount&quot;);</span>
+<span class="nc" id="L148">			deleteAccount();</span>
+<span class="nc" id="L149">		} else {</span>
+			// Back to view all accounts
+<span class="nc" id="L151">			logger.traceExit(&quot;exit handleIndividualAccountOptions, calling viewAllAccounts&quot;);</span>
+<span class="nc" id="L152">			viewAllAccounts();</span>
+		}
+<span class="nc" id="L154">	}</span>
+	private void viewIndividualAccountTransactions() {
+<span class="nc" id="L156">		logger.traceEntry(&quot;entry viewIndividualAccountTransactions&quot;);</span>
+<span class="nc" id="L157">		logger.info(&quot;calling getTransactionsByAccountID&quot;);</span>
+<span class="nc" id="L158">		List&lt;Transaction&gt; thisAccountsTransactions = getTransactionsByAccountID();</span>
+<span class="nc bnc" id="L159" title="All 2 branches missed.">		if (thisAccountsTransactions!=null) {</span>
+<span class="nc" id="L160">			logger.traceExit(&quot;exit viewIndividualAccountTransactions, calling printListOfTransactions(thisAccountsTransactions)&quot;);</span>
+<span class="nc" id="L161">			printListOfTransactions(thisAccountsTransactions);</span>
+<span class="nc" id="L162">		} else {</span>
+<span class="nc" id="L163">			System.out.println(&quot;Problem getting transactions list, sending you back to account view.&quot;);</span>
+<span class="nc" id="L164">			logger.traceExit(&quot;exit viewIndividualAccountTransactions, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L165">			individualAccountOptionsPrompt();</span>
+		}
+<span class="nc" id="L167">	}</span>
+	private void printListOfTransactions(List&lt;Transaction&gt; myTransactionList) {
+<span class="nc" id="L169">		System.out.println(&quot;Transaction ID,	Amount,	Withdrawal, Date of purchase&quot;);</span>
+<span class="nc bnc" id="L170" title="All 2 branches missed.">		for (Transaction t: myTransactionList) {</span>
+<span class="nc bnc" id="L171" title="All 2 branches missed.">			System.out.printf(&quot;%d, %d, %s, %s%n&quot;,t.getTransaction_id(),t.getAmount(),t.getWithdrawal() == 1 ? &quot;true&quot;:&quot;false&quot;,t.getDate_of_purchase().toString());</span>
+		}
+<span class="nc" id="L173">		System.out.println(&quot;Going back to account view.&quot;);</span>
+<span class="nc" id="L174">		logger.traceExit(&quot;exit printListOfTransactions, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L175">		individualAccountOptionsPrompt();</span>
+<span class="nc" id="L176">	}</span>
+	private List&lt;Transaction&gt; getTransactionsByAccountID() {
+<span class="nc" id="L178">		logger.traceEntry(&quot;entry getTransactionsByAccountID&quot;);</span>
+<span class="nc" id="L179">		TransactionService transactionService = TransactionService.getService();</span>
+<span class="nc" id="L180">		Optional&lt;List&lt;Transaction&gt;&gt; optionalTransactions = transactionService.getAllTransactionsByAccountID(myAccount.getAccountID());</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">		if (optionalTransactions.isPresent()) {</span>
+<span class="nc" id="L182">			logger.traceExit(&quot;exit getTransactionsByAccountID, returning transaction list to calling function.&quot;);</span>
+<span class="nc" id="L183">			return optionalTransactions.get();</span>
+		} else {
+<span class="nc" id="L185">			System.out.println(&quot;Server failed to connect, transactions not received.&quot;);</span>
+<span class="nc" id="L186">			System.out.println(&quot;Going back to account view.&quot;);</span>
+<span class="nc" id="L187">			logger.traceExit(&quot;exit getTransactionsByAccountID, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L188">			individualAccountOptionsPrompt();</span>
+		}
+<span class="nc" id="L190">		return null;</span>
+	}
+	private void deleteAccount() {
+<span class="nc" id="L193">		logger.traceEntry(&quot;entry deleteAccount&quot;);</span>
+<span class="nc" id="L194">		System.out.printf(&quot;You are deleting account number %d.%n&quot;,myAccount.getAccountID());</span>
+		try {
+<span class="nc" id="L196">			Optional&lt;Boolean&gt; success = accountService.deleteAccount(myAccount.getAccountID());</span>
+<span class="nc bnc" id="L197" title="All 2 branches missed.">			if (success.isPresent()) {</span>
+<span class="nc bnc" id="L198" title="All 2 branches missed.">				if (success.get()) {</span>
+<span class="nc" id="L199">					int indexToRemove = 0;</span>
+<span class="nc" id="L200">					Boolean foundIt = false;</span>
+<span class="nc bnc" id="L201" title="All 2 branches missed.">					for (int i =0; i&lt;myAccounts.size();i++) {</span>
+<span class="nc bnc" id="L202" title="All 2 branches missed.">						if (myAccounts.get(i).getAccountID()==myAccount.getAccountID()) {</span>
+<span class="nc" id="L203">							foundIt = true;</span>
+<span class="nc" id="L204">							indexToRemove = i;</span>
+<span class="nc" id="L205">							break;</span>
+						}
+					}
+<span class="nc bnc" id="L208" title="All 2 branches missed.">					if (foundIt) {</span>
+<span class="nc" id="L209">						myAccounts.remove(indexToRemove);</span>
+<span class="nc" id="L210">						myAccount = null;</span>
+<span class="nc" id="L211">					} else {</span>
+<span class="nc" id="L212">						System.out.println(&quot;The local list of accounts didn't have the account you are trying to delete, very weird.&quot;);</span>
+					}
+<span class="nc" id="L214">					System.out.println(&quot;Going back to regular user options.&quot;);</span>
+<span class="nc" id="L215">					logger.traceExit(&quot;exit deleteAccount, calling promptRegularUserChoice&quot;);</span>
+<span class="nc" id="L216">					promptRegularUserChoice();</span>
+<span class="nc" id="L217">				} else {</span>
+<span class="nc" id="L218">					System.out.println(&quot;User may or may not have been deleted. Checking with new query.&quot;);</span>
+<span class="nc" id="L219">					Optional&lt;List&lt;Account&gt;&gt; optionalAccounts = accountService.getAllAccounts(SessionManager.sessionUser.getUser_id());</span>
+<span class="nc bnc" id="L220" title="All 2 branches missed.">					if (optionalAccounts.isPresent()) {</span>
+<span class="nc" id="L221">						myAccounts = optionalAccounts.get();</span>
+<span class="nc bnc" id="L222" title="All 2 branches missed.">						for (Account a: myAccounts) {</span>
+<span class="nc bnc" id="L223" title="All 2 branches missed.">							if (a.getAccountID()==myAccount.getAccountID()) {</span>
+<span class="nc" id="L224">								System.out.println(&quot;System failed to delete the account, going back to account options.&quot;);</span>
+<span class="nc" id="L225">								logger.traceExit(&quot;exit deleteAccount, calling promptRegularUserChoice&quot;);</span>
+<span class="nc" id="L226">								viewIndividualAccount();</span>
+							}
+						}
+<span class="nc" id="L229">					} else {</span>
+<span class="nc" id="L230">						System.out.println(&quot;Database is having issues, the request to see if accounts are present failed. This may be because you have no accounts left or it may be that the server failed.&quot;);						</span>
+					}
+				}
+<span class="nc" id="L233">				System.out.println(&quot;Going back to user menu.&quot;);</span>
+<span class="nc" id="L234">				logger.traceExit(&quot;exit deleteAccount, calling promptRegularUserChoice&quot;);</span>
+<span class="nc" id="L235">				promptRegularUserChoice();</span>
+<span class="nc" id="L236">			} else {</span>
+<span class="nc" id="L237">				System.out.println(&quot;Connection not available, account not deleted, taking you back to individual account options.&quot;);</span>
+<span class="nc" id="L238">				logger.traceExit(&quot;exit deleteAccount, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L239">				viewIndividualAccount();</span>
+			}
+<span class="nc" id="L241">		} catch (AccountNotEmptyException e) {</span>
+<span class="nc" id="L242">			logger.catching(e);</span>
+<span class="nc" id="L243">			System.out.println(&quot;That account isn't empty, taking you back to individual account options.&quot;);</span>
+<span class="nc" id="L244">			logger.traceExit(&quot;exit deleteAccount, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L245">			viewIndividualAccount();</span>
+		}
+<span class="nc" id="L247">	}</span>
+	private void depositToAccount() {
+<span class="nc" id="L249">		logger.traceEntry(&quot;entry depositToAccount&quot;);</span>
+<span class="nc" id="L250">		System.out.printf(&quot;You are making a withdrawal from account number %d.%n&quot;,myAccount.getAccountID());</span>
+<span class="nc" id="L251">		System.out.printf(&quot;The current balance is %d.%n&quot;,myAccount.getBalance());</span>
+<span class="nc" id="L252">		System.out.println(&quot;How much would you like to deposit into the account?&quot;);</span>
+<span class="nc" id="L253">		int depositAmount = ri.readPositiveInteger();</span>
+<span class="nc" id="L254">		Optional&lt;Boolean&gt; optionalSuccess = accountService.depositToAccount(myAccount.getAccountID(), depositAmount);</span>
+<span class="nc bnc" id="L255" title="All 2 branches missed.">		if (optionalSuccess.isPresent()) {</span>
+<span class="nc bnc" id="L256" title="All 2 branches missed.">			if (optionalSuccess.get()) {</span>
+<span class="nc" id="L257">				System.out.println(&quot;Deposit successful.&quot;);</span>
+<span class="nc" id="L258">				myAccount.setBalance(myAccount.getBalance() + depositAmount);</span>
+<span class="nc" id="L259">			} else {</span>
+<span class="nc" id="L260">				System.out.println(&quot;Something went wrong with the request, deposit may or may not have gone through. Going back to account options.&quot;);</span>
+			}
+<span class="nc" id="L262">		} else {</span>
+<span class="nc" id="L263">			System.out.println(&quot;No connection is available currently. Going back to account options.&quot;);</span>
+		}
+<span class="nc" id="L265">		logger.traceExit(&quot;exit depositToAccount, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L266">		viewIndividualAccount();</span>
+<span class="nc" id="L267">	}</span>
+	private void withdrawFromAccount() {
+<span class="nc" id="L269">		logger.traceEntry(&quot;entry withdrawFromAccount&quot;);</span>
+<span class="nc" id="L270">		System.out.printf(&quot;You are making a withdrawal from account number %d.%n&quot;,myAccount.getAccountID());</span>
+<span class="nc" id="L271">		System.out.printf(&quot;The current balance is %d.%n&quot;,myAccount.getBalance());</span>
+<span class="nc" id="L272">		System.out.println(&quot;How much would you like to withdraw from the account?&quot;);</span>
+<span class="nc" id="L273">		int withdrawalAmount = ri.readPositiveInteger();</span>
+		try {
+<span class="nc" id="L275">			Optional&lt;Boolean&gt; success = accountService.withdrawFromAccount(myAccount.getAccountID(), withdrawalAmount);</span>
+<span class="nc bnc" id="L276" title="All 2 branches missed.">			if (success.isPresent()) {</span>
+<span class="nc bnc" id="L277" title="All 2 branches missed.">				if (success.get()) {</span>
+<span class="nc" id="L278">					logger.traceExit(&quot;exit withdrawFromAccount, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L279">					System.out.println(&quot;Withdrawal successful.&quot;);</span>
+<span class="nc" id="L280">					myAccount.setBalance(myAccount.getBalance() - withdrawalAmount);</span>
+<span class="nc" id="L281">					viewIndividualAccount();</span>
+<span class="nc" id="L282">				} else {</span>
+<span class="nc" id="L283">					System.out.println(&quot;Something went wrong with the request, withdrawal may or may not have gone through. Going back to account options.&quot;);</span>
+<span class="nc" id="L284">					logger.traceExit(&quot;exit withdrawFromAccount, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L285">					viewIndividualAccount();</span>
+				}
+<span class="nc" id="L287">			} else {</span>
+<span class="nc" id="L288">				System.out.println(&quot;No connection is available currently. Going back to account options.&quot;);</span>
+<span class="nc" id="L289">				logger.traceExit(&quot;exit withdrawFromAccount, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L290">				viewIndividualAccount();</span>
+			}
+<span class="nc" id="L292">		} catch (OverdraftException e) {</span>
+<span class="nc" id="L293">			logger.catching(e);</span>
+<span class="nc" id="L294">			System.out.println(&quot;Withdrawal failed, you can try again.&quot;);</span>
+<span class="nc" id="L295">			logger.traceExit(&quot;exit withdrawFromAccount, calling withdrawFromAccount&quot;);</span>
+<span class="nc" id="L296">			withdrawFromAccount();</span>
+		}
+<span class="nc" id="L298">	}</span>
+	private void viewAllAccounts() {
+<span class="nc" id="L300">		logger.traceEntry(&quot;entry viewAllAccounts&quot;);</span>
+<span class="nc" id="L301">		System.out.println(&quot;You are viewing all accounts.&quot;);</span>
+<span class="nc" id="L302">		System.out.println(&quot;AccountID	Balance&quot;);</span>
+<span class="nc bnc" id="L303" title="All 2 branches missed.">		for (Account a: myAccounts) {</span>
+<span class="nc" id="L304">			System.out.printf(&quot;%d,\t%d%n&quot;,a.getAccountID(),a.getBalance());	</span>
+		}
+<span class="nc" id="L306">		logger.traceExit(&quot;exit viewAllAccounts, calling promptRegularUserChoice&quot;);</span>
+<span class="nc" id="L307">		promptRegularUserChoice();</span>
+<span class="nc" id="L308">	}</span>
+	private void handleCreateAccountRequest() {
+<span class="nc" id="L310">		logger.traceEntry(&quot;entry handleCreateAccountRequest&quot;);</span>
+<span class="nc" id="L311">		System.out.println(&quot;You are making a new account.&quot;);</span>
+<span class="nc" id="L312">		System.out.println(&quot;How much would you like to deposit into the new account?&quot;);</span>
+<span class="nc" id="L313">		int sBalance = ri.readPositiveInteger();</span>
+		try {
+<span class="nc" id="L315">			Optional&lt;Account&gt; myAcc = accountService.registerAccount(SessionManager.sessionUser.getUser_id(), sBalance);</span>
+<span class="nc bnc" id="L316" title="All 2 branches missed.">			if (myAcc.isPresent()) {</span>
+<span class="nc" id="L317">				myAccount = myAcc.get();</span>
+<span class="nc" id="L318">				myAccounts.add(myAccount);</span>
+<span class="nc" id="L319">				System.out.println(&quot;The new account has been created successfully. Going to account view.&quot;);</span>
+<span class="nc" id="L320">				logger.traceExit(&quot;exit handleCreateAccountRequest, calling individualAccountOptionsPrompt&quot;);</span>
+<span class="nc" id="L321">				viewIndividualAccount();</span>
+<span class="nc" id="L322">			} else {</span>
+<span class="nc" id="L323">				System.out.println(&quot;Uh-oh, the new account wasn't made for some reason, server issue.&quot;);</span>
+<span class="nc" id="L324">				logger.info(&quot;Server couldn't add new account.&quot;);</span>
+			}
+<span class="nc" id="L326">		} catch (UserIDDoesNotExistException e) {</span>
+<span class="nc" id="L327">			System.out.println(&quot;uh-oh, somehow this user doesn't exist in the database.&quot;);</span>
+<span class="nc" id="L328">			logger.catching(e);</span>
+		}
+<span class="nc" id="L330">		logger.traceExit(&quot;exit handleCreateAccountRequest, calling&quot;);</span>
+<span class="nc" id="L331">	}</span>
+	private void getAllAccounts() {
+<span class="nc" id="L333">		logger.traceEntry(&quot;entry getAllAccounts&quot;);</span>
+<span class="nc" id="L334">		Optional&lt;List&lt;Account&gt;&gt; optionalAccounts = accountService.getAllAccounts(SessionManager.sessionUser.getUser_id());</span>
+<span class="nc bnc" id="L335" title="All 2 branches missed.">		if (optionalAccounts.isPresent()) {</span>
+<span class="nc" id="L336">			myAccounts = optionalAccounts.get();</span>
+<span class="nc" id="L337">		} else {</span>
+<span class="nc" id="L338">			System.out.println(&quot;Server failed to find any accounts, try to create an account, and if that doesn't work then it is a server issue.&quot;);</span>
+<span class="nc" id="L339">			logger.info(&quot;Server failed to return any accounts.&quot;);</span>
+		}
+<span class="nc" id="L341">		logger.traceExit(&quot;exit getAllAccounts&quot;);	</span>
+<span class="nc" id="L342">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

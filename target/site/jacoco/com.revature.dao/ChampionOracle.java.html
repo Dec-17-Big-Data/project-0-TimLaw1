@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChampionOracle.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.dao</a> &gt; <span class="el_source">ChampionOracle.java</span></div><h1>ChampionOracle.java</h1><pre class="source lang-java linenums">package com.revature.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.models.Champion;
+import com.revature.utils.ConnectionUtil;
+
+public class ChampionOracle implements ChampionDao {
+	
+<span class="nc" id="L19">	private static final Logger logger = LogManager.getLogger(ChampionOracle.class);</span>
+	private static ChampionOracle championOracle;
+<span class="nc" id="L21">	final static ChampionDao championDao = ChampionOracle.getDao();</span>
+	
+<span class="nc" id="L23">	private ChampionOracle() {</span>
+		
+<span class="nc" id="L25">	}</span>
+	
+	public static ChampionOracle getDao() {
+<span class="nc bnc" id="L28" title="All 2 branches missed.">		if (championOracle == null) {</span>
+<span class="nc" id="L29">			championOracle = new ChampionOracle();</span>
+		}
+<span class="nc" id="L31">		return championOracle;</span>
+	}
+	
+	@Override
+	public Optional&lt;List&lt;Champion&gt;&gt; getAllChampions() {
+<span class="nc" id="L36">		Connection con = ConnectionUtil.getConnection();</span>
+
+<span class="nc bnc" id="L38" title="All 2 branches missed.">		if (con == null) {</span>
+<span class="nc" id="L39">			return Optional.empty();</span>
+		}
+		try {
+<span class="nc" id="L42">			String sql = &quot;select * from champions&quot;;</span>
+<span class="nc" id="L43">			PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="nc" id="L44">			ResultSet rs = ps.executeQuery();</span>
+
+<span class="nc" id="L46">			List&lt;Champion&gt; listOfChampions = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">			while (rs.next()) {</span>
+<span class="nc" id="L48">				listOfChampions.add(new Champion(rs.getInt(&quot;champion_id&quot;), rs.getString(&quot;champion_name&quot;),</span>
+<span class="nc" id="L49">						rs.getString(&quot;a1&quot;), rs.getString(&quot;a2&quot;), rs.getString(&quot;a3&quot;), rs.getString(&quot;a4&quot;),</span>
+<span class="nc" id="L50">						rs.getString(&quot;passive&quot;), rs.getFloat(&quot;health&quot;)));</span>
+			}
+			
+<span class="nc" id="L53">			return Optional.of(listOfChampions);</span>
+<span class="nc" id="L54">		} catch (SQLException e) {</span>
+<span class="nc" id="L55">			logger.catching(e);</span>
+		}
+<span class="nc" id="L57">		return null;</span>
+	}
+
+//	@Override
+//	public Optional&lt;Champion&gt; getChampionByName(String name) {
+//		return null;
+//		TODO: update from Quinn's
+//		Connection con = ConnectionUtil.getConnection();
+//
+//		if (con == null) {
+//			return Optional.empty();
+//		}
+//		try {
+//			String sql = &quot;select * from champions where champion_name = ?&quot;;
+//			PreparedStatement ps = con.prepareStatement(sql);
+//			ps.setString(0,name);
+//			ResultSet rs = ps.executeQuery();
+//
+//			Champion champion = null;
+//			while (rs.next()) {
+//				champion = new Champion(rs.getInt(&quot;champion_id&quot;), rs.getString(&quot;champion_name&quot;),
+//						rs.getString(&quot;a1&quot;), rs.getString(&quot;a2&quot;), rs.getString(&quot;a3&quot;), rs.getString(&quot;a4&quot;),
+//						rs.getString(&quot;passive&quot;), rs.getFloat(&quot;health&quot;));
+//			}
+//			
+//			if (champion == null) {
+//				return null;
+//			}
+//			return champion;
+//		} catch (SQLException e) {
+//
+//		}
+//		return null;
+//	}
+
+	@Override
+	public Optional&lt;Champion&gt; getChampionById() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L95">		return null;</span>
+	}
+
+	@Override
+	public Optional&lt;Champion&gt; getChampionByName(String name) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L101">		return null;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

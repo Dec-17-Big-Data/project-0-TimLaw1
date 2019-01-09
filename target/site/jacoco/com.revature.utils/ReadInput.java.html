@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReadInput.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project0</a> &gt; <a href="index.source.html" class="el_package">com.revature.utils</a> &gt; <span class="el_source">ReadInput.java</span></div><h1>ReadInput.java</h1><pre class="source lang-java linenums">package com.revature.utils;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.revature.exceptions.InvalidOptionException;
+
+public class ReadInput {
+<span class="fc" id="L12">	private static final Logger logger = LogManager.getLogger(ReadInput.class);</span>
+	private String[] validOptions;
+<span class="fc" id="L14">	public ReadInput() {}</span>
+<span class="fc" id="L15">	public ReadInput(String[] options) { this.validOptions = options; }</span>
+<span class="nc" id="L16">	public ReadInput(List&lt;String&gt; validIDs) {</span>
+<span class="nc" id="L17">		this.validOptions = new String[validIDs.size()];</span>
+<span class="nc bnc" id="L18" title="All 2 branches missed.">		for (int i = 0; i &lt; validOptions.length; i++) {</span>
+<span class="nc" id="L19">			this.validOptions[i] = validIDs.get(i);</span>
+		}
+<span class="nc" id="L21">	}</span>
+	private int optionsErrorPrompt() {
+<span class="nc" id="L23">		logger.traceEntry(&quot;entry optionsErrorPrompt&quot;);</span>
+<span class="nc" id="L24">		System.out.println(&quot;Try again...&quot;);</span>
+<span class="nc" id="L25">		return logger.traceExit(promptThenReadOptions());</span>
+	}
+	public int promptThenReadOptions() {
+<span class="nc" id="L28">		logger.traceEntry();</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">		for (int i = 0; i&lt;validOptions.length; i++) {</span>
+<span class="nc" id="L30">			System.out.println(String.valueOf(i+1)+&quot;.&quot;+ validOptions[i]);</span>
+		}
+<span class="nc" id="L32">		System.out.println(&quot;Please type in the name or number of the choice and hit enter.&quot;);	</span>
+<span class="nc" id="L33">		return logger.traceExit(readOptions());</span>
+	}
+	public int readOptions() {
+<span class="nc" id="L36">		logger.traceEntry();</span>
+<span class="nc" id="L37">		int choice = -1;</span>
+		try{
+<span class="nc" id="L39">			choice = parseChoice(JDBCBank.inStream.nextLine());	</span>
+<span class="nc" id="L40">			return logger.traceExit(choice);</span>
+<span class="nc" id="L41">		} catch (InvalidOptionException IOE) {</span>
+<span class="nc" id="L42">			logger.catching(IOE);</span>
+<span class="nc" id="L43">			System.out.println(IOE);</span>
+<span class="nc" id="L44">		} catch (NoSuchElementException NSEE) {</span>
+<span class="nc" id="L45">			logger.catching(NSEE);</span>
+<span class="nc" id="L46">		} catch (IllegalStateException ISE) {</span>
+<span class="nc" id="L47">			logger.catching(ISE);</span>
+<span class="nc" id="L48">		} catch(Exception e) {</span>
+<span class="nc" id="L49">			logger.catching(e);</span>
+		} 
+<span class="nc" id="L51">		return logger.traceExit(optionsErrorPrompt());</span>
+	}
+	public int parseChoice(String choice) throws InvalidOptionException {
+		//TODO make these custom exceptions so it can be JUnit tested
+<span class="fc" id="L55">		logger.traceEntry(&quot;entry parseChoice Scanner input: {}&quot;, choice);</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">		if (choice.matches(&quot;\\s*&quot;)) {</span>
+<span class="fc" id="L57">			throw new InvalidOptionException(&quot;You didn't enter anything.&quot;);</span>
+		}
+<span class="fc" id="L59">		String[] digitSS = choice.split(&quot;[^\\d+]&quot;);</span>
+<span class="fc" id="L60">		int digitCount = 0;</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">		for (String i: digitSS) {</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">			if (i.equals(&quot;&quot;)) {</span>
+<span class="nc" id="L63">				continue;</span>
+			} else {
+<span class="fc" id="L65">				digitCount++;</span>
+			}
+		}
+<span class="fc" id="L68">		int result = 0;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">		if (digitCount&gt;1) {</span>
+<span class="fc" id="L70">			throw new InvalidOptionException(&quot;You entered too many different numbers.&quot;);</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">		} else if (digitCount==1) {</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">			for (String i: digitSS) {</span>
+<span class="pc bpc" id="L73" title="1 of 2 branches missed.">				if (i.equals(&quot;&quot;)) {</span>
+<span class="nc" id="L74">					continue;</span>
+				} else {
+<span class="fc" id="L76">					result = Integer.valueOf(i);</span>
+<span class="fc" id="L77">					break;</span>
+				}
+			}
+<span class="pc bpc" id="L80" title="1 of 4 branches missed.">			if (result &gt; 0 &amp;&amp; result &lt;= validOptions.length) {</span>
+<span class="fc" id="L81">				return logger.traceExit(result);</span>
+			} else {
+<span class="fc" id="L83">				throw new InvalidOptionException(&quot;You entered an invalid option.&quot;);</span>
+			}
+		} else {
+<span class="fc" id="L86">			String[] wordSS = choice.split(&quot;[^\\w+]&quot;);</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">			if (wordSS.length!=1) {</span>
+<span class="fc" id="L88">				throw new InvalidOptionException(&quot;You entered too many strings.&quot;);</span>
+			}
+<span class="fc bfc" id="L90" title="All 2 branches covered.">			for (int i = 0; i &lt; validOptions.length; i++) {</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">				if (wordSS[0].toLowerCase().equals(validOptions[i].toLowerCase())) {</span>
+<span class="fc" id="L92">					result = i+1;</span>
+<span class="fc" id="L93">					return logger.traceExit(result);</span>
+				}
+			}
+<span class="fc" id="L96">			throw new InvalidOptionException(&quot;You entered an invalid option.&quot;);</span>
+		}
+	}
+	public String readUsernameOrPassword() {
+<span class="nc" id="L100">		logger.traceEntry(&quot;entry readUsernameOrPassword&quot;);</span>
+<span class="nc" id="L101">		String password = null;</span>
+		try{
+<span class="nc" id="L103">			password = validateUsernameOrPassword(JDBCBank.inStream.nextLine());</span>
+<span class="nc" id="L104">			return logger.traceExit(password);</span>
+<span class="nc" id="L105">		} catch (InvalidOptionException IOE) {</span>
+<span class="nc" id="L106">			logger.catching(IOE);</span>
+<span class="nc" id="L107">			System.out.println(IOE);</span>
+<span class="nc" id="L108">		} catch (NoSuchElementException NSEE) {</span>
+<span class="nc" id="L109">			logger.catching(NSEE);</span>
+<span class="nc" id="L110">		} catch (IllegalStateException ISE) {</span>
+<span class="nc" id="L111">			logger.catching(ISE);</span>
+<span class="nc" id="L112">		} catch(Exception e) {</span>
+<span class="nc" id="L113">			logger.catching(e);</span>
+		}
+<span class="nc" id="L115">		return logger.traceExit(usernameOrPasswordErrorPrompt());</span>
+	}
+	public String validateUsernameOrPassword(String usernameOrPassword) throws InvalidOptionException {
+		//TODO make these custom exceptions so it can be JUnit tested
+<span class="fc" id="L119">		logger.traceEntry(&quot;entry validateUsernameOrPassword&quot;);</span>
+<span class="fc" id="L120">		String invalidCharactersRegex = &quot;[a-zA-Z\\d\\!\\(\\)\\-\\.\\?\\[\\]\\_\\`\\~\\;\\:\\@\\#\\$\\%\\^\\&amp;\\*\\+\\=]+&quot;;</span>
+<span class="fc bfc" id="L121" title="All 2 branches covered.">		if (usernameOrPassword.matches(&quot;\\s*&quot;)) {</span>
+<span class="fc" id="L122">			throw new InvalidOptionException(&quot;You can't enter an empty password.&quot;);</span>
+<span class="fc bfc" id="L123" title="All 2 branches covered.">		} else if (!usernameOrPassword.matches(invalidCharactersRegex)) {</span>
+<span class="fc" id="L124">			throw new InvalidOptionException(&quot;System.out.println(\&quot;You entered an invalid character.\r\n&quot; + </span>
+					&quot;Valid characters include: 'a-z','A-Z','0-9','!','(',')','-','.',''?\r\n&quot; + 
+					&quot;as well as: '[',']','_','`','~',';',':','@','#','$','^','&amp;','*','+','='\r\n&quot;);
+		} else {
+<span class="fc" id="L128">			return logger.traceExit(usernameOrPassword);</span>
+		}
+	}
+	private String usernameOrPasswordErrorPrompt() {
+<span class="nc" id="L132">		logger.traceEntry(&quot;entry usernameOrPasswordErrorPrompt&quot;);</span>
+<span class="nc" id="L133">		System.out.println(&quot;Try entering a valid username/password again...&quot;);</span>
+<span class="nc" id="L134">		return logger.traceExit(readUsernameOrPassword());</span>
+	}
+	public int readPositiveInteger() {
+<span class="nc" id="L137">		logger.traceEntry(&quot;Entry readPositiveInteger&quot;);</span>
+<span class="nc" id="L138">		int posInt = -1;</span>
+		try{
+<span class="nc" id="L140">			posInt = validatePositiveInteger(JDBCBank.inStream.nextLine());</span>
+<span class="nc" id="L141">			return logger.traceExit(posInt);</span>
+<span class="nc" id="L142">		} catch (InvalidOptionException IOE) {</span>
+<span class="nc" id="L143">			logger.catching(IOE);</span>
+<span class="nc" id="L144">			System.out.println(IOE);</span>
+<span class="nc" id="L145">		} catch (NoSuchElementException NSEE) {</span>
+<span class="nc" id="L146">			logger.catching(NSEE);</span>
+<span class="nc" id="L147">		} catch (IllegalStateException ISE) {</span>
+<span class="nc" id="L148">			logger.catching(ISE);</span>
+<span class="nc" id="L149">		} catch(Exception e) {</span>
+<span class="nc" id="L150">			logger.catching(e);</span>
+		} 
+<span class="nc" id="L152">		return logger.traceExit(positiveIntegerErrorPrompt());</span>
+	}
+	public int validatePositiveInteger(String inputString) throws InvalidOptionException {
+<span class="fc" id="L155">		logger.traceEntry(&quot;Entry validatePositiveInteger&quot;);</span>
+<span class="fc" id="L156">		String validString = &quot;[0-9]+&quot;;</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">		if (inputString.matches(&quot;\\s*&quot;)) {</span>
+<span class="fc" id="L158">			throw new InvalidOptionException(&quot;You can't enter an empty string.&quot;);</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">		} else if (!inputString.matches(validString)) {</span>
+<span class="fc" id="L160">			throw new InvalidOptionException(&quot;Number must be of the format 123456789&quot;);</span>
+<span class="fc bfc" id="L161" title="All 2 branches covered.">		} else if (inputString.length()&gt; 20) {</span>
+<span class="fc" id="L162">			throw new InvalidOptionException(&quot;You need to input a number less than 20 digits long.&quot;);</span>
+		} else {
+<span class="fc bfc" id="L164" title="All 2 branches covered.">			if (inputString.length()==1) {</span>
+<span class="fc" id="L165">				int output = Integer.valueOf(inputString); </span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">				if (output==0) {</span>
+<span class="fc" id="L167">					throw new InvalidOptionException(&quot;You can't input 0.&quot;);</span>
+				}
+<span class="fc" id="L169">				return logger.traceExit(output);</span>
+			} else {
+<span class="fc" id="L171">				String invalidOrdering = &quot;0+[0-9]*&quot;;</span>
+<span class="fc bfc" id="L172" title="All 2 branches covered.">				if (inputString.matches(invalidOrdering)) {</span>
+<span class="fc" id="L173">					throw new InvalidOptionException(&quot;The number cannot begin with any leading zeros.&quot;);</span>
+				} else {
+<span class="fc" id="L175">					int output = Integer.valueOf(inputString); </span>
+<span class="fc" id="L176">					return logger.traceExit(output);</span>
+				}
+			}
+		}
+	}
+	private int positiveIntegerErrorPrompt() {
+<span class="nc" id="L182">		logger.traceEntry(&quot;Entry positiveIntegerErrorPrompt&quot;);</span>
+<span class="nc" id="L183">		System.out.println(&quot;Try inputting a valid number again...&quot;);</span>
+<span class="nc" id="L184">		return logger.traceExit(readPositiveInteger());</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

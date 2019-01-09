@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,7 +20,7 @@ import com.revature.utils.ConnectionUtil;
 
 import oracle.jdbc.OracleTypes;
 public class UserOracle implements UserDao {
-	private static final Logger logger = LogManager.getLogger(ChampionOracle.class);
+	private static final Logger logger = LogManager.getLogger(UserOracle.class);
 	private static UserOracle userOracle;
 	final static UserDao userDao = UserOracle.getDao();
 	
@@ -54,6 +55,7 @@ public class UserOracle implements UserDao {
 			while (rs.next()) {
 				listOfUsers.add(new User(rs.getInt("user_id"),rs.getString("user_name"),rs.getString("user_password"),rs.getInt("super_user")));
 			}
+			Collections.sort(listOfUsers);
 			getAllSuccess = true;
 		} catch (SQLException e) {
 			logger.catching(e);

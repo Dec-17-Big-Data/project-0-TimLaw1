@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
@@ -12,11 +13,12 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.revature.exceptions.OverdraftException;
 import com.revature.exceptions.UserIDDoesNotExistException;
-import com.revature.exceptions.UsernameAlreadyExists;
 import com.revature.models.Account;
 import com.revature.models.Champion;
 import com.revature.models.User;
+import com.revature.modules.RegularUser;
 import com.revature.modules.SuperUser;
 import com.revature.services.AccountService;
 import com.revature.services.ChampionService;
@@ -28,11 +30,25 @@ public class JDBCBank {
 	public static final Scanner inStream = new Scanner(System.in);
 	public static void main(String[] args) {
 		logger.traceEntry("entry main");
-		testUserService();
-//		testSuperUserView();
-//		SessionManager sm = SessionManager.getSessionManager();
-//		sm.start();
+//		testWithdraw();
+		SessionManager sm = SessionManager.getSessionManager();
+		sm.start();
 		logger.traceExit("exit main");
+	}
+	public static void testWithdraw () {
+		AccountService accountService = AccountService.getService();
+		Optional<Boolean> optionalSuccess;
+		try {
+			optionalSuccess = accountService.withdrawFromAccount(1, 505000);
+			if (optionalSuccess.isPresent()) {
+				System.out.println("Worked");
+			} else {
+				System.out.println("failed");
+			}
+		} catch (OverdraftException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public static void testUserService() {
 		AccountService myAS = AccountService.getService();
@@ -48,6 +64,10 @@ public class JDBCBank {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public static void testRegularUserView() {
+		RegularUser myRU = new RegularUser();
+		myRU.initiateRegularUserSession();
 	}
 	public static void testSuperUserView() {
 		SuperUser mySU = new SuperUser();
